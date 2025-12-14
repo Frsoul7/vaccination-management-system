@@ -57,6 +57,49 @@ java -jar target/Sem2App-1.0-SNAPSHOT-jar-with-dependencies.jar --console
 | **Receptionist** | r@r.pt | 123 |
 | **SNS User** | u@u.pt | 123 |
 
+## 📸 Screenshots
+
+### Console Interface
+
+<div align="center">
+  <img src="docs/screenshots/console/1-welcome_login.png" alt="Console Login" width="600"/>
+  <p><em>Console Login Screen</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/console/2-admin-menu.png" alt="Admin Menu" width="600"/>
+  <p><em>Administrator Menu Options</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/console/5-receptionist-register_user.png" alt="Register User" width="600"/>
+  <p><em>Receptionist Registering SNS User</em></p>
+</div>
+
+### GUI Interface
+
+<div align="center">
+  <img src="docs/screenshots/gui/3- login.png" alt="GUI Login" width="600"/>
+  <p><em>Graphical Login Interface</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/gui/4- choose_vaccination_center.png" alt="Choose Center" width="600"/>
+  <p><em>Vaccination Center Selection</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/gui/9- coordinator_perfomance_analysis.png" alt="Performance Analysis" width="600"/>
+  <p><em>Center Coordinator - Performance Analysis Dashboard</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/gui/11- nurse_vaccine_administration_process1.png" alt="Nurse Interface" width="600"/>
+  <p><em>Nurse Interface - Vaccine Administration Process</em></p>
+</div>
+
+[🖼️ View all screenshots →](docs/screenshots)
+
 ## 🎯 Key Features
 
 ### For SNS Users
