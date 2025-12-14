@@ -1,8 +1,10 @@
 package app.controller;
 
 import app.domain.model.Company;
+import app.domain.model.Employee;
 import app.domain.model.SNSUser;
 import app.domain.model.VaccinationCenter;
+import app.domain.model.store.EmployeeStore;
 import app.domain.model.store.PerformanceRecordsStore;
 import app.domain.model.store.SNSUserStore;
 import app.domain.model.store.VaccinationCenterStore;
@@ -127,6 +129,9 @@ public class App implements Constants {
         this.authFacade.addUserWithRole("Center Coordinator", "c@c.pt", "123",
                                         EmployeeRoles.ROLE_CENTERCOORNIDATOR.getRoleId());
 
+        // Bootstrap employees (dev seed data) - add employees to store
+        bootstrapEmployees();
+        
         // Bootstrap vaccination centers (dev seed data)
         bootstrapVaccinationCenters();
         
@@ -167,6 +172,68 @@ public class App implements Constants {
         return singleton;
     }
 
+    /**
+     * Bootstrap employees with seed data for development
+     * Creates Employee objects in the EmployeeStore for the auth users
+     */
+    private void bootstrapEmployees() {
+        try {
+            EmployeeStore empStore = company.getEmployeeStore();
+            
+            // Check if bootstrap employees already exist (check by email)
+            boolean adminExists = false;
+            try {
+                empStore.getEmployeeByEmail("admin@lei.sem2.pt");
+                adminExists = true;
+            } catch (Exception e) {
+                // Employee doesn't exist, continue with bootstrap
+            }
+            
+            if (adminExists) {
+                return; // Bootstrap employees already exist, skip
+            }
+            
+            // Create Employee objects matching the auth users
+            // These will appear in "Get List of Employees"
+            
+            // 1. Main Administrator
+            Employee admin = new Employee("Main Administrator", "Porto, Portugal", 912345678L, 
+                                         "admin@lei.sem2.pt", 123456789L, EmployeeRoles.ROLE_ADMIN);
+            admin.setId();
+            empStore.addEmployee(admin);
+            
+            // 2. SW Developer (Admin)
+            Employee dev = new Employee("SW Developer", "Porto, Portugal", 912345679L, 
+                                       "p@p.pt", 123456790L, EmployeeRoles.ROLE_ADMIN);
+            dev.setId();
+            empStore.addEmployee(dev);
+            
+            // 3. Receptionist
+            Employee receptionist = new Employee("Receptionist", "Porto, Portugal", 912345680L, 
+                                                "r@r.pt", 123456791L, EmployeeRoles.ROLE_RECEPTIONIST);
+            receptionist.setId();
+            empStore.addEmployee(receptionist);
+            
+            // 4. Nurse
+            Employee nurse = new Employee("Nurse", "Porto, Portugal", 912345681L, 
+                                         "n@n.pt", 123456792L, EmployeeRoles.ROLE_NURSE);
+            nurse.setId();
+            empStore.addEmployee(nurse);
+            
+            // 5. Center Coordinator
+            Employee coordinator = new Employee("Center Coordinator", "Porto, Portugal", 912345682L, 
+                                               "c@c.pt", 123456793L, EmployeeRoles.ROLE_CENTERCOORNIDATOR);
+            coordinator.setId();
+            empStore.addEmployee(coordinator);
+            
+            System.out.println("✓ Bootstrap: 5 employees added to EmployeeStore successfully");
+            
+        } catch (Exception e) {
+            // Silent catch - bootstrap data creation failure shouldn't prevent app startup
+            System.out.println("Warning: Failed to bootstrap employees - " + e.getMessage());
+        }
+    }
+    
     /**
      * Bootstrap vaccination centers with seed data for development
      * Only creates centers if they don't already exist (checked after serialization loads)
