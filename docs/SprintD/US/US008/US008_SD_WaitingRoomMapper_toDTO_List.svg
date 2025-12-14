@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="714px" preserveAspectRatio="none" style="width:1116px;height:714px;background:#FFFFFF;" version="1.1" viewBox="0 0 1116 714" width="1116px" zoomAndPan="magnify"><defs><filter height="300%" id="f11t2674epz9ia" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="600.7344" style="stroke:#A80036;stroke-width:1.0;" width="10" x="178" y="51.6094"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="374" y="176.2734"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="628" y="584.9922"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="236.625"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="296.9766"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="357.3281"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="417.6797"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="478.0313"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="487.4219" style="stroke:#000000;stroke-width:2.0;" width="1006" x="96" y="135.5703"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="183" x2="183" y1="41.6094" y2="670.3438"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="379" x2="379" y1="41.6094" y2="670.3438"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="633" x2="633" y1="115.2656" y2="670.3438"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="843" x2="843" y1="41.6094" y2="670.3438"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1005" x2="1005" y1="549.3359" y2="670.3438"/><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="150" x="106" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="113" y="26.5332">:WaitingRoomMapper</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="150" x="106" y="669.3438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="113" y="690.877">:WaitingRoomMapper</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="214" x="270" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="277" y="26.5332">listWaitingRoom: List&lt;SnsUser&gt;</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="214" x="270" y="669.3438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="277" y="690.877">listWaitingRoom: List&lt;SnsUser&gt;</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="266" x="498" y="669.3438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="252" x="505" y="690.877">listWaitingRoomDTO: List&lt;SnsUserDto&gt;</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="126" x="778" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="785" y="26.5332">snsUser: SnsUser</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="126" x="778" y="669.3438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="785" y="690.877">snsUser: SnsUser</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="170" x="918" y="669.3438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="925" y="690.877">snsUserDto: SnsUserDto</text><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="600.7344" style="stroke:#A80036;stroke-width:1.0;" width="10" x="178" y="51.6094"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="374" y="176.2734"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="628" y="584.9922"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="236.625"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="296.9766"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="357.3281"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="417.6797"/><rect fill="#FFFFFF" filter="url(#f11t2674epz9ia)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="838" y="478.0313"/><ellipse cx="7.5" cy="73.2109" fill="none" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="166,69.9609,176,73.9609,166,77.9609,170,73.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="12" x2="172" y1="73.9609" y2="73.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="15" y="69.1045">1</text><a href="/US008_SD.puml" target="_top" title="/US008_SD.puml" xlink:actuate="onRequest" xlink:href="/US008_SD.puml" xlink:show="new" xlink:title="/US008_SD.puml" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="140" x="26" y="69.1045">toDTO(listWaitingRoom)</text></a><polygon fill="#A80036" points="486,100.3125,496,104.3125,486,108.3125,490,104.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="188" x2="492" y1="104.3125" y2="104.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="99.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="206" y="99.4561">create()</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="266" x="498" y="81.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="252" x="505" y="103.4941">listWaitingRoomDTO: List&lt;SnsUserDto&gt;</text><path d="M96,135.5703 L169,135.5703 L169,143.5703 L159,153.5703 L96,153.5703 L96,135.5703 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="487.4219" style="stroke:#000000;stroke-width:2.0;" width="1006" x="96" y="135.5703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="111" y="150.0654">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="208" x="184" y="148.9893">[for each SnsUser in listWaitingRoom]</text><polygon fill="#A80036" points="362,172.2734,372,176.2734,362,180.2734,366,176.2734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188" x2="368" y1="176.2734" y2="176.2734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="171.417">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="206" y="171.417">snsUser = getSnsUser(i)</text><polygon fill="#A80036" points="826,232.625,836,236.625,826,240.625,830,236.625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188" x2="832" y1="236.625" y2="236.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="231.7686">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="206" y="231.7686">name = getName()</text><polygon fill="#A80036" points="826,292.9766,836,296.9766,826,300.9766,830,296.9766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188" x2="832" y1="296.9766" y2="296.9766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="292.1201">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="206" y="292.1201">gender = getGender()</text><polygon fill="#A80036" points="826,353.3281,836,357.3281,826,361.3281,830,357.3281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188" x2="832" y1="357.3281" y2="357.3281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="352.4717">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="206" y="352.4717">birthDate = getBirthDate()</text><polygon fill="#A80036" points="826,413.6797,836,417.6797,826,421.6797,830,417.6797" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188" x2="832" y1="417.6797" y2="417.6797"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="412.8232">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="230" x="206" y="412.8232">snsUserNumber = getSnsUserNumber()</text><polygon fill="#A80036" points="826,474.0313,836,478.0313,826,482.0313,830,478.0313" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188" x2="832" y1="478.0313" y2="478.0313"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="473.1748">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="204" x="206" y="473.1748">phoneNumber = getPhoneNumber()</text><polygon fill="#A80036" points="906,534.3828,916,538.3828,906,542.3828,910,538.3828" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="188" x2="912" y1="538.3828" y2="538.3828"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="195" y="533.5264">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="372" x="206" y="533.5264">create(name, gender, birthDate, snsUserNumber, phoneNumber)</text><rect fill="#FEFECE" filter="url(#f11t2674epz9ia)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="170" x="918" y="516.0313"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="925" y="537.5645">snsUserDto: SnsUserDto</text><polygon fill="#A80036" points="616,580.9922,626,584.9922,616,588.9922,620,584.9922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188" x2="622" y1="584.9922" y2="584.9922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="195" y="580.1357">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97" x="213" y="580.1357">add(snsUserDto)</text><polygon fill="#A80036" points="11,648.3438,1,652.3438,11,656.3438,7,652.3438" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="5" x2="182" y1="652.3438" y2="652.3438"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="17" y="647.4873">11</text><a href="/US008_SD.puml" target="_top" title="/US008_SD.puml" xlink:actuate="onRequest" xlink:href="/US008_SD.puml" xlink:show="new" xlink:title="/US008_SD.puml" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="87" x="35" y="647.4873">listSnsUserDto</text></a><!--MD5=[6a4cb3e1560ced3cc64c7b658f1f3e6f]
+@startuml
+autonumber
+'hide footbox
+
+participant ":WaitingRoomMapper" as mapper
+participant "listWaitingRoom: List<SnsUser>" as list
+participant "listWaitingRoomDTO: List<SnsUserDto>" as listDTO
+participant "snsUser: SnsUser" as snsu
+participant "snsUserDto: SnsUserDto" as snsuDTO
+
+activate mapper
+[o->mapper : [[/US008_SD.puml toDTO(listWaitingRoom)]]
+mapper- ->listDTO** : create()
+
+loop for each SnsUser in listWaitingRoom
+
+mapper -> list : snsUser = getSnsUser(i)
+activate list
+deactivate list
+
+mapper -> snsu : name = getName()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : gender = getGender()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : birthDate = getBirthDate()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : snsUserNumber = getSnsUserNumber()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : phoneNumber = getPhoneNumber()
+activate snsu
+deactivate snsu
+
+mapper - -> snsuDTO** : create(name, gender, birthDate, snsUserNumber, phoneNumber)
+
+mapper -> listDTO : add(snsUserDto)
+activate listDTO
+deactivate listDTO
+
+end
+
+<- - mapper : [[/US008_SD.puml listSnsUserDto]]
+deactivate mapper
+
+
+@enduml
+
+@startuml
+autonumber
+
+participant ":WaitingRoomMapper" as mapper
+participant "listWaitingRoom: List<SnsUser>" as list
+participant "listWaitingRoomDTO: List<SnsUserDto>" as listDTO
+participant "snsUser: SnsUser" as snsu
+participant "snsUserDto: SnsUserDto" as snsuDTO
+
+activate mapper
+[o->mapper : [[/US008_SD.puml toDTO(listWaitingRoom)]]
+mapper- ->listDTO** : create()
+
+loop for each SnsUser in listWaitingRoom
+
+mapper -> list : snsUser = getSnsUser(i)
+activate list
+deactivate list
+
+mapper -> snsu : name = getName()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : gender = getGender()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : birthDate = getBirthDate()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : snsUserNumber = getSnsUserNumber()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : phoneNumber = getPhoneNumber()
+activate snsu
+deactivate snsu
+
+mapper - -> snsuDTO** : create(name, gender, birthDate, snsUserNumber, phoneNumber)
+
+mapper -> listDTO : add(snsUserDto)
+activate listDTO
+deactivate listDTO
+
+end
+
+<- - mapper : [[/US008_SD.puml listSnsUserDto]]
+deactivate mapper
+
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

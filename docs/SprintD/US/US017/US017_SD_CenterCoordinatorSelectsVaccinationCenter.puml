@@ -1,0 +1,49 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Center Coordinator"
+
+participant ":SelectVaccinationCenterUI" as UI
+participant ":CenterCoordinatorUi" as CCUI
+participant "SelectVaccinationCenterController" as CTRL
+participant ":Company" as Com
+participant "vcStore:\nVaccinationCenterStore" as VcStore
+participant ":VaccinationCenterMapper" as VCMapper
+participant "lvaccinationCenters: List<VaccinationCenter>" as ListVCenters
+participant "lvaccinationCentersDTO : List<vaccinationCentersDTO>" as VCListDTO
+
+
+note left UI : After login, this UI will run automatically
+
+activate UI
+UI->CTRL : lvaccinationCenters = getVaccinationCenters()
+activate CTRL
+CTRL->Com :vcStore = getVaccinationCenterStore()
+activate Com
+deactivate Com
+CTRL->VcStore: lvaccinationCenters = getVaccinationCenters()
+activate VcStore
+deactivate VcStore
+CTRL->VCMapper: toDTO(lvaccinationCenters)
+activate VCMapper
+ref over VCMapper
+:[[/US017_SD_VaccinationCenterMapper_toDTO_List.puml SD_VaccinationCenterMapper_toDTO_List]]
+
+end ref
+VCMapper --> CTRL : lvaccinationCentersDTO
+deactivate VCMapper
+deactivate CTRL
+
+UI --> "Center Coordinator": shows the vaccination centers list
+deactivate UI
+
+activate "Center Coordinator"
+"Center Coordinator" ->UI : selects the vaccination center to work
+activate UI
+UI ->CCUI: runs automatically CenterCoordinatorUI(vaccinationCenterId)
+activate CCUI
+deactivate CCUI
+deactivate UI
+
+@enduml

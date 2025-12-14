@@ -1,0 +1,38 @@
+@startuml
+autonumber
+actor "Administrator" as Admin
+
+activate Admin
+Admin -> ":System" : asks to record the administration of a vaccine to a sns user
+activate ":System"
+":System" --> Admin : shows list of sns users from the "waiting room" sorted by "arrival time"\nand asks to select one
+deactivate ":System"
+
+Admin -> ":System" : selects a sns user
+activate ":System"
+":System" --> Admin : shows the sns user info and health conditions and asks to confirm
+deactivate ":System"
+
+Admin -> ":System" : confirms presented information
+activate ":System"
+":System" --> Admin : shows a list of vaccines and asks to select one
+deactivate ":System"
+
+Admin -> ":System" : selects a vaccine by lot number
+activate ":System"
+":System" --> Admin : shows vaccine administration process compliance data with the physical conditions\nand asks to type the vaccine administration hour
+deactivate ":System"
+
+Admin -> ":System" : types the vaccine administration hour
+activate ":System"
+":System" --> Admin : shows the administrated vaccine resume and asks to permanently record the information
+deactivate ":System"
+
+Admin -> ":System" : confirms
+activate ":System"
+":System" --> Admin : informs success of operation
+deactivate ":System"
+
+deactivate Admin
+
+@enduml

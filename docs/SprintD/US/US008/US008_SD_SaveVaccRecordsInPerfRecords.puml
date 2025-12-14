@@ -1,0 +1,33 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":VaccinationCenter" as VC
+participant "vaccRecords:\nVaccinationRecords" as vaccRds
+
+activate VC
+[o->VC : [[/US008_SD.puml saveVaccRecordsInPerfRecords(snsUserNumber,vaccRecords)]]
+
+VC->vaccRds: vaccineName = getVaccineName()
+activate vaccRds
+deactivate vaccRds
+VC->vaccRds: doseStep = getDoseStep()
+activate vaccRds
+deactivate vaccRds
+VC->vaccRds: vaccineLotNumber = getVaccineLotNumber()
+activate vaccRds
+deactivate vaccRds
+VC->vaccRds: nurseAdministrationDate = getNurseAdministrationDate()
+activate vaccRds
+deactivate vaccRds
+VC->vaccRds: nurseAdministrationTimeHour = getNurseAdministrationTimeHour()
+activate vaccRds
+deactivate vaccRds
+VC->VC: setPerfRecordsAfterVaccAdministration(\nsnsUserNumber,vaccineName,doseStep,\nvaccineLotNumber, nurseAdministrationDate,\nnurseAdministrationTimeHour)
+activate VC
+deactivate VC
+<-- VC :
+deactivate VC
+
+
+@enduml

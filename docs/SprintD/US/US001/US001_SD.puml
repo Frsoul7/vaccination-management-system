@@ -1,0 +1,173 @@
+@startuml
+autonumber
+'hide footbox
+actor "SNS User" as snsUser
+
+participant ":ScheduleAVaccineUI" as UI
+participant ":ScheduleAVaccineController" as CTRL
+participant ":Company" as Com
+participant "snsUserStore: SnsUserStore" as SNSStore
+participant "vtStore: VaccineTypeStore" as vtStore
+participant ":VaccineTypeMapper" as VTMapper
+participant "vcStore: vaccinationCenterStore" as vcStore
+participant "VaccinationCenter" as selectedVS
+participant ":VaccinationCenterMapper" as VCMapper
+participant "scheduleStore: VaccineSchedulerStore" as schStore
+participant "vaccineScheduler:VaccineScheduler" as vScheduler
+participant ":SMSNotification" as SMSNotification
+participant ":VaccineSchedulerMapper" as VSMapper
+participant "lVaccinationCenters: List<VaccinationCenter>" as ListVCenters
+participant "lVacType: List<VaccineType>" as ListVType
+participant "lVaccinationCentersDTO : List<vaccinationCentersDTO>" as VCListDTO
+participant "lVacTypeDTO : List<vaccineTypeDTO>" as VTListDTO
+participant "objectDTO : VaccineSchedulerDTO" as objDTO
+
+
+participant "AuthFacade" as Aut
+
+activate snsUser
+snsUser -> UI : asks to schedule a vaccine
+activate UI
+UI --> snsUser : requests the required data (snsUserNumber)
+deactivate UI
+snsUser -> UI : types requested data
+activate UI
+UI -> CTRL : validateSnsUserNumber(snsUserNumber)
+activate CTRL
+CTRL->Com : snsUserStore = getSnsUserStore()
+activate Com
+deactivate Com
+CTRL->SNSStore : validateSnsUserNumber(snsUserNumber)
+activate SNSStore
+deactivate SNSStore
+CTRL-->UI : validated
+deactivate CTRL
+
+UI->CTRL : lVacType = getVaccineTypes()
+activate CTRL
+CTRL->Com : vtStore = getVaccineTypeStore()
+activate Com
+deactivate Com
+
+CTRL->vtStore: lVacType = getVaccineTypes()
+
+activate vtStore
+deactivate vtStore
+CTRL->VTMapper: toDTO(lVacType)
+activate VTMapper
+
+ref over VTMapper
+SD_VaccineTypeMapper_toDTO_List
+end ref
+
+VTMapper --> CTRL : lVacTypeDTO
+deactivate VTMapper
+CTRL-->UI : validated
+deactivate CTRL
+UI --> snsUser : presents data and requests selection (vaccineType)
+deactivate UI
+snsUser -> UI : selects the data
+activate UI
+
+UI->CTRL : lVaccinationCenters = getVaccinationCenters()
+activate CTRL
+CTRL->Com : vcStore = getVaccinationCenterStore()
+
+activate Com
+deactivate Com
+
+CTRL->vcStore: lVaccinationCenters = getVaccinationCenters()
+
+activate vcStore
+deactivate vcStore
+CTRL->VCMapper: toDTO(lVaccinationCenters)
+activate VCMapper
+ref over VCMapper
+SD_VaccinationCenterMapper_toDTO_List
+end ref
+VCMapper --> CTRL : lVaccinationCentersDTO
+deactivate VCMapper
+CTRL-->UI : validated
+
+deactivate CTRL
+UI --> snsUser : presents data and requests selection (vaccinationCenter)
+deactivate UI
+snsUser -> UI : selects the data
+activate UI
+UI --> snsUser : requests the SMS notification
+deactivate UI
+snsUser -> UI : selects the data
+activate UI
+UI --> snsUser : requests the date
+deactivate UI
+snsUser -> UI : types the date
+activate UI
+UI ->CTRL : timeOfFreeSlots=getTimeOfFreeSlots(date, vaccinationCenterID)
+activate CTRL
+CTRL -> vcStore : timeOfFreeSlots = getTimeOfFreeSlots(date, vaccinationCenterId)
+activate vcStore
+deactivate vcStore
+deactivate CTRL
+UI --> snsUser : requests to select a free slot
+deactivate UI
+snsUser -> UI : select data
+activate UI
+UI->CTRL : registerVaccineScheduler(snsUserNumber, vaccinationCenter, vaccineType, date, time)
+activate CTRL
+CTRL->selectedVS : schedulerStore = getVaccineSchedulerStore()
+activate selectedVS
+deactivate selectedVS
+CTRL->schStore : vaccineScheduler = registerVaccineScheduler(snsUserNumber, vaccinationCenter, vaccineType, date, time)
+activate schStore
+schStore--> vScheduler** : create (snsUserNumber, vaccineType, date, time)
+deactivate schStore
+
+CTRL-> VSMapper : toDTO(vaccineScheduler)
+activate VSMapper
+ref over VSMapper
+SD_VaccineSchedulerMapper_toDTO_Object
+end ref
+VSMapper --> CTRL : objectDTO
+deactivate VSMapper
+
+
+deactivate CTRL
+UI-->snsUser : shows data and asks for confirmation
+deactivate UI
+snsUser -> UI : confirms data
+activate UI
+UI->CTRL : saveVaccineScheduler()
+activate CTRL
+CTRL->schStore : saveVaccineScheduler()
+activate schStore
+schStore -> schStore : validateVaccineScheduleIsUnique(vaccineScheduler)
+activate schStore
+deactivate schStore
+schStore -> schStore : addVaccineSchedule(vaccineScheduler)
+activate schStore
+deactivate schStore
+deactivate schStore
+deactivate CTRL
+
+alt if smsConfirmation is active
+UI->CTRL : sendSMS()
+activate CTRL
+CTRL -> SMSNotification : sendSMS()
+activate SMSNotification
+SMSNotification -> SMSNotification : sendSMS(phoneNumber)
+activate SMSNotification
+deactivate SMSNotification
+deactivate SMSNotification
+deactivate CTRL
+
+end
+UI-->snsUser : show success of the operation
+
+
+deactivate UI
+deactivate snsUser
+
+
+
+
+@enduml

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.NurseGUI">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="600.0" text="MENU: NURSE" textFill="#247ec0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="370.0" prefWidth="257.0" style="-fx-background-color: #f0f9ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnSessionLogout" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnSessionLogoutAction" text="LOGOUT" />
+            <Label layoutX="22.0" layoutY="24.0" text="Please, choose your action" textFill="#247ec0">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Button fx:id="btnTest" layoutX="82.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnTestAction" text="TEST VC ID" />
+            <Label fx:id="lbTest" layoutX="167.0" layoutY="335.0" text="##" />
+            <Button fx:id="btnJumpToVaccAdministrationMenu" layoutX="42.0" layoutY="78.0" mnemonicParsing="false" onAction="#btnJumpToVaccAdministrationMenuAction" prefHeight="25.0" prefWidth="511.0" text="Record SNS User administration of a vaccine" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

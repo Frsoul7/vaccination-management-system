@@ -1,0 +1,105 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class RegisterArrivalOfSnsUserToTakeVaccineController {
++getVaccineScheduler(snsUserNumber)
++setSnsUserArrivalTime(arrivalTime)
++addSnsUserToWaitingList(snsUser)
+}
+
+class RegisterArrivalOfSnsUserToTakeVaccineUI {
+}
+
+class "VaccinationCenter" {
+  -name
+  -address
+  -phoneNumber
+  -emailAddress
+  -faxNumber
+  -websiteAddress
+  -openHour
+  -closeHour
+  -slotDuration
+  -maximumNumberOfVaccinesPerSlot
+  -vaccinationCenterType
+  -**designation**
+  -waitingList
+  +getVaccineSchedulerStore()
+  +addSnsUserToWaitingList(snsUser)
+  +validateSnsUserInWaitingList(snsUser)
+  +addToWaitingList(snsUser)
+}
+
+class "VaccineSchedulerStore"{
++getVaccineSchedulerBySnsUserNumber(snsUserNumber)
+}
+
+class "VaccineSchedulerMapper"{
++toDTO(vaccineScheduler)
+}
+
+class SnsUserStore {
++getSnsUserBySnsUserNumber(snsUserNumber)
+}
+
+class SnsUser {
+ -name
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -SnsUserNumber
+ -**address**
+ -**birthdate**
+ -**arrivalTime**
+ -**gender**
+ +setSnsUserArrivalTime(arrivalTime)
+}
+
+class "VaccineScheduler"{
+-snsUserNumber
+-vaccineType
+-date
+-time
+-vaccinationCenter
++validateArrivalTime(arrivalTime)
++getSnsUserNumber()
++getVaccinationCenter()
++getDateTime()
++getVaccineType()
++VaccineScheduler(snsUserNumber, vaccineType, ...)
+}
+
+class "VaccineSchedulerDTO"{
+-snsUserNumber
+-vaccineType
+-dateTime
+-vaccineType
++VaccineSchedulerDTO(snsUserNumber, vaccineType, ...)
+}
+
+class Company {
+  -designation
+  +getSnsUserBySnsUserNumber(snsUserNumber)
+}
+
+
+RegisterArrivalOfSnsUserToTakeVaccineUI ..> RegisterArrivalOfSnsUserToTakeVaccineController
+RegisterArrivalOfSnsUserToTakeVaccineController ..> VaccinationCenter
+RegisterArrivalOfSnsUserToTakeVaccineController ..> Company
+RegisterArrivalOfSnsUserToTakeVaccineController ..> VaccineSchedulerStore
+RegisterArrivalOfSnsUserToTakeVaccineController ..> VaccineSchedulerMapper
+RegisterArrivalOfSnsUserToTakeVaccineController ..> VaccineScheduler
+RegisterArrivalOfSnsUserToTakeVaccineController ..> SnsUserStore
+RegisterArrivalOfSnsUserToTakeVaccineController ..> SnsUser
+
+VaccinationCenter "1" --> "1" VaccineSchedulerStore : use
+VaccineSchedulerStore "1" --> "*" VaccineScheduler : has
+
+Company "1" --> "1" SnsUserStore : use
+SnsUserStore "1" --> "*" SnsUser : has
+
+VaccineSchedulerMapper ..> VaccineSchedulerDTO
+VaccineSchedulerMapper ..> VaccineScheduler
+
+
+@enduml

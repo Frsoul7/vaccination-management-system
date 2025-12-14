@@ -1,0 +1,37 @@
+@startuml
+autonumber
+actor "Coordinator" as coord
+
+activate coord
+coord -> ":System" : stars the verification of vaccination statistics
+
+activate ":System"
+":System" --> coord : requests the required date interval (start and end dates)
+deactivate ":System"
+
+coord -> ":System" : types required information according to the data field
+
+activate ":System"
+":System" --> coord : requests confirmation
+deactivate ":System"
+
+coord -> ":System" : confirms
+
+activate ":System"
+":System" --> coord : shows the results and ask if want to save
+deactivate ":System"
+
+coord -> ":System" : confirms
+
+activate ":System"
+":System" --> coord : request full path of csv file to save
+deactivate ":System"
+
+coord -> ":System" : types data (filepath)
+
+activate ":System"
+":System" --> coord : informs about the (in)success of the operation
+deactivate ":System"
+
+
+@enduml

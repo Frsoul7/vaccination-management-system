@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="109px" preserveAspectRatio="none" style="width:320px;height:109px;background:#FFFFFF;" version="1.1" viewBox="0 0 320 109" width="320px" zoomAndPan="magnify"><defs><filter height="300%" id="fmpiem0u2tvpf" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#fmpiem0u2tvpf)" height="90" style="stroke:#000000;stroke-width:1.5;" width="199" x="109" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="183.5" y="23.5332">System</text><ellipse cx="208.5873" cy="62.1175" fill="#FEFECE" filter="url(#fmpiem0u2tvpf)" rx="83.5873" ry="19.1175" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="147.0873" y="65.846">Schedule a vaccine</text><!--MD5=[f532526e249e2afdfba79ae5d415ddf5]
+entity sns--><ellipse cx="35.5" cy="30" fill="#FEFECE" filter="url(#fmpiem0u2tvpf)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M35.5,38 L35.5,65 M22.5,46 L48.5,46 M35.5,65 L22.5,80 M35.5,65 L48.5,80 " fill="none" filter="url(#fmpiem0u2tvpf)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="6" y="100.0332">SNS user</text><!--MD5=[3bdfffd24d18d9e1fa45372b45e1d8e0]
+link sns to Schedule a vaccine--><path d="M65.12,62 C80.37,62 100.04,62 119.87,62 " fill="none" id="sns-to-Schedule a vaccine" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="124.91,62,115.91,58,119.91,62,115.91,66,124.91,62" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[53eaa629b5c073fb607bf619ce808aae]
+@startuml
+
+left to right direction
+"SNS user" as sns
+rectangle System{
+sns - -> (Schedule a vaccine)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

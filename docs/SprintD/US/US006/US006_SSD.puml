@@ -1,0 +1,9 @@
+@startuml
+autonumber
+actor "System Clock" as SClock
+
+activate SClock
+SClock -> ":System" : clock triggers at configured hour
+deactivate SClock
+
+@enduml

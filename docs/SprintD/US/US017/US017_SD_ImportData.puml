@@ -1,0 +1,110 @@
+@startuml
+autonumber
+
+participant ":ImportLegacySystemDataController" as CTRL
+participant ":Validations" as vald
+participant "data:ImportedDataInformation" as ImpDt
+participant "snsUserStore: SnsUserStore" as SNSStore
+participant "snsUser:\nSnsUser" as SnsU
+participant "vStore:\nVaccineStore" as VStore
+participant ":HealthRecords" as HR
+participant "vaccRecordsStore:\nVaccinationRecordsStore" as vRcdStore
+participant "snsUserVaccinationRecords:\nVaccinationRecords" as vRCD
+participant "newSnsUserVaccinationRecords:\nVaccinationRecords" as nvRCD
+participant "vacc:\nVaccine" as Vac
+participant "vaccinationCenter1:VaccinationCenter" as selectedVS
+participant "admProc:\nAdministrationProcess" as AdmProc
+participant "perfRecordsStore:\nPerformanceRecordsStore" as pRdsStore
+participant "perfRecords:\nPerformanceRecords" as pRecords
+
+participant "lLegacyData:List<String>" as listData
+participant "lImportedLegacyData:List<ImportedDataInformation>" as listImpData
+participant "attributes:String[]" as atr
+
+
+activate CTRL
+loop for each line in lLegacyData
+
+CTRL -> CTRL : attributes = splitLine(line)
+activate CTRL
+deactivate CTRL
+loop for each attribute in attributes
+CTRL -> vald : validateNumberOfAttributes(attributes.length())
+activate vald
+deactivate vald
+CTRL -> vald : validateSnsUserNumber(attributes[0])
+activate vald
+deactivate vald
+note over vald
+Continue until all attributes have been validated
+end note
+end
+CTRL -> SNSStore: validateIfSnsUserExist(snsUserNumber)
+activate SNSStore
+deactivate SNSStore
+CTRL -> VStore: validateIfVaccineExist(lotNumber)
+activate VStore
+deactivate VStore
+CTRL -> SNSStore: vaccRecordsStore = getSnsUserVaccinationRecords(snsUserNumber)
+activate SNSStore
+SNSStore -> HR: getSnsUserVaccinationRecords()
+activate HR
+deactivate HR
+deactivate SNSStore
+CTRL -> vRcdStore: checkIfSnsUSerTakeAnyDoseOfVaccine(lotNumber)
+activate vRcdStore
+deactivate vRcdStore
+alt true
+CTRL -> vRcdStore: doseNumber = getDoseNumber()
+activate vRcdStore
+vRcdStore -> vRCD: getDoseNumber()
+activate vRCD
+deactivate vRCD
+deactivate vRcdStore
+end
+CTRL -> CTRL: validateDoseNumber(doseNumber)
+activate CTRL
+deactivate CTRL
+
+CTRL -> VStore:vacc = getVaccine(LotNumber)
+activate VStore
+deactivate VStore
+CTRL -> Vac: checkIfDoseNumberIsValid(doseNumber,snsUserAge)
+activate Vac
+Vac -> Vac: admProc=getAdministrationProcessByAge(age)
+activate Vac
+deactivate Vac
+Vac -> AdmProc: numberOfDoses=getNumberOfDoses()
+activate AdmProc
+deactivate AdmProc
+Vac -> Vac: checkIfDoseNumberIsValid(numberOfDoses)
+activate Vac
+deactivate Vac
+deactivate Vac
+CTRL -> selectedVS: pRdsStore=getPerformanceRecordsStore()
+activate selectedVS
+deactivate selectedVS
+CTRL -> selectedVS : registerImportedData(snsUserNumber, vaccineName, doseStep...)
+activate selectedVS
+selectedVS -> pRdsStore:  registerImportedData(snsUserNumber, vaccineName, doseStep...)
+deactivate selectedVS
+activate pRdsStore
+pRdsStore --> pRecords** : create(snsUserNumber, vaccineName, doseStep...)
+deactivate pRdsStore
+CTRL -> vRcdStore : registerVaccinationImportedData(vaccineName, doseStep, lotNumber...)
+activate vRcdStore
+vRcdStore --> nvRCD**:create(vaccineName, doseStep, lotNumber...)
+deactivate vRcdStore
+CTRL -> Vac: vaccineType=getVaccineType()
+activate Vac
+deactivate Vac
+CTRL -> SnsU: snsUserName=getSnsUserName()
+activate SnsU
+deactivate SnsU
+CTRL --> ImpDt**: create(vaccineType, snsUserName, snsUserNumber,...)
+CTRL -> CTRL: addImportedData(data)
+activate CTRL
+deactivate CTRL
+end
+
+@enduml

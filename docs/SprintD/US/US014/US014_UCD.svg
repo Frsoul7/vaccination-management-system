@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="127px" preserveAspectRatio="none" style="width:426px;height:127px;background:#FFFFFF;" version="1.1" viewBox="0 0 426 127" width="426px" zoomAndPan="magnify"><defs><filter height="300%" id="fpc6k3k732bpi" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#fpc6k3k732bpi)" height="108" style="stroke:#000000;stroke-width:1.5;" width="281" x="133" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="248.5" y="23.5332">System</text><ellipse cx="273.2727" cy="70.7545" fill="#FEFECE" filter="url(#fpc6k3k732bpi)" rx="124.2727" ry="27.2545" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="214" x="166.2727" y="74.4831">US014: Import SNS Users CSV file</text><!--MD5=[79a439086b036a57b90a01d7b2f8bbd1]
+entity admin--><ellipse cx="47.5" cy="39" fill="#FEFECE" filter="url(#fpc6k3k732bpi)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M47.5,47 L47.5,74 M34.5,55 L60.5,55 M47.5,74 L34.5,89 M47.5,74 L60.5,89 " fill="none" filter="url(#fpc6k3k732bpi)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="6" y="109.0332">Administrator</text><!--MD5=[d793ff229d93fee429cc96e8e56d5ec7]
+link admin to US014: Import SNS Users CSV file--><path d="M89.06,71 C104.87,71 123.94,71 143.72,71 " fill="none" id="admin-to-US014: Import SNS Users CSV file" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="148.76,71,139.76,67,143.76,71,139.76,75,148.76,71" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ad54ccfb28a34c0933241cf1de9d13ac]
+@startuml
+
+left to right direction
+"Administrator" as admin
+rectangle System{
+admin - -> (US014: Import SNS Users CSV file)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

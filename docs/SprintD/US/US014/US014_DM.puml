@@ -1,0 +1,40 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+
+class User {
+  -name
+  -password
+  -email
+}
+
+
+class Administrator {
+}
+
+class "SNS User" {
+ -name
+ -email
+ -phone number
+ -citizen card number
+ -SNS user number
+ -**address**
+ -**birthdate**
+ -**arrivalTime**
+ -**gender**
+}
+
+class Company {
+  -Designation
+}
+
+
+Company "1" -- "*" "SNS User" : knows >
+Company "1" -- "*" Administrator : employs >
+User "1"-- "0..1" "SNS User" : relates to <
+"Administrator" "1" -- "*" "SNS User" : registers >
+
+
+@enduml

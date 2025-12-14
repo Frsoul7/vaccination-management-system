@@ -1,0 +1,220 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ImportLegacySystemDataUI{
+}
+
+class ImportLegacySystemDataController {
++validateFile(filePath)
++importLegacyData(filePath,timeCriteria, orderCriteria)
++splitLine(line)
++validateDoseNumber(doseNumber)
++addImportedData(data)
++getSortAlgorithm()
+}
+
+class Validations{
++validateIfFileExists(filePath)
++validateIfFilesIsNotEmpty(filePath)
++validateNumberOfAttributes(attributes.length())
++validateSnsUserNumber(attributes[0])
++allMethodsToValidateAllOtherAttributes()
+}
+class ReadFile{
++readFile(filePath)
+}
+
+class ImportedDataInformation{
+-snsUserName
+-vaccineType
+-snsUserNumber
+-vaccineName
+-doseStep
+-lotNumber
+-scheduledDate
+-scheduledTimeHour
+-arrivalDate
+-arrivalTimeHour
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+-leavingDate
+-leavingTimeHour
++create(vaccineType,snsUserNumber,...)
+}
+
+
+Interface SortAdaptor{
++sort(lImportedLegacyData,timeCriteria,orderCriteria)
+}
+
+class bubbleSort{
++sort(lImportedLegacyData,timeCriteria,orderCriteria)
+}
+
+class mergeSort{
++sort(lImportedLegacyData,timeCriteria,orderCriteria)
+}
+
+class SnsUserStore{
++validateIfSnsUserExists(snsUserNumber)
++getSnsUserVaccinationRecords(snsUserNumber)
+}
+
+class VaccinationRecordsStore{
++checkIfSnsUserTakeAnyDoseOfVaccine(lotNumber)
++getDoseNumber()
++registerVaccinationImportedData(vaccineName,...)
+}
+
+class VaccineStore{
++validateIfVaccineExist(lotNumber)
++getVaccine(lotNumber)
+}
+
+class PerformanceRecordsStore{
++registerImportedDada(snsUserNumber,...)
+}
+
+class ImportLegacySystemDataMapper {
++toDTO(lImportedLegacyData)
++getSnsUserName()
++allMethodsToGetAllOtherAttributes()
+}
+
+class ImportedDataInformationDTO {
++create(snsUserNumber,...)
+}
+
+class VaccinationCenter {
+  -name
+  -address
+  -phoneNumber
+  -emailAddress
+  -faxNumber
+  -websiteAddress
+  -openHours
+  -closeHours
+  -slotDuration
+  -maximumNumberOfVaccinesPerSlot
+  -vaccinationCenterType
+  -designation
+  -lWaitingList
+  -lRecoveryList
+  -vaccinationCenterID
+  -perfRecordsStore
+  -vacSchedulerStore
+  +getPerformanceRecordsStore()
+  +registerImportedDada(snsUserNumber,...)
+}
+
+class PerformanceRecords{
+-snsUserNumber
+-vaccineName
+-doseStep
+-lotNumber
+-scheduledDate
+-scheduledTimeHour
+-arrivalDate
+-arrivalTimeHour
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+-leavingDate
+-leavingTimeHour
++create(snsUserNumber,...)
+}
+
+class Vaccine{
+-name
+-lotNumber
+-id
+-brand
+-vaccineType
+-numberDoses
+-vaccineDosage
++checkIfDoseNumberIsValid(doseNumber,snsUserAge)
++getAdministrationProcessByAge(age)
++getNumberOfDoses()
++checkIfDoseNumberIsValid(numberOfDoses)
++getVaccineType()
+}
+
+class SnsUser {
+ -name
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthdate
+ -gender
+ -arrivalTime
+ +getSnsUserName()
+}
+
+class Company {
+  -Designation
+  +getSnsUserStore()
+  +getVaccineStore()
+}
+
+class VaccinationRecords{
+-vaccineName
+-doseStep
+-vaccineLotNumber
+-administrationDate
+-administrationTimeHour
++getDoseNumber
+}
+
+class HealthRecords {
+-health condition
+-adverse reactions
++getSnsUserVaccinationRecords()
+}
+
+class AdministrationProcess{
+-ageGroup
+-numberOfDoses
+-vaccineDosage
+-timeIntervalBetweenDoses
++getNumberOfDoses()
+}
+
+ImportLegacySystemDataUI ..> ImportLegacySystemDataController
+ImportLegacySystemDataController ..> Validations
+ImportLegacySystemDataController ..> ReadFile
+ImportLegacySystemDataController ..> Company
+ImportLegacySystemDataController ..> SnsUserStore
+ImportLegacySystemDataController ..> VaccineStore
+ImportLegacySystemDataController ..> VaccinationRecordsStore
+ImportLegacySystemDataController ..> Vaccine
+ImportLegacySystemDataController ..> VaccinationCenter
+ImportLegacySystemDataController ..> SnsUser
+ImportLegacySystemDataController ..> ImportedDataInformation
+
+ImportLegacySystemDataController ..> SortAdaptor
+SortAdaptor <|.. bubbleSort
+SortAdaptor <|.. mergeSort
+
+ImportLegacySystemDataController ..> ImportLegacySystemDataMapper
+ImportLegacySystemDataMapper ..> ImportedDataInformation
+ImportLegacySystemDataMapper ..> ImportedDataInformationDTO
+
+Company "1" --> "1" SnsUserStore : use
+Company "1" --> "1" VaccinationCenterStore : use
+Company "1" --> "1" VaccineStore : use
+
+HealthRecords "1" --> "1" VaccinationRecordsStore : use
+
+SnsUserStore "1" --> "*" SnsUser : has
+VaccinationCenterStore "1" --> "*" VaccinationCenter : has
+VaccineStore "1" --> "*" Vaccine : has
+
+VaccinationCenter "1" --> "1" PerformanceRecordsStore : use
+PerformanceRecords "*" --> "1" PerformanceRecordsStore : is part of
+
+SnsUser "1" --> "*" HealthRecords : has
+VaccinationRecords "*" --> "1" VaccinationRecordsStore : is part of
+
+Vaccine "1" --> "*" AdministrationProcess : follows
+
+@enduml

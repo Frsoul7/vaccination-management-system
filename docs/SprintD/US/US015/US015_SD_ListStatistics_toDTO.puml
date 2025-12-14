@@ -1,0 +1,32 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":ListStatisticsMapper" as LTMapper
+participant "lStatistics: List<Statistics>" as ListStatistics
+participant "lStatisticsDTO : List<StatisticsDTO>" as ListStatisticsDTO
+participant "objectDTO : CountDate" as CountDate
+
+activate LTMapper
+[o->LTMapper : toDTO(lStatistics)
+LTMapper-->ListStatisticsDTO** : create()
+
+loop for each entry in lStatistics
+LTMapper -> ListStatistics : countDate.getCount(total)
+activate ListStatistics
+deactivate ListStatistics
+
+LTMapper-> CountDate** : create()
+
+LTMapper -> ListStatisticsDTO : add(objectDTO)
+activate ListStatisticsDTO
+deactivate ListStatisticsDTO
+
+end
+
+<-- LTMapper : [[/US015_SD.puml lStatisticsDTO]]
+
+deactivate LTMapper
+
+
+@enduml

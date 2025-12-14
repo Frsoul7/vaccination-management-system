@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Center Coordinator" as coord
+rectangle System{
+coord --> (Vaccination Process Management)
+}
+
+@enduml

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.VaccineAdministrationGUI">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="600.0" text="MENU: VACCINE ADMINISTRATION" textFill="#247ec0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="370.0" prefWidth="257.0" style="-fx-background-color: #f0f9ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnCancelOperation" alignment="CENTER" layoutX="417.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnCancelOperationAction" prefHeight="47.0" prefWidth="138.0" text="CANCEL&#10;OPERATION" textAlignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+            <Label layoutX="423.0" layoutY="103.0" text="PROGRESS STATUS" textFill="#247ec0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProgressBoard" alignment="CENTER" layoutX="417.0" layoutY="126.0" prefHeight="57.0" prefWidth="138.0">
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRecordVaccinationRecords" layoutX="307.0" layoutY="323.0" mnemonicParsing="false" onAction="#btnRecordVaccinationRecordsAction" text="record" textFill="#00000099" />
+            <Label alignment="CENTER_RIGHT" layoutX="93.0" layoutY="299.0" prefHeight="17.0" prefWidth="19.0" text="mL" textFill="#00000099" />
+            <Label fx:id="lblVaccAdministrationTime" alignment="CENTER_RIGHT" layoutX="127.0" layoutY="299.0" prefHeight="17.0" prefWidth="72.0" text="hh:mm am" textFill="#00000099" />
+            <Label fx:id="lblDosageVolume" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="299.0" prefHeight="17.0" prefWidth="37.0" textFill="#00000099" />
+            <Label fx:id="lblProgressBoardTxt" alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="126.0" prefHeight="57.0" prefWidth="138.0" text="###" textAlignment="CENTER">
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboxVaccineLotNumber" layoutX="68.0" layoutY="198.0" onAction="#cboxVaccineLotNumberAction" prefHeight="25.0" prefWidth="287.0" promptText="- - vaccine lot number - -">
+               <effect>
+                  <Glow level="0.4" />
+               </effect>
+            </ComboBox>
+            <Button fx:id="btnCheckDosage" layoutX="309.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnCheckDosageAction" text="check" textFill="#00000099" />
+            <Label fx:id="lbInfoHealthConditions" alignment="TOP_LEFT" layoutX="67.0" layoutY="113.0" prefHeight="48.0" prefWidth="253.0" text="- n/a -" textFill="#00000099">
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnShowInfoHealthCondit" layoutX="310.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnShowInfoHealthConditAction" text="show" textFill="#00000099" />
+            <ComboBox fx:id="cboxWaitingRoom" layoutX="67.0" layoutY="32.0" onAction="#cboxWaitingRoomAction" prefHeight="25.0" prefWidth="287.0" promptText="- - waiting room list - -">
+               <effect>
+                  <Glow level="0.4" />
+               </effect>
+            </ComboBox>
+            <Label layoutX="54.0" layoutY="326.0" mouseTransparent="true" pickOnBounds="false" text="5. Record vaccine administration" textFill="#247ec0" />
+            <Label layoutX="53.0" layoutY="257.0" mouseTransparent="true" pickOnBounds="false" text="4. Check vaccine administration dosage&#10;and type vaccination hour" textFill="#247ec0" />
+            <Label layoutX="53.0" layoutY="170.0" mouseTransparent="true" pickOnBounds="false" text="3. Select vaccine lot number" textFill="#247ec0" />
+            <Label layoutX="53.0" layoutY="74.0" mouseTransparent="true" pickOnBounds="false" text="2. Check selected sns user info and&#10;    health conditions" textFill="#247ec0" />
+            <Label layoutX="53.0" layoutY="8.0" mouseTransparent="true" pickOnBounds="false" text="1. Select sns user" textFill="#247ec0" />
+            <Button fx:id="btnTypeDate" layoutX="309.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnTypeDateAction" prefHeight="25.0" prefWidth="46.0" text="date" textFill="#00000099" />
+            <Label fx:id="lblVaccAdministrationDate" alignment="CENTER_RIGHT" layoutX="226.0" layoutY="171.0" prefHeight="17.0" prefWidth="72.0" text="dd/MM/yyyy" textFill="#00000099" />
+            <Button fx:id="btnExit" alignment="CENTER" layoutX="418.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnExitAction" prefHeight="47.0" prefWidth="138.0" text="EXIT" textAlignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Circle fx:id="circleTwo" layoutX="31.0" layoutY="83.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Circle fx:id="circleOne" layoutX="31.0" layoutY="17.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Circle fx:id="circleThree" layoutX="31.0" layoutY="180.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Circle fx:id="circleFour" layoutX="31.0" layoutY="266.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Circle fx:id="circleFive" layoutX="31.0" layoutY="335.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,38 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":ImportLegacySystemDataMapper" as map
+participant "lImportedLegacyData:List<ImportedDataInformation>" as listImpData
+participant "lImportedLegacyDataDTO : List<ImportedDataInformationDTO>" as ListDTO
+participant "data:ImportedDataInformation" as ImpDt
+participant "objectDTO : ImportedDataInformationDTO" as objDTO
+
+activate map
+[o->map : toDTO(lImportedLegacyData)
+map-->lImportedLegacyDataDTO** : create()
+
+loop for each ImportedDataInformation in lImportedLegacyData
+map -> listImpData : data = getImportedDataInformation(i)
+activate listImpData
+deactivate listImpData
+
+map -> ImpDt : snsUserName = getSnsUserName()
+activate ImpDt
+deactivate ImpDt
+
+note left : continues until getting all imported information
+
+map --> objDTO** : create(snsUserName, vaccineType, ...)
+
+map -> ListDTO : add(objectDTO)
+activate ListDTO
+deactivate ListDTO
+
+end
+
+<-- map : lImportedLegacyDataDTO
+deactivate map
+
+
+@enduml

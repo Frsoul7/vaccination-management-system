@@ -1,0 +1,53 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ImportSNSUserUI {
+}
+
+class ImportSNSUserController {
++startImport(filePath)
+}
+
+class Company {
++getSnsUserStore()
+}
+
+class SnsUserStore {
++isSNSUserAlreadyExists(snsUserNumber)
++registerSnsUser(name, gender, phoneNumber, email, citizenCardNumber, snsUserNumber, birthdate)
++saveSnsUser()
++validateSnsUser(snsUser)
++addSnsUser(snsUser)
+}
+
+class SnsUser{
++create(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
++getName()
++getEmail()
+}
+
+
+class AuthFacade {
++existUserEmail(email)
++addUser(name, email, password)
+}
+
+class PasswordGenerator{
++getPassword()
+}
+
+
+ImportSNSUserUI ..> ImportSNSUserController
+
+ImportSNSUserController ..> Company
+ImportSNSUserController ..> SnsUserStore
+
+Company "1" --> "1" SnsUserStore : use
+
+SnsUserStore "1" --> "*" SnsUser : has
+SnsUserStore ..> AuthFacade
+SnsUserStore ..> PasswordGenerator
+
+
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+
+left to right direction
+"SNS user" as sns
+"Receptionist" as Recep
+"Nurse" as Nurse
+"Administrator" as Admin
+"Center Coordinator" as Coordinator
+"User" as user
+
+user <|-- sns
+user <|-- Nurse
+user <|-- Coordinator
+user <|-- Recep
+user <|-- Admin
+
+
+rectangle System{
+sns --> (US001: Schedule a Vaccine)
+Recep --> (US002: Schedule a Vaccination)
+Recep --> (US003: Register SNS User)
+Recep --> (US004: Register the arrival of SNS User to a Vaccination Center)
+Nurse --> (US005: Consult the users in the waiting room of a Vaccination center)
+Admin --> (US009: Register Vaccination Centers)
+Admin --> (US010: Register Employee)
+Admin --> (US011: Get a List of Employees)
+Admin --> (US012: Specify Vaccine Type)
+Admin --> (US013: Specify a new Vaccine and its Administration Process)
+Admin --> (US014: Load a set of users from a CSV file)
+}
+
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "VaccAdministrationDosageMapper" as mapper
+participant "vacc: Vaccine" as vacc
+participant "vaccAdministrationDosageDto: VaccAdministrationDosageDTO" as objDTO
+
+activate mapper
+[o->mapper : [[/US008_SD.puml toDTO(vacc, nextDoseStep, vaccDosage)]]
+
+
+mapper -> vacc: vaccineTypeObj = getVaccineType()
+activate vacc
+deactivate vacc
+
+mapper -> vacc: vaccineNameObj = getName()
+activate vacc
+deactivate vacc
+
+mapper -> vacc: vaccineLotNumberObj = getLotNumber()
+activate vacc
+deactivate vacc
+
+mapper -> mapper: vaccineDoseStepObj = nextDoseStep
+activate mapper
+deactivate mapper
+
+mapper -> mapper : vaccineDosageObj = vaccDosage
+activate mapper
+deactivate mapper
+
+mapper --> objDTO** : create(vaccineTypeObj, vaccineNameObj, vaccineLotNumberObj, vaccineDoseStepObj, vaccineDosageObj)
+
+
+
+<-- mapper : [[/US008_SD.puml vaccAdministrationDosageDto]]
+deactivate mapper
+
+
+@enduml

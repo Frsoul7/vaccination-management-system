@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="117px" preserveAspectRatio="none" style="width:370px;height:117px;background:#FFFFFF;" version="1.1" viewBox="0 0 370 117" width="370px" zoomAndPan="magnify"><defs><filter height="300%" id="f148swzbnh28bm" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#f148swzbnh28bm)" height="98" style="stroke:#000000;stroke-width:1.5;" width="237" x="121" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="214.5" y="23.5332">System</text><ellipse cx="239.7412" cy="65.9482" fill="#FEFECE" filter="url(#f148swzbnh28bm)" rx="102.7412" ry="22.9482" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="156.2412" y="69.6768">US003: Register SNS User</text><!--MD5=[c379f63bf4dce4781374740e142de8a3]
+entity recep--><ellipse cx="41.5" cy="34" fill="#FEFECE" filter="url(#f148swzbnh28bm)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M41.5,42 L41.5,69 M28.5,50 L54.5,50 M41.5,69 L28.5,84 M41.5,69 L54.5,84 " fill="none" filter="url(#f148swzbnh28bm)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="6" y="104.0332">Receptionit</text><!--MD5=[0a0f38d9c4f7b2e0d2e41f5d26274c5b]
+link recep to US003: Register SNS User--><path d="M77.09,66 C92.69,66 112.05,66 131.89,66 " fill="none" id="recep-to-US003: Register SNS User" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="136.94,66,127.94,62,131.94,66,127.94,70,136.94,66" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[322df2233ece7a36303a6477f0bbb723]
+@startuml
+
+left to right direction
+"Receptionit" as recep
+rectangle System{
+recep - -> (US003: Register SNS User)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

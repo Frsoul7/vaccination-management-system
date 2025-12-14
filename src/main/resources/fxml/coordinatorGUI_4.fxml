@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.CoordinatorGUI_4">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="600.0" text="MENU: CENTER COORDINATOR - Performance Analysis" textFill="#247ec0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <AnchorPane prefHeight="370.0" prefWidth="206.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="BackButton" layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#BackToMenu" text="BACK" />
+            <Button fx:id="AnalyzeButton" layoutX="70.0" layoutY="207.0" mnemonicParsing="false" onAction="#AnalyzePerformance" text="ANALYZE" textFill="#247ec0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="LogoutButton" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#SessionLogout" text="LOGOUT" />
+            <Label fx:id="dateLabelInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="51.0" text="Select date to analyse" />
+            <TextField fx:id="dateField" alignment="CENTER" layoutX="25.0" layoutY="76.0" prefHeight="25.0" prefWidth="159.0" promptText="DD/MM/YYYY" />
+            <Label fx:id="intervalLabelInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="113.0" text="Time interval (minutes)" />
+            <TextField fx:id="timeIntervalField" alignment="CENTER" layoutX="25.0" layoutY="136.0" prefHeight="25.0" prefWidth="159.0" promptText="e.g., 5, 10, 30" />
+            <Label fx:id="errorMessage" layoutX="10.0" layoutY="167.0" prefWidth="186.0" textFill="#f25555" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <ListView fx:id="ResultsListView" prefHeight="328.0" prefWidth="362.0" BorderPane.alignment="CENTER">
+      </ListView>
+   </right>
+</BorderPane>

@@ -1,0 +1,26 @@
+@startuml
+autonumber
+actor "Center Coordinator" as cord
+
+activate cord
+
+cord -> ":System" : starts the analysis of the performance of a center
+activate ":System"
+
+":System" --> cord : requests the date and the time interval
+deactivate ":System"
+
+cord -> ":System" : types the required information
+activate ":System"
+
+":System" --> cord : shows all selected data and requests confirmation
+deactivate ":System"
+
+cord -> ":System" : confirms data
+activate ":System"
+
+":System" --> cord : shows the performance and informs about the success of the operation
+deactivate ":System"
+deactivate cord
+
+@enduml

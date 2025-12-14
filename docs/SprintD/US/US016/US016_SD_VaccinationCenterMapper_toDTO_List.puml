@@ -1,0 +1,42 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":VaccinationCenterMapper" as VCMapper
+participant "lvaccinationCenters: List<VaccinationCenter>" as ListVCenters
+participant "lvaccinationCentersDTO : List<vaccinationCentersDTO>" as VCListDTO
+participant "vaccinationCenter : VaccinationCenter" as Vcenter
+participant "objectDTO : VaccinationCenterDTO" as objDTO
+
+activate VCMapper
+[o->VCMapper : [[/US016_SD_CenterCoordinatorSelectsVaccinationCenter.puml toDTO(lvaccinationCenters)]]
+VCMapper-->VCListDTO** : create()
+
+loop for each VaccinationCenter in lvaccinationCenters
+VCMapper -> ListVCenters : vaccinationCenter = getVaccinationCenter(i)
+activate ListVCenters
+deactivate ListVCenters
+
+VCMapper -> Vcenter : name = getName()
+activate Vcenter
+deactivate Vcenter
+
+VCMapper -> Vcenter : address = getAddress()
+activate Vcenter
+deactivate Vcenter
+
+note left : continues until getting all vaccinationCenter attributes
+
+VCMapper --> objDTO** : create(name, address, ...)
+
+VCMapper -> VCListDTO : add(objectDTO)
+activate VCListDTO
+deactivate VCListDTO
+
+end
+
+<-- VCMapper : [[/US016_SD_CenterCoordinatorSelectsVaccinationCenter.puml lvaccinationCentersDTO]]
+deactivate VCMapper
+
+
+@enduml

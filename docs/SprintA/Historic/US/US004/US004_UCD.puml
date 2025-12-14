@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"SNS user" as sns
+rectangle System{
+sns --> (To be informed that my recovery period has ended)
+}
+
+@enduml

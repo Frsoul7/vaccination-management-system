@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.Welcome2GUI">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="384.0" style="-fx-background-color: #e6eef4;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="92.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="328.0" layoutX="28.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/wagmiLogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="8.0" layoutY="43.0" prefHeight="30.0" prefWidth="373.0" text="WELCOME TO " textFill="#247ec0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="8.0" layoutY="306.0" prefHeight="30.0" prefWidth="373.0" text="PANDEMIC MANAGEMENT SOLUTIONS" textFill="#247ec0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="216.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="48.0" layoutY="42.0" text="Login Page">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="114.0" text="user email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="190.0" text="user password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userEmail" layoutX="12.0" layoutY="145.0" prefHeight="25.0" prefWidth="193.0" promptText="type your email" />
+            <PasswordField fx:id="userPass" layoutX="13.0" layoutY="222.0" prefHeight="25.0" prefWidth="192.0" promptText="type your password" />
+            <Button fx:id="loginButton" layoutX="63.0" layoutY="279.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="51.0" prefWidth="91.0" text="Login">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="wrongLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="344.0" textFill="#e85f5f" />
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="FileSaveButton" mnemonicParsing="false" onAction="#saveDataButton" text="Save data" />
+                  <MenuItem fx:id="FileLoadButton" mnemonicParsing="false" onAction="#loadDataButton" text="Load data" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="QuitButton" mnemonicParsing="false" onAction="#closeApp" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem fx:id="AboutButton" mnemonicParsing="false" onAction="#aboutUs" text="WAGMI App" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

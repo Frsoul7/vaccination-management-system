@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="145px" preserveAspectRatio="none" style="width:472px;height:145px;background:#FFFFFF;" version="1.1" viewBox="0 0 472 145" width="472px" zoomAndPan="magnify"><defs><filter height="300%" id="f1437t0ilo8jzo" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#f1437t0ilo8jzo)" height="126" style="stroke:#000000;stroke-width:1.5;" width="373" x="87" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="248.5" y="23.5332">System</text><ellipse cx="273.3927" cy="79.9785" fill="#FEFECE" filter="url(#f1437t0ilo8jzo)" rx="170.3927" ry="36.4785" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="311" x="117.8927" y="83.7071">To check the SNS user info and health conditions</text><!--MD5=[6a1fdf58a6ccf033c5989c890f6048c5]
+entity n--><ellipse cx="24.5" cy="48" fill="#FEFECE" filter="url(#f1437t0ilo8jzo)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M24.5,56 L24.5,83 M11.5,64 L37.5,64 M24.5,83 L11.5,98 M24.5,83 L37.5,98 " fill="none" filter="url(#f1437t0ilo8jzo)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="6" y="118.0332">Nurse</text><!--MD5=[eaef77eb29bf56f91b40ac07e83fc3b9]
+link n to To check the SNS user info and health conditions--><path d="M43.26,80 C56.43,80 75.85,80 97.92,80 " fill="none" id="n-to-To check the SNS user info and health conditions" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="102.97,80,93.97,76,97.97,80,93.97,84,102.97,80" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[940e956afea018af2b9a17ac9b1dc8a4]
+@startuml
+
+left to right direction
+"Nurse" as n
+rectangle System{
+n - -> (To check the SNS user info and health conditions)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

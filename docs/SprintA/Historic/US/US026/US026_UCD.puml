@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"User" as user
+rectangle System{
+user --> (To authenticate in the system)
+}
+
+@enduml

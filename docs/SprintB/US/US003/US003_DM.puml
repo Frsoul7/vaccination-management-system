@@ -1,0 +1,37 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+
+class User {
+  -name
+  -password
+  -email
+}
+
+
+class Receptionist {
+}
+
+class "SNS User" {
+ -name
+ -email
+ -phone number
+ -citizen card number
+ -SNS user number
+ -Birthdate
+ -gender
+}
+class Company {
+  -Designation
+}
+
+
+Company "1" -- "*" "SNS User" : knows >
+Company "1" -- "*" Receptionist : employs >
+User "1"-- "0..1" "SNS User" : relates to <
+"Receptionist" "1" -- "*" "SNS User" : registers >
+
+
+@enduml

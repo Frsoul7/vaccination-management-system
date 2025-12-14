@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Administrator" as admin
+rectangle System{
+admin --> (US014: Import SNS Users CSV file)
+}
+
+@enduml

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="294px" preserveAspectRatio="none" style="width:835px;height:294px;background:#FFFFFF;" version="1.1" viewBox="0 0 835 294" width="835px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="192.0156" style="stroke:#181818;stroke-width:1.0;" width="10" x="184" y="47.6094"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="454" y="100.3125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="189" x2="189" y1="37.6094" y2="257.625"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="459" x2="459" y1="37.6094" y2="257.625"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="710" x2="710" y1="205.9688" y2="257.625"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="180" x="99" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="166" x="106" y="26.5332">:VaccineSchedulerMapper</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="180" x="99" y="256.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="166" x="106" y="278.1582">:VaccineSchedulerMapper</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="244" x="337" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="230" x="344" y="26.5332">vaccineScheduler:VaccineScheduler</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="244" x="337" y="256.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="230" x="344" y="278.1582">vaccineScheduler:VaccineScheduler</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="238" x="591" y="256.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="224" x="598" y="278.1582">objectDTO : VaccineSchedulerDTO</text><rect fill="#FFFFFF" height="192.0156" style="stroke:#181818;stroke-width:1.0;" width="10" x="184" y="47.6094"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="454" y="100.3125"/><ellipse cx="7.5" cy="69.2109" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/><polygon fill="#181818" points="172,65.9609,182,69.9609,172,73.9609,176,69.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="12" x2="178" y1="69.9609" y2="69.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="15" y="65.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="26" y="65.1045">toDTO(vaccineScheduler)</text><polygon fill="#181818" points="442,96.3125,452,100.3125,442,104.3125,446,100.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="194" x2="448" y1="100.3125" y2="100.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="201" y="95.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="230" x="212" y="95.4561">snsUserNumber = getSnsUserNumber()</text><path d="M85,143.3125 L85,169.3125 L562,169.3125 L562,153.3125 L552,143.3125 L85,143.3125 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M552,143.3125 L552,153.3125 L562,153.3125 L552,143.3125 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="307" x="165.5" y="161.8076">continues until getting all vaccineScheduler attributes</text><polygon fill="#181818" points="579,193.0156,589,197.0156,579,201.0156,583,197.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="194" x2="585" y1="197.0156" y2="197.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="201" y="192.1592">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="236" x="212" y="192.1592">create(snsUserNumber, vaccineType, ...)</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="238" x="591" y="174.6641"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="224" x="598" y="196.1973">objectDTO : VaccineSchedulerDTO</text><polygon fill="#181818" points="11,235.625,1,239.625,11,243.625,7,239.625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="5" x2="188" y1="239.625" y2="239.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="17" y="234.7686">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="28" y="234.7686">objectDTO</text><!--MD5=[45402254b5be80000e0f7ef40bd78dce]
+@startuml
+autonumber
+'hide footbox
+
+participant ":VaccineSchedulerMapper" as VSMapper
+participant "vaccineScheduler:VaccineScheduler" as vScheduler
+participant "objectDTO : VaccineSchedulerDTO" as objDTO
+
+activate VSMapper
+[o->VSMapper : toDTO(vaccineScheduler)
+
+VSMapper -> vScheduler : snsUserNumber = getSnsUserNumber()
+activate vScheduler
+deactivate vScheduler
+
+note over VSMapper, vScheduler
+ continues until getting all vaccineScheduler attributes
+end note
+VSMapper - -> objDTO** : create(snsUserNumber, vaccineType, ...)
+
+<- - VSMapper : objectDTO
+deactivate VSMapper
+
+@enduml
+
+@startuml
+autonumber
+
+participant ":VaccineSchedulerMapper" as VSMapper
+participant "vaccineScheduler:VaccineScheduler" as vScheduler
+participant "objectDTO : VaccineSchedulerDTO" as objDTO
+
+activate VSMapper
+[o->VSMapper : toDTO(vaccineScheduler)
+
+VSMapper -> vScheduler : snsUserNumber = getSnsUserNumber()
+activate vScheduler
+deactivate vScheduler
+
+note over VSMapper, vScheduler
+ continues until getting all vaccineScheduler attributes
+end note
+VSMapper - -> objDTO** : create(snsUserNumber, vaccineType, ...)
+
+<- - VSMapper : objectDTO
+deactivate VSMapper
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

@@ -1,0 +1,61 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+class AuthFacade
+{
+  +addUser(name, email, pwd)
+  +existsUser(email)
+}
+
+class SnsUser {
+ -name
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthdate
+ -gender
+ +SnsUser(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+ +getEmail()
+ +getName()
+}
+
+class SnsUserStore{
++registerSnsUser(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
++saveSnsUser(snsUser)
++addSnsUser(snsUser)
++validateSnsUser(snsUser)
+}
+
+class PasswordGenerator
+{
+  +getPassword()
+}
+
+
+class Company {
+  -designation
+  +getSnsUserStore()
+  +getDesignation()
+}
+
+class RegisterSnsUserController {
+  +saveSnsUser()
+  +registerSnsUser(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+}
+
+class RegisterSnsUserUI {
+}
+
+RegisterSnsUserUI ..> RegisterSnsUserController
+RegisterSnsUserController ..> SnsUserStore
+RegisterSnsUserController ..> Company
+Company "1" --> "1" SnsUserStore : use
+SnsUserStore "1" --> "*" SnsUser : has
+
+
+SnsUserStore ..>  PasswordGenerator
+SnsUserStore ..>  AuthFacade
+
+@enduml

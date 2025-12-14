@@ -1,0 +1,19 @@
+@startuml
+autonumber
+actor "Administrator" as Admin
+
+activate Admin
+Admin -> ":System" : List employes
+activate ":System"
+":System" --> Admin : Choose listing option :1-List employee in specific 2-List all employes 3-list employes of a certain role
+deactivate ":System"
+
+Admin -> ":System" : choose the desired option from the list option
+activate ":System"
+":System" --> Admin :Present the data of the chosen option
+deactivate ":System"
+
+
+deactivate Admin
+
+@enduml

@@ -1,0 +1,110 @@
+@startuml
+
+class Company{
+id: integer
+description: String
+}
+
+class Pandemia{
+id: integer
+description: String
+}
+
+class User {
+name: String
+email: String
+password: String
+}
+
+class Role{
+id: integer
+description: String
+}
+
+class Employee{
+id: integer
+description: String
+}
+
+
+class SNSUtent{
+id: integer
+sns number: integer
+sms autorizada: boolean
+}
+
+class VaccinationCenter{
+id: integer
+Nome: String
+Endereco: String
+Telefone: String
+Email: String
+Fax: String
+Site: String
+HoraAbertura: Time
+HoraFecho: Time
+MinutosSlot: integer
+VaccinasMaximasSlot: intege
+PeriodoRecuperacao: integer
+}
+
+class TipoVacina{
+id: integer
+description: String
+}
+
+class Vacina{
+id: integer
+description: String
+}
+
+class AdministracaoVacina{
+Grupo Etario: integer
+Faxa Etaria: integer
+Doses Administrar: integer
+Numero Dose: integer
+Dosagem: integer
+Intevalo tempo dose anterior: integer
+}
+
+class VaccinationHistory{
+id: integer
+Numero dose: integer
+Data: Date
+Hora: Time
+Reacoes: String
+}
+
+
+class Agendamento{
+id: integer
+Data: Date
+Hora: Time
+}
+
+
+Company "1" -- "*" Pandemia
+Company "1" -- "*" User
+
+User "*" -- " *" Role
+User "1" -- " 1" Employee
+User "1" -- " 1" SNSUtent
+
+Agendamento "*" -- "1" VaccinationCenter : Local de Vacinação >
+Agendamento "*" -- "1" SNSUtent : Regista <
+
+Pandemia "1" -- "*" TipoVacina
+
+TipoVacina "1" -- " *" Vacina
+
+Vacina "1" -- " *" AdministracaoVacina
+
+SNSUtent "1" -- " *" VaccinationHistory
+
+Employee "1" -- " *" VaccinationCenter : Coordenador <
+Employee "1" -- " *" Agendamento : Regista >
+
+VaccinationHistory "*" -- "1" VaccinationCenter : Historico Vacinacao <
+VaccinationHistory "*" -- "1" Vacina
+VaccinationHistory "*" -- "1" Employee: Nurse <
+@enduml

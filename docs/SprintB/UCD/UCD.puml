@@ -1,0 +1,27 @@
+@startuml
+
+left to right direction
+"SNS user" as sns
+"Administrator" as Admin
+"Receptionist" as Recep
+"Nurse" as n
+"Center Coordinator" as coord
+"User" as user
+
+user <|-- sns
+user <|-- n
+user <|-- coord
+user <|-- Recep
+user <|-- Admin
+
+
+rectangle System{
+Admin --> (US010: Register Employee)
+Admin --> (US009: Register Vaccination Centers)
+Admin --> (US012: Specify Vaccine Type)
+Admin --> (US013: Specify a new Vaccine and its Administration Process)
+Admin --> (US011: Get a List of Employees)
+Recep --> (US003: Register SNS User)
+}
+
+@enduml

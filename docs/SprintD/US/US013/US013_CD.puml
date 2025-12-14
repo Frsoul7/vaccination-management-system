@@ -1,0 +1,85 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+class Vaccine{
+-name
+-lotNumber
+-Id
+-brand
+-ageGroup
+-doseNumber
+-vaccineDosage
+-vaccineTypeId
+-vaccineType
++Vaccine (name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineType)
++specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
++saveAdministrationProcess(administrationProcess)
++validateAdministrationProcess(administrationProcess)
++addAdministrationProcess(administrationProcess)
+}
+
+
+class VaccineType{
+-designation
+}
+
+class AdministrationProcess{
+-ageGroup
+-numberOfDoses
+-vaccineDosage
+-timeIntervalBetweenDoses
++AdministrationProcess(ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+}
+
+
+class VaccineTypeStore{
++getVaccineTypes()
++getVaccineType(vaccineTypeID)
+}
+
+class VaccineStore{
++specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
++saveVaccine(vaccine)
++getVaccine(Id)
++addVaccine(vaccine)
++validateVaccine(vaccine)
+}
+
+
+class Company {
+  -designation
+  +getVaccineTypeStore()
+  +getVaccineStore()
+  +getDesignation()
+}
+
+class RegisterVaccineAndAdministrationProcessController {
+  +getVaccineTypes()
+  +specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
+  +specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+  +saveVaccine()
+  +saveAdministrationProcess()
+}
+
+class RegisterVaccineAndAdministrationProcessUI {
+}
+
+
+RegisterVaccineAndAdministrationProcessUI ..> RegisterVaccineAndAdministrationProcessController
+RegisterVaccineAndAdministrationProcessController ..> VaccineStore
+RegisterVaccineAndAdministrationProcessController ..> VaccineTypeStore
+RegisterVaccineAndAdministrationProcessController ..> Company
+RegisterVaccineAndAdministrationProcessController ..> Vaccine
+
+Company "1" --> "1" VaccineStore : use
+Company "1" --> "1" VaccineTypeStore : use
+
+VaccineStore ..> VaccineTypeStore
+VaccineStore "1" --> "*" Vaccine  : has
+VaccineTypeStore "1" --> "*" VaccineType  : has
+
+Vaccine "1" --> "*" AdministrationProcess : follows
+Vaccine "*" --> "1" VaccineType : is part of
+
+@enduml

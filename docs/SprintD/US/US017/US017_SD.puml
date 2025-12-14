@@ -1,0 +1,95 @@
+@startuml
+autonumber
+actor "Center Coordinator" as Cord
+
+participant ":ImportLegacySystemDataUI" as UI
+participant ":ImportLegacySystemDataController" as CTRL
+participant ":Validations" as vald
+participant ":ReadFile" as rd
+participant ":Company" as comp
+participant "data:ImportedDataInformation" as ImpDt
+participant "sortAdaptor:SortAdaptor" as adaptor
+participant ":ImportLegacySystemDataMapper" as map
+participant "lLegacyData:List<String>" as listData
+participant "lImportedLegacyData:List<ImportedDataInformation>" as listImpData
+participant "lImportedLegacyDataDTO : List<ImportedDataInformationDTO>" as ListDTO
+
+
+activate Cord
+
+note over Cord, UI
+The center coordinator at this moment is already logged in
+and attached to the vaccination centers where he's working.
+See the [[US017_SD_CenterCoordinatorSelectsVaccinationCenter.puml SD_CenterCoordinatorSelectsVaccinationCenter]]
+end note
+
+Cord -> UI : starts import data from a legacy system
+activate UI
+UI --> Cord : requests csv file path
+deactivate UI
+Cord -> UI : types requested path
+activate UI
+UI -> CTRL : validateFile(filePath)
+activate CTRL
+CTRL -> vald : validateIfFileExist(filePath)
+activate vald
+vald -> vald : validateIfFileExist(filePath)
+activate vald
+deactivate vald
+vald -> vald : validateIfFileIsNotEmpty(filePath)
+activate vald
+deactivate vald
+deactivate vald
+deactivate CTRL
+UI --> Cord : Asks to select the sorting criterias
+deactivate UI
+Cord -> UI : Selects the sorting criterias
+activate UI
+UI --> Cord : Show the selected data and asks confirmation
+deactivate UI
+Cord -> UI : Confirms the data
+activate UI
+UI -> CTRL : importLegacyData(filePath,timeCriteria, orderCriteria)
+activate CTRL
+
+CTRL -> rd : readFile(filePath)
+activate rd
+rd --> listData** : create()
+
+loop for each line in file
+rd -> listData: add(stringLine)
+activate listData
+deactivate listData
+end
+rd --> CTRL : lLegacyData
+deactivate rd
+
+CTRL --> listImpData**: create()
+CTRL -> comp : snsUserStore=getSnsUserStore()
+activate comp
+deactivate comp
+CTRL -> comp : vStore=getVaccineStore()
+activate comp
+deactivate comp
+
+ref over CTRL
+[[US017_SD_ImportData.puml US017_SD_ImportData]]
+end ref
+
+CTRL -> CTRL: sortAlg =getSortAlgorithm()
+activate CTRL
+deactivate CTRL
+CTRL -> adaptor: lImportedLegacyData= sort(lImportedLegacyData,timeCriteria,orderCriteria)
+activate adaptor
+deactivate adaptor
+CTRL -> map: toDto(lImportedLegacyData)
+ref over map
+[[US017_SD_ImportLegacySystemDataMapper.puml US017_SD_ImportLegacySystemDataMapper]]
+end ref
+activate map
+map --> CTRL: lImportedLegacyDataDTO
+deactivate map
+deactivate CTRL
+UI --> Cord: Shows the imported data and informs about the success of the operation
+
+@enduml

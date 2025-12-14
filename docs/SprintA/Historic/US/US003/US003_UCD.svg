@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="131px" preserveAspectRatio="none" style="width:422px;height:131px;background:#FFFFFF;" version="1.1" viewBox="0 0 422 131" width="422px" zoomAndPan="magnify"><defs><filter height="300%" id="fnjvh27y9azgx" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#fnjvh27y9azgx)" height="112" style="stroke:#000000;stroke-width:1.5;" width="301" x="109" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="234.5" y="23.5332">System</text><ellipse cx="259.5829" cy="72.8166" fill="#FEFECE" filter="url(#fnjvh27y9azgx)" rx="134.5829" ry="29.3166" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="236" x="141.5829" y="76.5451">Authorize the DGS to send me a SMS</text><!--MD5=[f532526e249e2afdfba79ae5d415ddf5]
+entity sns--><ellipse cx="35.5" cy="41" fill="#FEFECE" filter="url(#fnjvh27y9azgx)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M35.5,49 L35.5,76 M22.5,57 L48.5,57 M35.5,76 L22.5,91 M35.5,76 L48.5,91 " fill="none" filter="url(#fnjvh27y9azgx)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="6" y="111.0332">SNS user</text><!--MD5=[5d5491276f37a86a39f1708f84f34c3c]
+link sns to Authorize the DGS to send me a SMS--><path d="M65.07,73 C79.75,73 98.84,73 119.3,73 " fill="none" id="sns-to-Authorize the DGS to send me a SMS" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="124.53,73,115.53,69,119.53,73,115.53,77,124.53,73" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[165aad2b0d0d18efb1450370638b2b1f]
+@startuml
+
+left to right direction
+"SNS user" as sns
+rectangle System{
+sns - -> (Authorize the DGS to send me a SMS)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

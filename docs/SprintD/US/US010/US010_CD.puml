@@ -1,0 +1,72 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+class AuthFacade
+{
+  +addUserWithRole(name, email, pwd, roleId)
+  +existsUser(email)
+}
+
+class Employee{
+  -id
+  -name
+  -address
+  -phoneNumber
+  -email
+  -citizenCardNumber
+  -employeeRole
+  +Employee(name, address, phoneNumber, email, citizenCardNumber, employeeRole)
+  +getName()
+  +getEmail()
+  +getEmployeeRole()
+}
+
+class EmployeeStore{
++registerEmployee(name, address, phoneNumber, email, citizenCardNumber, employeeRole)
++saveEmployee(employee)
++addEmployee(employee)
++validateEmployee(employee)
+}
+
+class PasswordGenerator
+{
+  +getPassword()
+}
+
+class Receptionist {
+}
+
+class Nurse {
+}
+
+class "CenterCoordinator" {
+}
+
+class Company {
+  -designation
+  +getEmployeeStore()
+  +getDesignation()
+}
+
+class RegisterEmployeeController {
+  +saveEmployee()
+  +registerEmployee(name, address, phoneNumber, email, citizenCardNumber, employeeRole)
+}
+
+class RegisterEmployeeUI {
+}
+
+RegisterEmployeeUI ..> RegisterEmployeeController
+RegisterEmployeeController ..> EmployeeStore
+RegisterEmployeeController ..> Company
+Company "1" --> "1" EmployeeStore : use
+EmployeeStore "1" --> "*" Employee : has
+Employee <|-- Nurse
+Employee <|-- Receptionist
+Employee <|-- "CenterCoordinator"
+
+EmployeeStore ..>  PasswordGenerator
+EmployeeStore ..>  AuthFacade
+
+@enduml

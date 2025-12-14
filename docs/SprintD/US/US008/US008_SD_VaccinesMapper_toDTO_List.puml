@@ -1,0 +1,57 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "VaccineMapper" as mapper
+participant "listVaccinesFiltered: List<Vaccine>" as list
+participant "listVaccinesmDto: List<VaccineDTO>" as listDTO
+participant "vaccine: Vaccine" as vacc
+participant "vaccineDto: VaccineDTO" as vaccDTO
+
+activate mapper
+[o->mapper : [[/US008_SD.puml toDTO(listVaccinesFiltered)]]
+mapper-->listDTO** : create()
+
+loop for each Vaccine in listVaccinesFiltered
+
+mapper -> list : vacc = getVaccine(i)
+activate list
+deactivate list
+
+mapper -> vacc : name = getName()
+activate vacc
+deactivate vacc
+
+mapper -> vacc : lotNumber = getLotNumber()
+activate vacc
+deactivate vacc
+
+mapper -> vacc : id = getId()
+activate vacc
+deactivate vacc
+
+mapper -> vacc : brand = getBrand()
+activate vacc
+deactivate vacc
+
+mapper -> vacc : vaccineType = getVaccineType()
+activate vacc
+deactivate vacc
+
+mapper -> vacc : ageGroup = getAgeGroup()
+activate vacc
+deactivate vacc
+
+mapper --> vaccDTO** : create(name, lotNumber, id, brand, vaccineType, ageGroup)
+
+mapper -> listDTO : add(vaccineDto)
+activate listDTO
+deactivate listDTO
+
+end
+
+<-- mapper : [[/US008_SD.puml listVaccinesmDto]]
+deactivate mapper
+
+
+@enduml

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="745px" preserveAspectRatio="none" style="width:554px;height:745px;background:#FFFFFF;" version="1.1" viewBox="0 0 554 745" width="554px" zoomAndPan="magnify"><defs><filter height="300%" id="fdlnbjhlqcmes" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#fdlnbjhlqcmes)" height="726" style="stroke:#000000;stroke-width:1.5;" width="281" x="261" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="376.5" y="23.5332">System</text><ellipse cx="401.5066" cy="62.2013" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="84.0066" ry="19.2013" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="339.5066" y="65.9298">Vaccine Scheduling</text><ellipse cx="401.7402" cy="142.048" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="118.2402" ry="26.048" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201" x="301.2402" y="145.7766">Vaccination Certificate Issuance</text><ellipse cx="401.4259" cy="219.7852" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="71.9259" ry="16.7852" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="351.9259" y="224.3018">Register Users</text><ellipse cx="401.434" cy="296.9868" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="110.434" ry="24.4868" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184" x="309.434" y="300.7153">Register Vaccination Centers</text><ellipse cx="401.6203" cy="374.8241" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="77.1203" ry="17.8241" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="345.7783" y="379.1856">Register Vaccine</text><ellipse cx="401.2698" cy="447.954" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="85.2698" ry="19.454" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="337.7698" y="451.6825">SNS Users Check-in</text><ellipse cx="401.6309" cy="523.8262" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="92.1309" ry="20.8262" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="330.1309" y="527.5547">Vaccine Administration</text><ellipse cx="401.6395" cy="603.1279" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="103.6395" ry="23.1279" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="317.1395" y="606.8564">Record Adverse Reactions</text><ellipse cx="401.2727" cy="688.7545" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="124.2727" ry="27.2545" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="214" x="294.2727" y="692.4831">Vaccination Process Management</text><!--MD5=[f532526e249e2afdfba79ae5d415ddf5]
+entity sns--><ellipse cx="156" cy="110" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M156,118 L156,145 M143,126 L169,126 M156,145 L143,160 M156,145 L169,160 " fill="none" filter="url(#fdlnbjhlqcmes)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="126.5" y="180.0332">SNS user</text><!--MD5=[97ab183161fd5d1db7fba7485cf76add]
+entity Admin--><ellipse cx="156" cy="281" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M156,289 L156,316 M143,297 L169,297 M156,316 L143,331 M156,316 L169,331 " fill="none" filter="url(#fdlnbjhlqcmes)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="114.5" y="351.0332">Administrator</text><!--MD5=[13d33e681bb8b80feb56fac81b77103f]
+entity Recep--><ellipse cx="156" cy="408" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M156,416 L156,443 M143,424 L169,424 M156,443 L143,458 M156,443 L169,458 " fill="none" filter="url(#fdlnbjhlqcmes)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="117" y="478.0332">Receptionist</text><!--MD5=[6a1fdf58a6ccf033c5989c890f6048c5]
+entity n--><ellipse cx="156" cy="526" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M156,534 L156,561 M143,542 L169,542 M156,561 L143,576 M156,561 L169,576 " fill="none" filter="url(#fdlnbjhlqcmes)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="137.5" y="596.0332">Nurse</text><!--MD5=[74ae13a03863147ae30e011dc1ccfa85]
+entity coord--><ellipse cx="156" cy="646" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M156,654 L156,681 M143,662 L169,662 M156,681 L143,696 M156,681 L169,696 " fill="none" filter="url(#fdlnbjhlqcmes)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="95" y="716.0332">Center Coordinator</text><!--MD5=[8fc3522a43f8c7199df5e09e5bb0188e]
+entity user--><ellipse cx="20.5" cy="408" fill="#FEFECE" filter="url(#fdlnbjhlqcmes)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M20.5,416 L20.5,443 M7.5,424 L33.5,424 M20.5,443 L7.5,458 M20.5,443 L33.5,458 " fill="none" filter="url(#fdlnbjhlqcmes)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="6" y="478.0332">User</text><!--MD5=[70d74ad23bb0c40bb5fa5f0245b22d3c]
+reverse link user to sns--><path d="M41.96,383.29 C55.87,346.07 75.26,296.59 95,254 C105.99,230.28 119.67,204.53 131.18,183.7 " fill="none" id="user-backto-sns" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="48.53,385.72,35.03,402.06,35.4,380.87,48.53,385.72" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[36eb5cf623a57c3bb1b3ccfd1c9c8b6e]
+reverse link user to n--><path d="M50.31,465.46 C76.76,488.84 115.1,522.73 137.3,542.35 " fill="none" id="user-backto-n" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="45.63,470.67,35.28,452.18,54.91,460.18,45.63,470.67" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[910a5162bcb41c50edc057278e79ffcd]
+reverse link user to coord--><path d="M40.21,500.77 C52.71,536.33 71.22,581.13 95,617 C99.43,623.69 104.66,630.27 110.16,636.49 " fill="none" id="user-backto-coord" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="33.49,502.75,33.72,481.57,46.76,498.27,33.49,502.75" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[17dcfa5008ee8a05bf664aaa5a897519]
+reverse link user to Recep--><path d="M55.57,440 C74.24,440 97.46,440 116.75,440 " fill="none" id="user-backto-Recep" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="55.28,447,35.28,440,55.28,433,55.28,447" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[05f636e075c7bd91d367b75f821ac10f]
+reverse link user to Admin--><path d="M49.95,412.93 C68.73,395.07 93.61,371.4 114.44,351.58 " fill="none" id="user-backto-Admin" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="54.6,418.17,35.28,426.89,44.95,408.03,54.6,418.17" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8251f7df67088e13cd89f6d8da68c7ed]
+link sns to Vaccine Scheduling--><path d="M185.82,127.04 C204.58,117.74 229.79,106.07 253,98 C278.68,89.07 307.6,81.5 332.99,75.63 " fill="none" id="sns-to-Vaccine Scheduling" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="338.02,74.48,328.3547,72.5875,333.1459,75.5949,330.1385,80.3861,338.02,74.48" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0322e67c86445da58e873fb54c99127c]
+link sns to Vaccination Certificate Issuance--><path d="M185.89,142 C209.18,142 243.64,142 278.17,142 " fill="none" id="sns-to-Vaccination Certificate Issuance" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="283.26,142,274.26,138,278.26,142,274.26,146,283.26,142" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d171ddd7cbb7fec6b5e2dc6e7867b3fe]
+link Admin to Register Users--><path d="M197.58,284.64 C214.15,274.1 233.9,262.81 253,255 C279.6,244.12 310.35,236.15 336.86,230.59 " fill="none" id="Admin-to-Register Users" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="341.76,229.58,332.136,227.4873,336.8638,230.5935,333.7576,235.3213,341.76,229.58" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fd423ba312dac4aa826a2606f86ef72d]
+link Admin to Register Vaccination Centers--><path d="M197.76,310.32 C223.14,308.65 257.11,306.42 289.99,304.26 " fill="none" id="Admin-to-Register Vaccination Centers" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="295.25,303.92,286.0064,300.5205,290.2608,304.2488,286.5325,308.5032,295.25,303.92" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9cf718e5b1f040930908511f7f94276e]
+link Admin to Register Vaccine--><path d="M197.58,324.23 C214.66,328.9 234.77,334.31 253,339 C282.2,346.52 314.75,354.5 341.83,361.04 " fill="none" id="Admin-to-Register Vaccine" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="346.82,362.24,339.0087,356.2414,341.9594,361.0677,337.133,364.0184,346.82,362.24" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0e9194fc84058a93957165d30cfe8633]
+link Recep to SNS Users Check-in--><path d="M195.05,441.25 C226.09,442.27 271.2,443.75 311.25,445.07 " fill="none" id="Recep-to-SNS Users Check-in" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="316.62,445.24,307.7623,440.934,311.6229,445.0687,307.4882,448.9293,316.62,445.24" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a06fee6d81e535d34a1b422b1e7f12dd]
+link n to Vaccine Administration--><path d="M174.51,555.55 C204.2,551.41 266.2,542.75 317.76,535.55 " fill="none" id="n-to-Vaccine Administration" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="322.72,534.86,313.2491,532.1577,317.7691,535.5591,314.3677,540.0791,322.72,534.86" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2e9bd16c9236673df94bdd435814a788]
+link n to Record Adverse Reactions--><path d="M174.51,561.24 C203.93,566.67 265.1,577.98 316.38,587.45 " fill="none" id="n-to-Record Adverse Reactions" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="321.31,588.37,313.1935,582.7913,316.3943,587.4555,311.7302,590.6563,321.31,588.37" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4263f3c804181a5104a5cdb125a17077]
+link coord to Vaccination Process Management--><path d="M217.19,680.72 C234.59,681.51 254.26,682.39 274.1,683.29 " fill="none" id="coord-to-Vaccination Process Management" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="279.15,683.52,270.3421,679.1132,274.1552,683.2917,269.9767,687.1048,279.15,683.52" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[80c6113ae09a0e593085a8385c5d193b]
+@startuml
+
+left to right direction
+"SNS user" as sns
+"Administrator" as Admin
+"Receptionist" as Recep
+"Nurse" as n
+"Center Coordinator" as coord
+"User" as user
+
+user <|- - sns
+user <|- - n
+user <|- - coord
+user <|- - Recep
+user <|- - Admin
+
+
+
+
+rectangle System{
+sns - -> (Vaccine Scheduling)
+sns - -> (Vaccination Certificate Issuance)
+Admin - -> (Register Users)
+Admin - -> (Register Vaccination Centers)
+Admin - -> (Register Vaccine)
+Recep - -> (SNS Users Check-in)
+n - -> (Vaccine Administration)
+n - -> (Record Adverse Reactions)
+coord - -> (Vaccination Process Management)
+
+}
+
+
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

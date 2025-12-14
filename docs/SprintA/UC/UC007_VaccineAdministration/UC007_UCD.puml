@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Nurse" as n
+rectangle System{
+n --> (Vaccine Administration)
+}
+
+@enduml

@@ -1,0 +1,52 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+class AuthFacade
+{
+  +addUserWithRole(String name, String email, String pwd, String roleId)
+  +existsUser(String email)
+}
+
+class Employee{
+  -address
+  -phone number
+  -citizen card number
+  -id
+  -name
+  -email
+  -role
+  +Employee(name, address, phone number, e-mail, citizen card number, employee role)
+  +getName()
+  +getEmail()
+  +getRole()
+}
+
+
+
+
+class Receptionist {
+}
+
+class Nurse {
+}
+
+class "Center Coordinator" {
+}
+
+
+
+
+
+
+
+RegisterEmploye ..> Employee
+
+
+Employee <|-- Nurse
+Employee <|-- Receptionist
+Employee <|-- "Center Coordinator"
+Employee ..> AuthFacade
+
+
+@enduml

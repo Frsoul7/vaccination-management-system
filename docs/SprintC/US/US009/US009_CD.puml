@@ -1,0 +1,66 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class "VaccinationCenter" {
+  -name
+  -address
+  -phoneNumber
+  -emailAddress
+  -faxNumber
+  -websiteAddress
+  -openHour
+  -closeHour
+  -slotDuration
+  -maximumNumberOfVaccinesPerSlot
+  -vaccinationCenterType
+  +waitingList
+  +VaccinationCenter(name, address, phoneNumber, emailAddress,\n faxNumber, websiteAddress, openHour, closeHour, slotDuration,\n maximumNumberOfVaccinesPerSlot,vaccinationCenterType)
+  +VaccinationCenter(name, address, phoneNumber, emailAddress,\n faxNumber, websiteAddress, openHour, closeHour, slotDuration,\n maximumNumberOfVaccinesPerSlot,vaccinationCenterType, arsDesignation, agesDesignation)
+}
+
+class "HealthcareCenter" {
+  -arsDesignation
+  -agesDesignation
+}
+
+class "MassVaccinationCenter" {
+
+}
+
+class VaccinationCenterStore{
++registerVaccinationCenter(name, address, phoneNumber, emailAddress,\n faxNumber, websiteAddress, openHour, closeHour, slotDuration,\n maximumNumberOfVaccinesPerSlot,vaccinationCenterType)
++registerVaccinationCenter(name, address, phoneNumber, emailAddress,\n faxNumber, websiteAddress, openHour, closeHour, slotDuration,\n maximumNumberOfVaccinesPerSlot,vaccinationCenterType, arsDesignation, agesDesignation)
++saveVaccinationCenter(vaccinationCenter)
++addVaccinationCenter(vaccinationCenter)
++validateVaccinationCenter(vaccinationCenter)
+}
+
+
+class Company {
+  -designation
+  +getVaccinationCenterStore()
+  +getDesignation()
+}
+
+class RegisterVaccinationCenterController {
+  +saveVaccinationCenter()
+  +registerVaccinationCenter(name, address, phoneNumber, emailAddress,\n faxNumber, websiteAddress, openHour, closeHour, slotDuration,\n maximumNumberOfVaccinesPerSlot,vaccinationCenterType)
+  +registerVaccinationCenter(arsDesignation, agesDesignation)
+  +checkVaccinationCenterType()
+}
+
+class RegisterVaccinationCenterUI {
+}
+
+
+RegisterVaccinationCenterUI ..> RegisterVaccinationCenterController
+RegisterVaccinationCenterController ..> VaccinationCenterStore
+RegisterVaccinationCenterController ..> Company
+Company "1" --> "1" VaccinationCenterStore : use
+VaccinationCenterStore "1" --> "*" "VaccinationCenter"  : has
+"VaccinationCenter"  <|-- "MassVaccinationCenter"
+"VaccinationCenter"  <|-- "HealthcareCenter"
+
+
+
+@enduml

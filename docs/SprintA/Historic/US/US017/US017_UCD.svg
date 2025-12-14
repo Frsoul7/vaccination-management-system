@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="153px" preserveAspectRatio="none" style="width:511px;height:153px;background:#FFFFFF;" version="1.1" viewBox="0 0 511 153" width="511px" zoomAndPan="magnify"><defs><filter height="300%" id="f1206y3figlpws" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#f1206y3figlpws)" height="134" style="stroke:#000000;stroke-width:1.5;" width="412" x="87" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="268" y="23.5332">System</text><ellipse cx="293.2487" cy="83.9497" fill="#FEFECE" filter="url(#f1206y3figlpws)" rx="190.2487" ry="40.4497" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="352" x="117.2487" y="87.6782">To check the list of SNS users ready to take the vaccine</text><!--MD5=[6a1fdf58a6ccf033c5989c890f6048c5]
+entity n--><ellipse cx="24.5" cy="52" fill="#FEFECE" filter="url(#f1206y3figlpws)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M24.5,60 L24.5,87 M11.5,68 L37.5,68 M24.5,87 L11.5,102 M24.5,87 L37.5,102 " fill="none" filter="url(#f1206y3figlpws)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="6" y="122.0332">Nurse</text><!--MD5=[bb579cac94b90ed391d0520b83870957]
+link n to To check the list of SNS users ready to take the vaccine--><path d="M43.4,84 C56.47,84 75.73,84 97.83,84 " fill="none" id="n-to-To check the list of SNS users ready to take the vaccine" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="102.9,84,93.9,80,97.9,84,93.9,88,102.9,84" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3bbb5b2120416022c9a8d18601f1cfae]
+@startuml
+
+left to right direction
+"Nurse" as n
+rectangle System{
+n - -> (To check the list of SNS users ready to take the vaccine)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

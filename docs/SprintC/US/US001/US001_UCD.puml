@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"SNS User" as SnsUser
+rectangle System{
+SnsUser --> (US001: Schedule a vaccine)
+}
+
+@enduml

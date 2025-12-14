@@ -1,0 +1,48 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+
+class Nurse{
+
+}
+
+class VaccinationCenter {
+    -name
+    -address
+    -phone number
+    -email address
+    -fax number
+    -website address
+    -Open and closing hours
+    -Slot duration
+    -maximum number of vaccines per slot
+    -type
+    -designation
+    -waiting list
+}
+
+class SnsUser{
+ -name
+ -address
+ -gender
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthDate
+ -arrivalTime
+}
+
+class Company
+{
+  -designation
+}
+
+
+Nurse "1" -- "*" "VaccinationCenter" : checks waiting list >
+Company "1" -- "*" SnsUser : knows >
+Company "1" -- "*" VaccinationCenter : manages >
+
+@enduml

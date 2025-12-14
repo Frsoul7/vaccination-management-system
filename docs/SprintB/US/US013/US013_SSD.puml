@@ -1,0 +1,67 @@
+@startuml
+autonumber
+actor "Administrator" as Admin
+
+activate Admin
+Admin -> ":System" : starts the registration of a new vaccine and its administration process [AP]
+
+activate ":System"
+":System" --> Admin : asks to select a vaccine type
+deactivate ":System"
+
+Admin -> ":System" : selects a vaccine type
+
+activate ":System"
+":System" --> Admin : requests the required data (name, lotNumber,  ID, brand, ageGroup, doseNumber, vaccineDosage )
+deactivate ":System"
+
+Admin -> ":System" : types required information according to the data fields
+activate ":System"
+":System" --> Admin : presents all data and asks for confirmation
+deactivate ":System"
+
+Admin -> ":System" : confirms the data
+activate ":System"
+":System" --> Admin : informs about the success of the operation, and requests the number\n of age groups' intervals for AP
+deactivate ":System"
+
+Admin -> ":System" : types required information
+
+loop number of age groups' intervals for AP
+
+activate ":System"
+":System" --> Admin :requests the required data (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+deactivate ":System"
+
+Admin -> ":System" : types required information according to the data fields
+
+activate ":System"
+":System" --> Admin : presents all data and asks for confirmation
+deactivate ":System"
+
+Admin -> ":System" : confirms the data
+
+activate ":System"
+":System" --> Admin : informs about the success of the operation
+deactivate ":System"
+end loop
+deactivate Admin
+
+@enduml
+
+1 str vac
+2 select vac typed
+3 select
+4 requests
+5 typed
+6 shou data e ask confirmation
+7 confirmation
+8 infor do success and reques numbe admin proc
+9 typed
+[loop]
+10 request data
+11 typed
+[end loop]
+12 shou data e ask confirmation
+13 confirmation
+14 infor do success

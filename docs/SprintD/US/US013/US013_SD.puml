@@ -1,0 +1,122 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RegisterVaccineAndAdministrationProcessUI" as UI
+participant ":RegisterVaccineAndAdministrationProcessController" as CTRL
+participant ":Company" as Com
+participant "vStore:\nVaccineStore" as VStore
+participant "vac:Vaccine" as Vac
+participant "vtStore:\nVaccineTypeStore" as VTStore
+participant "vacType:VaccineType" as VacTyp
+participant "lvacType:\nList<VaccineType>" as ListVacTyp
+participant "admproc:AdministrationProcess" as AdmProc
+
+activate ADM
+ADM -> UI : asks to register new vaccine and its administration process [AP]
+activate UI
+UI -> CTRL : lvacType=getVaccineTypes()
+activate CTRL
+CTRL -> Com : vtStore=getVaccineTypeStore()
+activate Com
+deactivate Com
+CTRL -> VTStore: lvacType =getVaccineTypes()
+activate VTStore
+deactivate VTStore
+deactivate CTRL
+UI --> ADM : shows vaccine types and asks to select one
+deactivate UI
+
+ADM -> UI : selects a vaccine type
+activate UI
+UI --> ADM : requests data (name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage)
+deactivate UI
+ADM -> UI : types requested data
+activate UI
+UI -> CTRL : specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
+activate CTRL
+CTRL -> Com : vStore = getVaccineStore()
+activate Com
+deactivate Com
+CTRL-> VStore : vac= specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
+activate VStore
+VStore -> VTStore: vacType = getVaccineType(vaccineTypeId)
+activate VTStore
+deactivate VTStore
+VStore --> Vac** : create(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vacType)
+deactivate VStore
+
+deactivate CTRL
+UI --> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveVaccine()
+activate CTRL
+CTRL -> VStore : saveVaccine(vac)
+activate VStore
+VStore -> VStore : validateVaccine(vac)
+activate VStore
+deactivate VStore
+VStore -> VStore : addVaccine(vac)
+activate VStore
+deactivate VStore
+deactivate VStore
+deactivate CTRL
+
+UI --> ADM : informs about the success of the operation and request\n the number of age groups' intervals for AP
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+loop number of age groups' for AP
+
+UI --> ADM : requests data (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+
+UI -> CTRL : specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+activate CTRL
+
+CTRL -> VStore : vac =getVaccine(Id)
+activate VStore
+deactivate VStore
+
+CTRL -> Vac: admproc=specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+activate Vac
+Vac --> AdmProc** : create(ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+deactivate Vac
+deactivate CTRL
+UI --> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveAdministrationProcess()
+activate CTRL
+CTRL -> Vac : saveAdministrationProcess(AdmProc)
+activate Vac
+Vac -> Vac : validateAdministrationProcess(AdmProc)
+activate Vac
+deactivate Vac
+Vac -> Vac : addAdministrationProcess(AdmProc)
+activate Vac
+deactivate Vac
+deactivate Vac
+deactivate CTRL
+
+UI --> ADM : informs about the success of the operation
+deactivate UI
+
+end
+
+
+deactivate ADM
+
+@enduml

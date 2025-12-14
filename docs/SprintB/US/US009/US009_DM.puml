@@ -1,0 +1,50 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+
+together {
+
+class "Vaccination Center" {
+  -name
+  -address
+  -phone number
+  -email address
+  -fax number
+  -website address
+  -Open and closing hours
+  -Slot duration
+  -maximum number of vaccines per slot
+  -type
+  +waiting list
+}
+
+class "Healthcare Center" {
+  -ARS Designation
+  -AGES Designation
+}
+
+class "Mass Vaccination Center" {
+
+}
+
+}
+
+class Administrator {
+}
+
+class Company {
+  -Designation
+}
+
+
+Company "1" -- "*" Administrator : registers >
+Company "1" -- "*" "Vaccination Center" : manages >
+
+"Vaccination Center" "1" -- "*" "Mass Vaccination Center" : part of <
+"Vaccination Center" "1" -- "*" "Healthcare Center" : part of <
+
+Administrator "1" -- "*" "Vaccination Center" : registers >
+
+@enduml

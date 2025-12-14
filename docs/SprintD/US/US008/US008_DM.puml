@@ -1,0 +1,125 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+class Employee{
+  -id
+  -role
+}
+
+class Nurse{
+
+}
+
+class SnsUser{
+ -name
+ -address
+ -gender
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthDate
+ -arrivalTime
+}
+
+class "VaccineAdministration"{
+-SNS user number
+-vaccine type
+-vaccine name
+-lote number
++recovery time
+}
+
+class VaccinationCenter {
+    -name
+    -address
+    -phone number
+    -email address
+    -fax number
+    -website address
+    -Open and closing hours
+    -Slot duration
+    -maximum number of vaccines per slot
+    -type
+    -designation
+    +waiting room
+}
+
+
+class Company
+{
+  -designation
+}
+
+class "Health Records" {
+-health condition
+-adverse reactions
+}
+class "VaccinationRecords"{
+-vaccineName
+-doseStep
+-vaccineLotNumber
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+}
+
+class "PerformanceRecords"{
+-snsUserNumber
+-vaccineName
+-doseStep
+-lotNumber
+-scheduledDate
+-scheduledTimeHour
+-arrivalDate
+-arrivalTimeHour
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+-leavingDate
+-leavingTimeHour
+}
+class VaccineScheduler{
+-SNS user number
+-vaccination center
+-dateTime
+-vaccine type
+}
+
+class "Vaccine Type"{
+-designation
+}
+together {
+class Vaccine{
+-designation
+-lot number
+}
+class "Administration Process"{
+-age group
+-doses administrated per age group
+-vaccine dosage
+-time intervals
+}
+}
+
+Company "1" -- "*" "Vaccine Type" : defines >
+Company "1" -- "*" Employee : owns >
+Employee "1" -- "*" "Nurse" : part of <
+Company "1" -- "*" SnsUser : knows >
+Company "1" -- "*" VaccinationCenter : manages >
+"PerformanceRecords" "*" -- "1" VaccinationCenter : is part of >
+"VaccinationRecords" "*" -- "1" "Health Records"  : is part of >
+Nurse "1" -- "*" "VaccineAdministration" : is responsible for >
+SnsUser "1" -- "*" VaccineAdministration : Administered on <
+'SnsUser "1" -- "*" VaccineScheduler : creates a >
+"VaccinationCenter" "1" -- "*" "VaccineScheduler" : plans for <
+"VaccineScheduler" "0..1" -- "0..1" "VaccineAdministration" : fulfilling <
+
+"VaccineScheduler" "*" -- "1" "Vaccine Type" : for taking a >
+Vaccine "*" -- "1" "Vaccine Type" : is part of >
+Vaccine "1" -- "*" "VaccineAdministration" : of a <
+"Administration Process" "*" -- "1" Vaccine : follows a <
+Nurse "1" -- "*" "Health Records" : consults/registers >
+Nurse "1" -- "*" "VaccinationCenter" : checks waiting room list  >
+SnsUser "1" -- "*" "Health Records" : has a >
+@enduml

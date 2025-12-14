@@ -1,0 +1,47 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "VaccinationRecordsMapper" as mapper
+participant "vaccRecord: VaccinationRecords " as vaccRcds
+participant ":DateCustom" as DateCustom
+participant ":TimeHour" as TimeHour
+participant "vaccRecordsDto: VaccRecordsDTO" as objDTO
+
+activate mapper
+[o->mapper : [[/US008_SD.puml toDTO(vaccRecord)]]
+
+
+mapper -> vaccRcds: vaccineNameObj = getVaccineName()
+activate vaccRcds
+deactivate vaccRcds
+
+mapper -> vaccRcds: doseStepObj = getDoseStep()
+activate vaccRcds
+deactivate vaccRcds
+
+mapper -> vaccRcds: vaccineLotNumberObj = getVaccineLotNumber()
+activate vaccRcds
+deactivate vaccRcds
+
+mapper -> vaccRcds: nurseAdministrationDateObj = getNurseAdministrationDate()
+activate vaccRcds
+vaccRcds -> DateCustom: create(nurseAdministrationDate)
+activate DateCustom
+deactivate DateCustom
+deactivate vaccRcds
+
+mapper -> vaccRcds: nurseAdministrationTimeHourObj = getNurseAdministrationTimeHour()
+activate vaccRcds
+vaccRcds -> TimeHour: create(nurseAdministrationTimeHour)
+activate TimeHour
+deactivate TimeHour
+deactivate vaccRcds
+
+mapper --> objDTO** : create(vaccineNameObj, doseStepObj, vaccineLotNumberObj, nurseAdministrationDateObj, nurseAdministrationTimeHourObj)
+
+<-- mapper : [[/US008_SD.puml vaccRecordsDto]]
+deactivate mapper
+
+
+@enduml

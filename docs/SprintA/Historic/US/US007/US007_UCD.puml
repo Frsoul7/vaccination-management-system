@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Administrator" as Admin
+rectangle System{
+Admin --> (To specify a new vaccine and its administration process)
+}
+
+@enduml

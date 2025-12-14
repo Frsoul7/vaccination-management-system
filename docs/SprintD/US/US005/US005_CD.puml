@@ -1,0 +1,88 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ConsultSnsUsersInWaitingRoomUI
+{
+
+}
+
+class ConsultSnsUsersInWaitingRoomController
+{
++getListOfSnsUsers(VaccinationCenter)
+}
+
+class WaitingRoomMapper
+{
++toDTO(listWaitingRoom)
+}
+
+class VaccinationCenter
+{
+    -name
+    -address
+    -phone number
+    -email address
+    -fax number
+    -website address
+    -Open and closing hours
+    -Slot duration
+    -maximum number of vaccines per slot
+    -type
+    -designation
+    -waiting list
+    +listWaitingRoom= getWaitingRoomList()
+    +sortWaitingRoomListByArrival()
+}
+
+class VaccinationCenterStore
+{
++listWaitingRoom=getVaccinationCenterWaitingRoomList(vaccinationCenter)
+}
+
+class Company
+{
+  -designation
+  +vcStore = GetVaccinationCenterStore()
+}
+
+class SnsUser
+{
+ -name
+ -address
+ -gender
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthDate
+}
+
+class SnsUserDto
+{
+ -name
+ -gender
+ -birthDate
+ -snsUserNumber
+ -phoneNumber
++SnsUserDto(name,gender,...)
+}
+
+
+ConsultSnsUsersInWaitingRoomUI ..> ConsultSnsUsersInWaitingRoomController
+ConsultSnsUsersInWaitingRoomController ..> WaitingRoomMapper
+ConsultSnsUsersInWaitingRoomController ..> VaccinationCenter
+ConsultSnsUsersInWaitingRoomController ..> SnsUser
+ConsultSnsUsersInWaitingRoomController ..> SnsUserDto
+ConsultSnsUsersInWaitingRoomController ..> VaccinationCenterStore
+ConsultSnsUsersInWaitingRoomController ..> Company
+
+VaccinationCenterStore ..> VaccinationCenter
+Company"1"-->"*" SnsUser : knows
+Company"1"-->"*" VaccinationCenter : manages
+
+WaitingRoomMapper ..> SnsUserDto
+WaitingRoomMapper ..> SnsUser
+
+
+
+@enduml

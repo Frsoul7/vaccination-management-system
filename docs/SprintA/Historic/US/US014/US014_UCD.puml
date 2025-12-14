@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Receptionist" as Recep
+rectangle System{
+Recep --> (Notify the system that a SNS user is ready)
+}
+
+@enduml

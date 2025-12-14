@@ -1,0 +1,23 @@
+@startuml
+autonumber
+actor "Receptionist" as Recep
+
+activate Recep
+Recep -> ":System" : starts the registration of a new SNS user
+activate ":System"
+":System" --> Recep : requests the required data (name, gender, phone number, e-mail, birthdate, SNS User number,citizen card number)
+deactivate ":System"
+
+Recep -> ":System" : types required information according to the data field
+activate ":System"
+":System" --> Recep : shows the data and requests confirmation
+deactivate ":System"
+
+Recep -> ":System" : confirms data
+activate ":System"
+":System" --> Recep : informs about the success of the operation
+deactivate ":System"
+
+deactivate Recep
+
+@enduml

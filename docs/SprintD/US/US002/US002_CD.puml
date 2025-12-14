@@ -1,0 +1,88 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+class AuthFacade
+{
+  +addUser(name, email, pwd)
+  +existsUser(snsUserNumber,citizenCardNumber)
+}
+
+class SnsUser {
+ -name
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+
+}
+
+class ScheduleStore{
++vaccinationCenterInf(Name,Address,OpenPeriod,CenterCoordinator)
++vaccineScheduleSaved
+
++validateSlotAvailable(date, time)
++saveSnsUser(snsUser)
++validateSnsUser(snsUser)
++validateSlotAvailable(date, time)
+}
+
+
+class ScheduleVaccineUI{
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ }
+
+class Company {
+  +getSnsUserStore()
+  +getDesignation()
+  +getVaccineTypeStore(
+}
+
+class vaccinationCenter {
+-name
+-address
+-phoneNumber
+-emailAddress
+-faxNumber
+-websiteAddress
+-openHour
+-closeHour
+-slotDuration
+-maximumNumberOfVaccinesPerSlot
+-vaccinationCenterType
+-designation
+-waitingLis
++getVaccineScheduleStore()
++centerDisponibility()
+}
+
+class ScheduleVaccineController {
++getSnsUserStore()
++scheduleVaccineHistorics()
++vaccineSelected()
++validateSchedulingVaccine
++creatSchedule()
++creatSmsSchedule()
+}
+
+class VaccineTypeStore{
++getVaccineTypes()
+}
+
+
+SnsUser ..>  Receptionist
+
+Receptionist..>ScheduleVaccineUI
+ScheduleVaccineController ..> ScheduleStore
+ScheduleVaccineUI ..> ScheduleVaccineController
+ScheduleVaccineController ..>  Company
+ScheduleVaccineController ..> vaccinationCenter
+ScheduleVaccineController ..>AuthFacade
+Company "1" --> "1" ScheduleStore : use
+Company "1" --> "1" vaccinationCenter: use
+Company "1" --> "1" VaccineTypeStore: use
+
+
+@enduml

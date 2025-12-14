@@ -1,0 +1,24 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":VaccineSchedulerMapper" as VSMapper
+participant "vaccineScheduler:VaccineScheduler" as vScheduler
+participant "objectDTO : VaccineSchedulerDTO" as objDTO
+
+activate VSMapper
+[o->VSMapper : toDTO(vaccineScheduler)
+
+VSMapper -> vScheduler : snsUserNumber = getSnsUserNumber()
+activate vScheduler
+deactivate vScheduler
+
+note over VSMapper, vScheduler
+ continues until getting all vaccineScheduler attributes
+end note
+VSMapper --> objDTO** : create(snsUserNumber, vaccineType, ...)
+
+<-- VSMapper : objectDTO
+deactivate VSMapper
+
+@enduml

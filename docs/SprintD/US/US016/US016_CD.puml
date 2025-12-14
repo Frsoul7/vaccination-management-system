@@ -1,0 +1,119 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class PerformanceAnalysisController{
++getPerformanceRecordsStore()
++getPerformanceRecords()
++validateTimeInterval()
++checkIfExistsRecordsForTheSelectedDate()
++create()
++getDate()
++getArrivalTime()
++getLeavingTime()
++getSlotIndex()
++setDifferenceBetweenArrLeavSnsUser()
++setInputList()
++getAlgorithm()
++setTimeInterval()
++getOpenHour()
++setOpenHour()
++calculateMaximumSum()
++calculateLessEffectivePeriod()
+}
+
+interface performanceAdaptor{
++determineContiguousSublistWithMaximumSum()
+}
+
+class PerformanceRecordsStore{
++registerImportedDada(snsUserNumber,...)
+}
+
+class PerformanceAnalysisMapper{
+}
+
+class VaccinationCenterMapper{
+}
+
+class VaccinationCenterDTO{
+}
+
+class PerformanceAnalysisDTO{
+}
+
+class bruteForceAlgorithm{
+}
+
+class VaccinationCenterStore{
++getVaccinationCenterId
+
+}
+class VaccinationCenter {
+  -name
+  -address
+  -phoneNumber
+  -emailAddress
+  -faxNumber
+  -websiteAddress
+  -openHours
+  -closeHours
+  -slotDuration
+  -maximumNumberOfVaccinesPerSlot
+  -vaccinationCenterType
+  -designation
+  -lWaitingList
+  -lRecoveryList
+  -vaccinationCenterID
+  -perfRecordsStore
+  -vacSchedulerStore
+  +getPerformanceRecordsStore()
+  +registerImportedDada(snsUserNumber,...)
+}
+
+class PerformanceRecords{
+-snsUserNumber
+-vaccineName
+-doseStep
+-lotNumber
+-scheduledDate
+-scheduledTimeHour
+-arrivalDate
+-arrivalTimeHour
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+-leavingDate
+-leavingTimeHour
++create(snsUserNumber,...)
+}
+
+class Company {
+  -Designation
+  +getVaccinationCenterStore()
+}
+
+class Validations{
++validateDate()
++validateTimeInterval()
+}
+
+PerformanceAnalysisUI ..> PerformanceAnalysisController
+PerformanceAnalysisController ..> VaccinationCenter
+PerformanceAnalysisController ..> Company
+PerformanceAnalysisController ..> PerformanceRecords
+PerformanceAnalysisController ..> PerformanceAnalysis
+PerformanceAnalysisController ..> PerformanceAnalysisMapper
+PerformanceAnalysisController ..> performanceAdaptor
+PerformanceAnalysisController ..> Validations
+performanceAdaptor <|.. bruteForceAlgorithm
+PerformanceAnalysisMapper ..> PerformanceAnalysisDTO
+PerformanceAnalysisController ..> VaccinationCenterMapper
+VaccinationCenterMapper ..> VaccinationCenterDTO
+VaccinationCenter "1" --> "1" PerformanceRecords
+
+Company "1" --> "1" VaccinationCenterStore : use
+Company "1" --> "1" PerformanceRecordsStore : use
+VaccinationCenterStore "1" --> "*" VaccinationCenter : has
+PerformanceRecordsStore "1"--> "*" PerformanceRecords : has
+
+
+@enduml

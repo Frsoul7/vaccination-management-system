@@ -1,0 +1,13 @@
+@startuml
+autonumber
+actor "Nurse" as nurse
+
+activate nurse
+nurse -> ":System" : requests the list of sns users in the waiting room
+activate ":System"
+":System" --> nurse : presents all data ordered by arrival
+deactivate ":System"
+deactivate nurse
+
+
+@enduml

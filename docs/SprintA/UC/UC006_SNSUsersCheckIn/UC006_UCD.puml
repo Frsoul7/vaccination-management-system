@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Receptionist" as Recep
+rectangle System{
+Recep --> (SNS Users Check-in)
+}
+
+@enduml

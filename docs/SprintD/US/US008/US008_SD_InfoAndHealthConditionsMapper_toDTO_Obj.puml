@@ -1,0 +1,32 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "InfoAndHealthConditionsMapper" as mapper
+participant "infoAndHealthConditionsDto: InfoAndHealthConditionsDTO" as objDTO
+
+activate mapper
+[o->mapper : [[/US008_SD.puml toDTO(name,age,adverseReactions)]]
+
+
+mapper -> mapper: nameObj = name
+activate mapper
+deactivate mapper
+
+mapper -> mapper : ageObj = age
+activate mapper
+deactivate mapper
+
+mapper -> mapper : adverseReactionsObj = adverseReactions
+activate mapper
+deactivate mapper
+
+mapper --> objDTO** : create(nameObj, ageObj, adverseReactionsObj)
+
+
+
+<-- mapper : [[/US008_SD.puml infoAndHealthConditionsDto]]
+deactivate mapper
+
+
+@enduml

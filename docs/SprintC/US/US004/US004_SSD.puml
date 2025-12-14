@@ -1,0 +1,31 @@
+@startuml
+autonumber
+actor "Receptionist" as Rec
+
+activate Rec
+Rec -> ":System" : starts the registration of an SNS User arrival
+activate ":System"
+":System" --> Rec : requests the required data (snsUserNumber)
+deactivate ":System"
+
+Rec -> ":System" : types required information according to the data fields
+activate ":System"
+
+":System" --> Rec : presents the data of the scheduler and asks confirmation
+deactivate ":System"
+
+Rec -> ":System" : confirms the data
+activate ":System"
+
+":System" --> Rec : requests the time of arrival
+deactivate ":System"
+
+Rec -> ":System" : types the required information
+activate ":System"
+
+":System" --> Rec : informs about the success of the operation
+deactivate ":System"
+
+deactivate Rec
+
+@enduml

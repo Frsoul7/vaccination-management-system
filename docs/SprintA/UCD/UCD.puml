@@ -1,0 +1,35 @@
+@startuml
+
+left to right direction
+"SNS user" as sns
+"Administrator" as Admin
+"Receptionist" as Recep
+"Nurse" as n
+"Center Coordinator" as coord
+"User" as user
+
+user <|-- sns
+user <|-- n
+user <|-- coord
+user <|-- Recep
+user <|-- Admin
+
+
+
+
+rectangle System{
+sns --> (Vaccine Scheduling)
+sns --> (Vaccination Certificate Issuance)
+Admin --> (Register Users)
+Admin --> (Register Vaccination Centers)
+Admin --> (Register Vaccine)
+Recep --> (SNS Users Check-in)
+n --> (Vaccine Administration)
+n --> (Record Adverse Reactions)
+coord --> (Vaccination Process Management)
+
+}
+
+
+
+@enduml

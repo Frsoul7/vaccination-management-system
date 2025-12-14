@@ -1,0 +1,195 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+
+together {
+class User {
+  -name
+  -password
+  -email
+}
+
+class Person {
+-name
+-address
+-phone number
+-email
+-citizen card number
+}
+}
+
+class Employee{
+  -id
+  -role
+}
+
+together {
+
+class "SNS User" {
+ -SNS user number
+ -birthdate
+ -gender
+ -arrivalTime
+}
+class "Vaccine Certificate"{
+}
+class "Health Records" {
+-health condition
+-adverse reactions
+}
+class "**VaccinationRecords**"{
+**-vaccineName**
+**-doseStep**
+**-vaccineLotNumber**
+**-nurseAdministrationDate**
+**-nurseAdministrationTimeHour**
+}
+
+}
+
+
+
+class Receptionist {
+
+}
+class Nurse {
+
+}
+
+
+together {
+
+class Administrator {
+}
+
+}
+
+class Company {
+  -Designation
+}
+
+together {
+
+class "Center Coordinator" {
+}
+class "Vaccination Center" {
+  -name
+  -address
+  -phone number
+  -email address
+  -fax number
+  -website address
+  -Open and closing hours
+  -Slot duration
+  -maximum number of vaccines per slot
+  -type
+  -designation
+  -waiting room
+  -recovery room
+}
+class "**PerformanceRecords**"{
+**-snsUserNumber**
+**-vaccineName**
+**-doseStep**
+**-lotNumber**
+**-scheduledDate**
+**-scheduledTimeHour**
+**-arrivalDate**
+**-arrivalTimeHour**
+**-nurseAdministrationDate**
+**-nurseAdministrationTimeHour**
+**-leavingDate**
+**-leavingTimeHour**
+}
+
+}
+
+together {
+class "Administration Process"{
+-age group
+-doses administrated per age group
+-vaccine dosage
+-time intervals
+}
+
+class Vaccine{
+-**name**
+-lotNumber
+-**id**
+-**brand**
+-**vaccineType**
+-**numberDoses**
+-**vaccineDosage**
+}
+
+}
+class "Vaccine Type"{
+-designation
+}
+
+class "Vaccine Scheduler"{
+-SNS user number
+-vaccination center
+-dateTime
+-vaccine type
+}
+
+class "Vaccine Administration"{
+**-SNS user number**
+-vaccine type
+-vaccine name
+-lote number
+}
+
+User "1"-- "0..1" "SNS User" : relates to <
+User "1"-- "0..1" "Employee" : relates to <
+
+"Person"  <|-- "SNS User"
+"Person" <|-- Employee
+
+Employee "1" -- "*" "Receptionist" : part of <
+Employee "1" -- "*" "Nurse" : part of <
+Employee "1" -- "*" "Center Coordinator" : part of <
+
+Company "1" -- "*" Employee : owns >
+Company "1" -- "*" "SNS User" : Knows >
+Company "1" -- "*" Administrator : registers >
+Company "1" -- "*" "Vaccine Type" : defines >
+Company "1" -- "*" "Vaccination Center" : manages >
+
+"Vaccination Center" "1" -- "*" "Vaccine Scheduler" : plans for <
+
+Administrator "1" -- "*" "Employee" : registers >
+Administrator "1" -- "*" "SNS User" : registers >
+Administrator "1" -- "*" "Vaccination Center" : registers >
+Administrator "1" -- "*" "Vaccine Type" : registers >
+Administrator "1" -- "*" Vaccine : registers >
+
+"Center Coordinator" "1" -- "*" "Vaccination Center" : monitors Covid-19 process >
+
+Vaccine "*" -- "1" "Vaccine Type" : is part of >
+Vaccine "1" -- "*" "Vaccine Administration" : of a <
+
+"Administration Process" "*" -- "1" Vaccine : follows a <
+
+Nurse "1" -- "*" "Vaccine Administration" : is responsible for >
+Nurse "1" -- "*" "Health Records" : registers/consults >
+Nurse "1" -- "*" "Vaccination Center" : checks waiting list  >
+
+
+"SNS User" "1" -- "*" "Vaccine Administration" : Administered on <
+"SNS User" "1" -- "*" "Vaccine Scheduler" : creates a >
+"SNS User" "1" -- "*" "Vaccine Certificate" : requests for issuance of >
+"SNS User" "1" -- "*" "Health Records" : has a >
+
+"Vaccine Scheduler" "*" -- "1" "Vaccine Type" : for taking a >
+"Vaccine Scheduler" "0..1" -- "0..1" "Vaccine Administration" : fulfilling <
+
+Receptionist "1" -- "*" "Vaccine Scheduler" : creates a >
+Receptionist "1" -- "*" "Vaccination Center" : arrival register >
+Receptionist "1" -- "*" "SNS User" : registers >
+
+"**PerformanceRecords**" "*" --[#black,bold] "1" "Vaccination Center" : is part of >
+
+"**VaccinationRecords**" "*" --[#black,bold] "1" "Health Records" : is part of >
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+autonumber
+actor "Receptionist" as Admin
+
+activate Admin
+Admin -> ":System" : Start vaccine scheduling process
+activate ":System"
+":System" --> Admin : Requests  user data for scheduling (SNS number,date and hour )
+deactivate ":System"
+
+Admin -> ":System" : Types required information according to the data fields
+activate ":System"
+":System" --> Admin : Presents all data and asks for confirmation
+deactivate ":System"
+
+Admin -> ":System" : Confirms the data
+activate ":System"
+":System" --> Admin : Informs about the success of the operation
+deactivate ":System"
+
+deactivate Admin
+
+@enduml

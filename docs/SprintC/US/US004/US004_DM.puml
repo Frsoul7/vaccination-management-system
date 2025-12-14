@@ -1,0 +1,53 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+class Receptionist {
+}
+
+class "Vaccination Center" {
+  -name
+  -address
+  -phone number
+  -email address
+  -fax number
+  -website address
+  -Open and closing hours
+  -Slot duration
+  -maximum number of vaccines per slot
+  -type
+  -**designation**
+  -waiting list
+}
+
+class "Vaccine Scheduler"{
+-SNS user number
+-vaccination center
+-dateTime
+-vaccine type
+}
+
+class "SNS User" {
+ -name
+ -email
+ -phone number
+ -citizen card number
+ -SNS user number
+ -**address**
+ -**birthdate**
+ -**arrivalTime**
+ -**gender**
+}
+
+class Company {
+  -Designation
+}
+
+Receptionist "1" -- "*" "Vaccination Center" : arrival register >
+"Vaccination Center" "1" -- "*" "Vaccine Scheduler" : plans for <
+"SNS User" "1" -- "*" "Vaccine Scheduler" : creates a >
+Company "1" -- "*" "SNS User" : Knows >
+Company "1" -- "*" "Vaccination Center" : manages >
+
+@enduml

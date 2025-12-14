@@ -1,0 +1,126 @@
+@startuml
+autonumber
+'hide footbox
+actor "Coordinator" as coord
+
+participant ":CheckDailyFullyVaccinatedUI" as UI
+participant ":CheckDailyFullyVaccinatedController" as CTRL
+participant "lStatistics : List<CountByDate>" as lStatistics
+participant ":Company" as comp
+participant ":CountByDate" as countByDate
+participant "prStore:\nPerformanceRecordsStore" as prStore
+participant "perfRecords:\nPerformanceRecords" as lPerfRecords
+participant "snsUStore:\nSnsUserStore" as snsuStore
+participant "snsUser:\nSnsUser" as SnsU
+participant "vac:\nVaccine" as Vac
+participant "vacStore:\nVaccineStore" as VacStore
+participant "admProc:\nAdministrationProcess" as AdmProc
+participant ":ListStatisticsMapper" as lStatisticsMapper
+
+
+activate coord
+
+note over coord
+The Coordinator at this moment is already logged in
+and attached to the vaccination center
+where he/she is working.
+Also, the CSV file containing the list of SNS users
+must be loaded.
+end note
+
+coord -> UI : asks to check the date interval of fully vaccinated per day
+activate UI
+UI --> coord : requests data (first and last dates of period to analyse
+deactivate UI
+
+coord -> UI : inserts requested data (startDate, endDate)
+activate UI
+
+UI -> lStatistics : lStatistics = create()
+activate lStatistics
+deactivate lStatistics
+
+loop for each day of interval
+UI -> countByDate : countDate = create(date)
+activate countByDate
+deactivate countByDate
+UI -> CTRL : total = getNumberOfDailyFullyVaccinated(date)
+
+activate CTRL
+CTRL ->  prStore : create(vaccinationCenterId)
+activate prStore
+deactivate prStore
+CTRL ->  lPerfRecords : create()
+activate lPerfRecords
+deactivate lPerfRecords
+CTRL-> prStore : lPerfRecords = getPerformanceRecordsStore(date)
+activate prStore
+deactivate prStore
+
+CTRL -> comp : snsUStore = getSnsUserStore();
+activate comp
+CTRL -> comp : vaccineStore = getVaccineStore();
+deactivate comp
+
+loop for each lPerfRecords
+CTRL -> lPerfRecords : snsUserNumber = getSnsUserNumber()
+activate lPerfRecords
+CTRL -> lPerfRecords : doseTaken = getDoseStep();
+deactivate lPerfRecords
+CTRL -> SnsU : snsUser = getSnsUser()
+activate SnsU
+deactivate SnsU
+CTRL -> snsuStore : snsUser = getSnsUserBySnsUserNumber(snsUserNumber)
+activate snsuStore
+deactivate snsuStore
+CTRL -> Vac: vaccine = getVaccine()
+activate Vac
+deactivate Vac
+CTRL -> VacStore : vaccine = getVaccine(perfRecord.getLotNumber())
+activate VacStore
+deactivate VacStore
+CTRL -> AdmProc : admProcess = getAdministrationProcess()
+activate AdmProc
+deactivate AdmProc
+CTRL -> Vac : admProcess = vaccine.getAdministrationProcess(age)
+activate Vac
+deactivate Vac
+end
+deactivate CTRL
+
+UI -> countByDate : countDate.setCount(total)
+activate countByDate
+deactivate countByDate
+UI -> lStatistics : lStatistics.add(contDate)
+activate lStatistics
+
+end
+
+
+lStatistics -> lStatisticsMapper : toDTO(lStatistics)
+ref over lStatisticsMapper
+[[/US015_SD_ListStatistics_toDTO.puml SD_ListStatistics_toDTO]]
+end ref
+deactivate lStatistics
+
+
+activate lStatisticsMapper
+lStatisticsMapper --> CTRL : lStatisticsDTO
+deactivate lStatisticsMapper
+activate CTRL
+CTRL --> UI : lStatisticsDTO
+deactivate lStatistics
+deactivate CTRL
+
+UI --> coord : show statistics and asks if wants to save data to a CSV file
+deactivate UI
+coord -> UI : insert requested data (filePath)
+activate UI
+UI -> CTRL : writeToCSV(filePath, lStatistics)
+activate CTRL
+deactivate CTRL
+UI --> coord : show success of operation (writeToCSV)
+deactivate UI
+
+
+@enduml

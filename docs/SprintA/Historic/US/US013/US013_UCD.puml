@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Receptionist" as Recep
+rectangle System{
+Recep --> (Check if a SNS users has the vaccine scheduled)
+}
+
+@enduml

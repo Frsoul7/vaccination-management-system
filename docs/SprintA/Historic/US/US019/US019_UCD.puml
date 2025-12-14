@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Nurse" as n
+rectangle System{
+n --> (To check the SNS user info and health conditions)
+}
+
+@enduml

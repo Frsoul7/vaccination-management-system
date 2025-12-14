@@ -1,0 +1,74 @@
+@startuml
+autonumber
+'hide footbox
+actor "Receptionist" as recep
+
+participant ":RegisterSnsUserUI" as UI
+participant ":RegisterSnsUserController" as CTRL
+participant ":Company" as Com
+participant "snsUStore: SnsUserStore" as SNSStore
+participant "snsUser:SnsUser" as SnsU
+participant "AuthFacade" as Aut
+participant ":PasswordGenerator" as Pass
+
+activate recep
+recep -> UI : asks to register new SNS User
+activate UI
+UI --> recep : requests data (name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+deactivate UI
+
+recep -> UI : types requested data
+activate UI
+UI -> CTRL : registerSnsUser(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+activate CTRL
+CTRL->Com : snsUStore = getSnsUserStore()
+activate Com
+deactivate Com
+CTRL->SNSStore : snsUser= registerSnsUser(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+activate SNSStore
+SNSStore --> SnsU** : create(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+
+deactivate CTRL
+deactivate Com
+deactivate SNSStore
+
+UI --> recep : presents all data and asks for confirmation
+deactivate UI
+
+recep -> UI : confirms the data
+activate UI
+UI -> CTRL : saveSnsUser()
+activate CTRL
+CTRL -> SNSStore : saveSnsUser(snsUser)
+activate SNSStore
+SNSStore -> SnsU : email=getEmail()
+activate SnsU
+deactivate SnsU
+SNSStore -> SNSStore : validateSnsUser(snsUser)
+activate SNSStore
+SNSStore -> Aut : existUser(email)
+activate Aut
+deactivate Aut
+deactivate SNSStore
+SNSStore -> SnsU : name=getName()
+activate SnsU
+deactivate SnsU
+
+SNSStore -> Pass : getPassword()
+activate Pass
+Pass --> SNSStore : pass
+deactivate Pass
+SNSStore -> Aut : addUser(name, email, pass)
+activate Aut
+deactivate Aut
+SNSStore -> SNSStore : addSnsUser(snsUser)
+activate SNSStore
+deactivate SNSStore
+deactivate SNSStore
+deactivate CTRL
+
+UI --> recep : informs about the success of the operation
+deactivate UI
+deactivate recep
+
+@enduml

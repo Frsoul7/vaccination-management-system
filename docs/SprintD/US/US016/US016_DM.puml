@@ -1,0 +1,51 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+class "Center Coordinator" {
+}
+
+class "Vaccination Center" {
+  -name
+  -address
+  -phone number
+  -email address
+  -fax number
+  -website address
+  -Open and closing hours
+  -Slot duration
+  -maximum number of vaccines per slot
+  -type
+  -designation
+  -waiting list
+  -recovery room
+}
+
+class "PerformanceRecords"{
+-snsUserNumber
+-vaccineName
+-doseStep
+-lotNumber
+-scheduledDate
+-scheduledTimeHour
+-arrivalDate
+-arrivalTimeHour
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+-leavingDate
+-leavingTimeHour
+}
+
+class Company {
+  -Designation
+}
+
+
+"Center Coordinator" "1" -- "*" "Vaccination Center" : monitors >
+Company "1" -- "*" "Vaccination Center" : manages >
+"PerformanceRecords" "*" --"1" "Vaccination Center" : is part of >
+
+
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RegisterVaccinationCenterUI" as UI
+participant ":RegisterVaccinationCenterController" as CTRL
+participant ":Company" as Com
+participant "vcStore:\nVaccinationCenterStore" as VcStore
+participant "vaccenter:VaccinationCenter" as Vc
+
+activate ADM
+ADM -> UI : asks to register new vaccination center
+activate UI
+UI --> ADM : requests data (e.g.: name, open hour, close hour, slot duration,vaccination center type, [...])
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+UI -> CTRL : registerVaccinationCenter(e.g.: name, open hour, close hour, slot duration,vaccination center type, [...])
+
+activate CTRL
+CTRL->Com : VcStore = getVaccinationCenterStore()
+activate Com
+
+deactivate Com
+CTRL -> CTRL : checkVaccinationCenterType()
+activate CTRL
+
+alt if vaccination center type is healthcare center
+
+UI --> ADM : requests data (ARS designation, AGES designation)
+ADM -> UI : types requested data
+UI -> CTRL : registerVaccinationCenter(ARS designation, AGES designation)
+
+else vaccination center type is mass vaccination center
+
+end
+deactivate CTRL
+CTRL->VcStore : vaccenter= registerVaccinationCenter(e.g.: name, open hour, close hour, slot duration,vaccination center type, [...])
+
+activate VcStore
+VcStore --> Vc** : create(e.g.: name, open hour, close hour, slot duration,vaccination center type, [...])
+
+deactivate CTRL
+deactivate Com
+deactivate VcStore
+
+UI --> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveVaccinationCenter()
+activate CTRL
+CTRL -> VcStore : saveVaccinationCenter(vaccenter)
+activate VcStore
+VcStore -> VcStore : validateVaccinationCenter(vaccenter)
+activate VcStore
+deactivate VcStore
+VcStore -> VcStore : addVaccinationCenter(vaccenter)
+activate VcStore
+deactivate VcStore
+deactivate VcStore
+deactivate CTRL
+
+UI --> ADM : informs about the success of the operation
+deactivate UI
+deactivate ADM
+
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+
+left to right direction
+"Administrator" as Admin
+rectangle System{
+Admin --> (US009: Register Vaccination Centers)
+}
+
+
+@enduml

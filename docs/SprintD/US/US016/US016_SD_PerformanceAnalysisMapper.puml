@@ -1,0 +1,23 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":PerformanceAnalysisMapper" as map
+participant "outputData:PerformanceAnalyzes" as out
+participant "performanceAnalyzesDTO:PerformanceAnalyzesDTO" as objDTO
+
+activate map
+[o->map : toDTO(vaccineScheduler)
+
+map -> out : lInputPerformanceRecords = getInputList()
+activate out
+deactivate out
+
+note left : continues until getting all PerformanceAnalyzes attributes
+
+map --> objDTO** : create(lInputPerformanceRecords, ...)
+
+<-- map : objectDTO
+deactivate map
+
+@enduml

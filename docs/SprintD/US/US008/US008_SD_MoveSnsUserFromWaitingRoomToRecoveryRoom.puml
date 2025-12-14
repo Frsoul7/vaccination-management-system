@@ -1,0 +1,53 @@
+@startuml
+autonumber
+'hide footbox
+
+
+participant "VaccinationCenter" as VC
+participant "lWaitingList: List<SnsUser>" as list
+participant "snsUser: SnsUser" as snsUser
+participant "lRecoveryList: List<SnsUser>" as listRecov
+participant "snsUserRecov: SnsUser" as snsUserObj
+
+
+
+activate VC
+[o->VC : [[/US008_SD.puml moveSnsUserFromWaitingRoomToRecoveryRoom(snsUser)]]
+'VC-->listDTO** : create()
+
+alt if lWaitingList is not Empty
+loop for each SnsUser in lWaitingList
+VC -> list : snsUser = getSnsUser(i)
+activate list
+deactivate list
+alt if snsUser equals unique attributes
+
+VC -> list: remove(snsUser)
+activate list
+deactivate list
+
+VC -> snsUser : setSnsUserArrivalTimeDefaultValues();
+activate snsUser
+deactivate snsUser
+
+loop for each SnsUser in lRecoveryList
+VC -> listRecov : snsUserRecov = getSnsUser(i)
+activate listRecov
+deactivate listRecov
+alt if snsUserRecov equals unique attributes
+VC -> VC: return false
+end alt
+VC -> listRecov : add(snsUserRecov)
+activate listRecov
+deactivate listRecov
+
+end loop
+end alt
+end loop
+end alt
+
+<-- VC : [[/US008_SD.puml .]]
+deactivate VC
+
+
+@enduml

@@ -1,0 +1,109 @@
+@startuml
+autonumber
+
+actor "Receptionist" as Rec
+
+participant ":RegisterArrivalOfSnsUserToTakeVaccineUI" as UI
+participant ":RegisterArrivalOfSnsUserToTakeVaccineController" as CTRL
+
+participant "vaccinationCenter1:VaccinationCenter" as selectedVS
+participant "scheduleStore: VaccineSchedulerStore" as schStore
+participant ":VaccineSchedulerMapper" as VSMapper
+participant ":Company" as Com
+participant "snsUStore: SnsUserStore" as SNSStore
+participant "snsUser:SnsUser" as SnsU
+participant "vaccineScheduler:VaccineScheduler" as vScheduler
+participant "lWaitingList : List<SnsUser>" as waitingL
+participant "objectDTO : VaccineSchedulerDTO" as objDTO
+
+activate Rec
+
+note over Rec, UI
+The receptionist at this moment is already logged in
+and attached to the vaccination centers where she's working.
+See the **SD_ReceptionistSelectsVaccinationCenter**
+end note
+
+Rec -> UI : starts the registration of an SNS User arrival
+activate UI
+UI --> Rec : requests the required data (snsUserNumber)
+deactivate UI
+
+
+Rec -> UI : types required information according to the data fields
+activate UI
+
+UI -> CTRL : vaccineScheduler=getVaccineScheduler(snsUserNumber)
+activate CTRL
+CTRL -> selectedVS : scheduleStore = getVaccineSchedulerStore()
+activate selectedVS
+deactivate selectedVS
+CTRL -> schStore : vaccineScheduler=getVaccineSchedulerBySnsUserNumber(snsUserNumber)
+activate schStore
+deactivate schStore
+
+CTRL-> VSMapper : toDTO(vaccineScheduler)
+activate VSMapper
+ref over VSMapper
+SD_VaccineSchedulerMapper_toDTO_Object
+end ref
+VSMapper --> CTRL : objectDTO
+deactivate VSMapper
+
+deactivate CTRL
+
+UI --> Rec : presents the data of the scheduler and asks confirmation
+deactivate UI
+
+Rec -> UI : confirms the data
+activate UI
+
+UI --> Rec : requests the time of arrival
+deactivate UI
+
+Rec -> UI : types the required information
+activate UI
+
+UI -> CTRL : setSnsUserArrivalTime(arrivalTime)
+activate CTRL
+
+CTRL -> vScheduler : validateArrivalTime(arrivalTime)
+activate vScheduler
+vScheduler --> CTRL : ok
+deactivate vScheduler
+
+CTRL -> Com : snsUStore=getSnsUserStore()
+activate Com
+deactivate Com
+CTRL -> SNSStore : snsUser=getSnsUserBySnsUserNumber(snsUserNumber)
+activate SNSStore
+deactivate SNSStore
+
+
+CTRL -> SnsU : setSnsUserArrivalTime(arrivalTime)
+activate SnsU
+deactivate SnsU
+
+deactivate CTRL
+
+UI -> CTRL : addSnsUserToWaitingList(snsUser)
+activate CTRL
+CTRL -> selectedVS : addSnsUserToWaitingList(snsUser)
+activate selectedVS
+selectedVS -> selectedVS : validateSnsUserInWaitingList(snsUser)
+activate selectedVS
+deactivate selectedVS
+
+selectedVS -> selectedVS : addToWaitingList(snsUser)
+activate selectedVS
+deactivate selectedVS
+
+deactivate selectedVS
+deactivate CTRL
+
+UI --> Rec : informs about the success of the operation
+deactivate UI
+
+deactivate Rec
+
+@enduml

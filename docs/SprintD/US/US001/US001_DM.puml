@@ -1,0 +1,62 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+
+class User {
+  -name
+  -password
+  -email
+}
+
+class "Vaccine Scheduler" {
+-SNS user number
+-vaccination center
+-date
+-time
+-vaccine type
+}
+
+class "Vaccination Center"{
+-name
+  -address
+  -phone number
+  -email address
+  -fax number
+  -website address
+  -Open and closing hours
+  -Slot duration
+  -maximum number of vaccines per slot
+  -type
+  -**designation**
+  -waiting list
+}
+
+class "SNS User" {
+ -name
+ -email
+ -phone number
+ -citizen card number
+ -SNS user number
+ -**address**
+ -**birthdate**
+ -**arrivalTime**
+ -**gender**
+}
+
+class Company {
+  -Designation
+}
+
+class "Vaccine Type"{
+-designation
+}
+
+Company "1" -- "*" "SNS User" : knows >
+User "1"-- "0..1" "SNS User" : relates to <
+"SNS User" "1" -- "*" "Vaccine Scheduler" : creates a >
+"Vaccine Scheduler" "*" -- "1" "Vaccination Center" : plans for
+"Vaccine Scheduler" "*" -- "1" "Vaccine Type" : for taking a
+
+@enduml

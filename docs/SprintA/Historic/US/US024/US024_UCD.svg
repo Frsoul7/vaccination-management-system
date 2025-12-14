@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="111px" preserveAspectRatio="none" style="width:391px;height:111px;background:#FFFFFF;" version="1.1" viewBox="0 0 391 111" width="391px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ivh291jtpbbv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#f1ivh291jtpbbv)" height="92" style="stroke:#000000;stroke-width:1.5;" width="207" x="172" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="250.5" y="23.5332">System</text><ellipse cx="275.3923" cy="62.8785" fill="#FEFECE" filter="url(#f1ivh291jtpbbv)" rx="87.3923" ry="19.8785" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="209.3923" y="66.607">To generate a report</text><!--MD5=[74ae13a03863147ae30e011dc1ccfa85]
+entity coord--><ellipse cx="67" cy="31" fill="#FEFECE" filter="url(#f1ivh291jtpbbv)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M67,39 L67,66 M54,47 L80,47 M67,66 L54,81 M67,66 L80,81 " fill="none" filter="url(#f1ivh291jtpbbv)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="6" y="101.0332">Center Coordinator</text><!--MD5=[543fd8a30358058891667f2534a86c17]
+link coord to To generate a report--><path d="M128.01,63 C145.09,63 164.11,63 182.64,63 " fill="none" id="coord-to-To generate a report" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="187.85,63,178.85,59,182.85,63,178.85,67,187.85,63" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[204d73df6c4e8cb7b0508f9460f951db]
+@startuml
+
+left to right direction
+"Center Coordinator" as coord
+rectangle System{
+coord - -> (To generate a report)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

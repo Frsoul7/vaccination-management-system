@@ -1,0 +1,77 @@
+@startuml
+autonumber
+actor "Administrator" as administrator
+
+participant ":ImportSNSUserUI" as UI
+participant ":ImportSNSUserController" as CTRL
+participant ":Company" as COMPANY
+participant "snsUserStore: SnsUserStore" as SNSSTORE
+participant "snsUser: SnsUser" as SNSUSER
+participant ":AuthFacade" as AUTHFACADE
+participant ":PasswordGenerator" as PASSWORDGENERATOR
+
+
+activate administrator
+administrator -> UI : asks to import SNS Users by CSV file
+
+activate UI
+UI --> administrator : requests csv file path (filePath)
+administrator -> UI : types requested data
+UI -> CTRL : startImport(filePath)
+
+activate CTRL
+loop for each line of csv file
+    CTRL -> COMPANY:  snsUserStore = getSnsUserStore()
+    activate COMPANY
+    deactivate COMPANY
+    CTRL -> SNSSTORE: snsUserAlreadyExists = isSNSUserAlreadyExists(snsUserNumber)
+    activate SNSSTORE
+
+    alt snsUserAlreadyExists = False
+        CTRL -> SNSSTORE : snsUser = registerSNSUser(name, gender, phoneNumber, email, citizenCardNumber, snsUserNumber, birthdate)
+
+        SNSSTORE --> SNSUSER** : create(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+        deactivate SNSSTORE
+
+        CTRL -> SNSSTORE : snsUserSaved = saveSnsUser()
+        activate SNSSTORE
+
+        SNSSTORE -> SNSUSER : email = getEmail()
+        activate SNSUSER
+        SNSSTORE -> SNSUSER : name = getName()
+        deactivate SNSUSER
+
+        SNSSTORE -> SNSSTORE : validateSnsUser(snsUser)
+        activate SNSSTORE
+        deactivate SNSSTORE
+
+        SNSSTORE -> AUTHFACADE : existUserEmail(email)
+        activate AUTHFACADE
+        deactivate AUTHFACADE
+
+        SNSSTORE -> PASSWORDGENERATOR : pass = getPassword()
+        activate PASSWORDGENERATOR
+        deactivate PASSWORDGENERATOR
+
+        SNSSTORE -> AUTHFACADE : addUser(name, email, pass)
+        activate AUTHFACADE
+        deactivate AUTHFACADE
+
+        SNSSTORE -> SNSSTORE : addSnsUser(snsUser)
+        activate SNSSTORE
+        deactivate SNSSTORE
+    end
+
+end
+
+deactivate SNSSTORE
+deactivate CTRL
+
+activate UI
+UI --> administrator : Inform about the success of the operation
+
+deactivate UI
+deactivate administrator
+
+
+@enduml

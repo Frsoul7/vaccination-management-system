@@ -1,0 +1,119 @@
+@startuml
+
+class CheckDailyFullyVaccinatedUI{
++validate(filePath)
+}
+
+class CheckDailyFullyVaccinatedController{
++getNumberOfDailyFullyVaccinated(date)
++writeToCSV(filePath, lStatistics)
+}
+
+class lStatistics{
++create()
+}
+
+class Company{
++getVaccineStore()
++getSnsUserStore()
++getPerformanceRecordsStore()
+}
+
+class CountByDate{
++create()
++countDate.setCount()
+}
+
+class PerformanceRecordsStore{
++getPerfomanceRecords(vaccinationCenterId)
+}
+
+class PerformanceRecords{
+-snsUserNumber
+-vaccineName
+-doseStep
+-lotNumber
+-scheduledDate
+-scheduledTimeHour
+-arrivalDate
+-arrivalTimeHour
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+-leavingDate
+-leavingTimeHour
++create()
++getSnsUserNumber()
++getDoseStep()
+}
+
+class Vaccine{
+-name
+-lotNumber
+-id
+-brand
+-vaccineType
+-numberDoses
+-vaccineDosage
++checkIfDoseNumberIsValid(doseNumber,snsUserAge)
++getAdministrationProcessByAge(age)
++getNumberOfDoses()
++checkIfDoseNumberIsValid(numberOfDoses)
++getVaccineType()
+}
+
+class SnsUserStore{
++getSnsUserBySnsUserNumber()
+}
+
+class SnsUser{
+ -name
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthdate
+ -gender
+ +getSnsUser(SnsUserSnsNumber)
+ }
+
+class VaccineStore{
++getVaccine(perRecords.getLotNumber())
+}
+
+class AdministrationProcess{
+-ageGroup
+-numberOfDoses
+-vaccineDosage
+-timeIntervalBetweenDoses
++getNumberOfDoses()
+}
+
+class ListStatisticsMapper{
++toDTO(lStatistics)
+}
+
+class ListStatisticsDTO{
++create()
+}
+
+CheckDailyFullyVaccinatedUI ..> CheckDailyFullyVaccinatedController
+CheckDailyFullyVaccinatedController ..> Company
+CheckDailyFullyVaccinatedController ..> CountByDate
+CheckDailyFullyVaccinatedController ..> lStatistics
+CheckDailyFullyVaccinatedController ..> ListStatisticsMapper
+Company ..> SnsUserStore
+Company ..> PerformanceRecordsStore
+Company ..> VaccineStore
+SnsUserStore ..> SnsUser
+VaccineStore ..> Vaccine
+Vaccine ..> AdministrationProcess
+lStatistics ..> ListStatisticsMapper
+lStatistics ..> SnsUser
+lStatistics ..> AdministrationProcess
+lStatistics ..> PerformanceRecords
+lStatistics ..> CountByDate
+ListStatisticsMapper ..> ListStatisticsDTO
+
+
+
+@enduml

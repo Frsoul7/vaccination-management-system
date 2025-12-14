@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Nurse" as n
+rectangle System{
+n --> (To record the administration of a vaccine)
+}
+
+@enduml

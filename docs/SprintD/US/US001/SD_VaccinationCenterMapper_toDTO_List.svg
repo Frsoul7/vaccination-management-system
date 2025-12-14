@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="543px" preserveAspectRatio="none" style="width:1739px;height:543px;background:#FFFFFF;" version="1.1" viewBox="0 0 1739 543" width="1739px" zoomAndPan="magnify"><defs><filter height="300%" id="fb9x9yp4q2wrg" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="429.6797" style="stroke:#A80036;stroke-width:1.0;" width="10" x="358" y="51.6094"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="651" y="176.2734"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="999.5" y="413.9375"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1326" y="236.625"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1326" y="301.9766"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="316.3672" style="stroke:#000000;stroke-width:2.0;" width="1715" x="10" y="135.5703"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="363" x2="363" y1="41.6094" y2="499.2891"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="656" x2="656" y1="41.6094" y2="499.2891"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1004" x2="1004" y1="115.2656" y2="499.2891"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1331" x2="1331" y1="41.6094" y2="499.2891"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1593" x2="1593" y1="378.2813" y2="499.2891"/><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="182" x="270" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="277" y="26.5332">:VaccinationCenterMapper</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="182" x="270" y="498.2891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="277" y="519.8223">:VaccinationCenterMapper</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="300" x="504" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="286" x="511" y="26.5332">lvaccinationCenters: List&lt;VaccinationCenter&gt;</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="300" x="504" y="498.2891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="286" x="511" y="519.8223">lvaccinationCenters: List&lt;VaccinationCenter&gt;</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="369" x="818" y="498.2891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="355" x="825" y="519.8223">lvaccinationCentersDTO : List&lt;vaccinationCentersDTO&gt;</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="256" x="1201" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="242" x="1208" y="26.5332">vaccinationCenter : VaccinationCenter</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="256" x="1201" y="498.2891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="242" x="1208" y="519.8223">vaccinationCenter : VaccinationCenter</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="240" x="1471" y="498.2891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="226" x="1478" y="519.8223">objectDTO : VaccinationCenterDTO</text><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="429.6797" style="stroke:#A80036;stroke-width:1.0;" width="10" x="358" y="51.6094"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="651" y="176.2734"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="999.5" y="413.9375"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1326" y="236.625"/><rect fill="#FFFFFF" filter="url(#fb9x9yp4q2wrg)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1326" y="301.9766"/><ellipse cx="7.5" cy="73.2109" fill="none" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="346,69.9609,356,73.9609,346,77.9609,350,73.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="12" x2="352" y1="73.9609" y2="73.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="15" y="69.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="26" y="69.1045">toDTO(lvaccinationCenters)</text><polygon fill="#A80036" points="806,100.3125,816,104.3125,806,108.3125,810,104.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="368" x2="812" y1="104.3125" y2="104.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="375" y="99.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="386" y="99.4561">create()</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="369" x="818" y="81.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="355" x="825" y="103.4941">lvaccinationCentersDTO : List&lt;vaccinationCentersDTO&gt;</text><path d="M10,135.5703 L83,135.5703 L83,143.5703 L73,153.5703 L10,153.5703 L10,135.5703 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="316.3672" style="stroke:#000000;stroke-width:2.0;" width="1715" x="10" y="135.5703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="25" y="150.0654">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="282" x="98" y="148.9893">[for each VaccinationCenter in lvaccinationCenters]</text><polygon fill="#A80036" points="639,172.2734,649,176.2734,639,180.2734,643,176.2734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="368" x2="645" y1="176.2734" y2="176.2734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="375" y="171.417">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="253" x="386" y="171.417">vaccinationCenter = getVaccinationCenter(i)</text><polygon fill="#A80036" points="1314,232.625,1324,236.625,1314,240.625,1318,236.625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="368" x2="1320" y1="236.625" y2="236.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="375" y="231.7686">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="386" y="231.7686">name = getName()</text><polygon fill="#A80036" points="1314,297.9766,1324,301.9766,1314,305.9766,1318,301.9766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="368" x2="1320" y1="301.9766" y2="301.9766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="375" y="297.1201">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="386" y="297.1201">address = getAddress()</text><path d="M20,279.625 L20,305.625 L349,305.625 L349,289.625 L339,279.625 L20,279.625 " fill="#FBFB77" filter="url(#fb9x9yp4q2wrg)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M339,279.625 L339,289.625 L349,289.625 L339,279.625 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="308" x="26" y="298.1201">continues until getting all vaccinationCenter attributes</text><polygon fill="#A80036" points="1459,363.3281,1469,367.3281,1459,371.3281,1463,367.3281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="368" x2="1465" y1="367.3281" y2="367.3281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="375" y="362.4717">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="386" y="362.4717">create(name, address, ...)</text><rect fill="#FEFECE" filter="url(#fb9x9yp4q2wrg)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="240" x="1471" y="344.9766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="226" x="1478" y="366.5098">objectDTO : VaccinationCenterDTO</text><polygon fill="#A80036" points="987.5,409.9375,997.5,413.9375,987.5,417.9375,991.5,413.9375" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="368" x2="993.5" y1="413.9375" y2="413.9375"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="375" y="409.0811">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="386" y="409.0811">add(objectDTO)</text><polygon fill="#A80036" points="11,477.2891,1,481.2891,11,485.2891,7,481.2891" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="5" x2="362" y1="481.2891" y2="481.2891"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="17" y="476.4326">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="28" y="476.4326">lvaccinationCentersDTO</text><!--MD5=[432b8cb0b21e03ddbf91e7df49e9e9d8]
+@startuml
+autonumber
+'hide footbox
+
+participant ":VaccinationCenterMapper" as VCMapper
+participant "lvaccinationCenters: List<VaccinationCenter>" as ListVCenters
+participant "lvaccinationCentersDTO : List<vaccinationCentersDTO>" as VCListDTO
+participant "vaccinationCenter : VaccinationCenter" as Vcenter
+participant "objectDTO : VaccinationCenterDTO" as objDTO
+
+activate VCMapper
+[o->VCMapper : toDTO(lvaccinationCenters)
+VCMapper- ->VCListDTO** : create()
+
+loop for each VaccinationCenter in lvaccinationCenters
+VCMapper -> ListVCenters : vaccinationCenter = getVaccinationCenter(i)
+activate ListVCenters
+deactivate ListVCenters
+
+VCMapper -> Vcenter : name = getName()
+activate Vcenter
+deactivate Vcenter
+
+VCMapper -> Vcenter : address = getAddress()
+activate Vcenter
+deactivate Vcenter
+
+note left : continues until getting all vaccinationCenter attributes
+
+VCMapper - -> objDTO** : create(name, address, ...)
+
+VCMapper -> VCListDTO : add(objectDTO)
+activate VCListDTO
+deactivate VCListDTO
+
+end
+
+<- - VCMapper : lvaccinationCentersDTO
+deactivate VCMapper
+
+
+@enduml
+
+@startuml
+autonumber
+
+participant ":VaccinationCenterMapper" as VCMapper
+participant "lvaccinationCenters: List<VaccinationCenter>" as ListVCenters
+participant "lvaccinationCentersDTO : List<vaccinationCentersDTO>" as VCListDTO
+participant "vaccinationCenter : VaccinationCenter" as Vcenter
+participant "objectDTO : VaccinationCenterDTO" as objDTO
+
+activate VCMapper
+[o->VCMapper : toDTO(lvaccinationCenters)
+VCMapper- ->VCListDTO** : create()
+
+loop for each VaccinationCenter in lvaccinationCenters
+VCMapper -> ListVCenters : vaccinationCenter = getVaccinationCenter(i)
+activate ListVCenters
+deactivate ListVCenters
+
+VCMapper -> Vcenter : name = getName()
+activate Vcenter
+deactivate Vcenter
+
+VCMapper -> Vcenter : address = getAddress()
+activate Vcenter
+deactivate Vcenter
+
+note left : continues until getting all vaccinationCenter attributes
+
+VCMapper - -> objDTO** : create(name, address, ...)
+
+VCMapper -> VCListDTO : add(objectDTO)
+activate VCListDTO
+deactivate VCListDTO
+
+end
+
+<- - VCMapper : lvaccinationCentersDTO
+deactivate VCMapper
+
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

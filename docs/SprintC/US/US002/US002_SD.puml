@@ -1,0 +1,112 @@
+@startuml
+autonumber
+'hide footbox
+actor "Receptionist" as recep
+
+participant ":ScheduleVaccineUI" as UI
+participant ":ScheduleVaccineController" as CTRL
+participant ":Company" as Com
+participant "ScheduleStore" as ScheduleStore
+participant "VaccinationCenter" as VaccinationCenter
+participant "SMSNotification" as SMSNotification
+participant "AuthFacade" as AuthFacade
+participant "SnsUser" as SnsUser
+
+activate recep
+
+recep -> UI :  Start vaccine scheduling process
+
+activate UI
+UI --> recep : requests data (snsUserNumber, citizenCardNumber)
+deactivate UI
+
+
+UI -> CTRL  :  validateSnsUserNumber
+
+activate CTRL
+
+
+activate UI
+
+recep -> UI : types required information according to the data fields
+
+activate Com
+
+
+
+CTRL -> Com: schedultingAlreadyExist()
+activate ScheduleStore
+Com -> ScheduleStore :getScheduleList()
+deactivate  ScheduleStore
+activate  AuthFacade
+Com ->  AuthFacade:validateSnsNumber()
+deactivate  AuthFacade
+deactivate Com
+deactivate CTRL
+UI --> recep : present the data according to the validation (schedultingeAlreadyExist)
+
+deactivate UI
+
+recep -> UI  : confirms the data
+activate UI
+UI --> recep : request vaccine type (pfizer,atrazeneca..etc)
+deactivate UI
+recep -> UI : types required information according to the data fields
+activate UI
+
+
+UI -> CTRL:vaccineTypeScheduled=getVaccScheduled
+activate Com
+activate CTRL
+
+CTRL -> Com: vaccineType()
+Com -> VaccinationCenter:validateSlotAvailable()
+deactivate CTRL
+activate VaccinationCenter
+UI --> recep : presents the data of the scheduler and asks confirmation
+deactivate Com
+deactivate VaccinationCenter
+deactivate UI
+
+recep -> UI:   choose date/time for schedule
+activate UI
+UI --> recep : present  center with vacancy
+deactivate UI
+
+recep -> UI: types the required information
+activate UI
+
+UI -> CTRL :getVaccinationSlot()
+activate VaccinationCenter
+activate CTRL
+CTRL -> VaccinationCenter :vaccCenterDisp()
+
+
+
+CTRL -> Com :saveSchedule
+activate Com
+UI --> recep: presents the data and ask for receive SMS
+deactivate Com
+deactivate  VaccinationCenter
+
+deactivate UI
+deactivate CTRL
+
+recep -> UI:Choose the  option (yes[..] no [..])
+activate UI
+UI ->CTRL:smsInf()
+activate CTRL
+activate SMSNotification
+CTRL -> SMSNotification :creatSMS()
+
+activate SnsUser
+SMSNotification -> SnsUser:snsUserData
+activate ScheduleStore
+SMSNotification --> ScheduleStore:getScheduleData()
+deactivate SnsUser
+
+
+
+
+UI --> recep:success of the operation
+@enduml

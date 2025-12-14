@@ -1,0 +1,288 @@
+@startuml
+autonumber
+'hide footbox
+actor Nurse
+
+participant ":RecordAdministrationOfAVaccineToSnsUserUI" as UI
+participant ":RecordAdministrationOfAVaccineToSnsUserController" as CTRL
+participant ":Company" as comp
+participant "vcStore:\nVaccinationCenterStore" as vcStore
+participant "vaccCenter:\nVaccinationCenter" as VC
+participant "snsUStore:\nSnsUserStore" as snsuStore
+participant "snsUser:\nSnsUser" as SnsU
+participant "healthRecords:\nHealthRecords" as hRcd
+participant ":TimeHour" as TimeHour
+participant "vaccRecordsStore:\nVaccinationRecordsStore" as vRcdStore
+participant "vaccRecordOld:\nVaccinationRecords" as vaccRds
+participant "vaccRecordNew:\nVaccinationRecords" as vaccRdsNew
+participant ":DateCustom" as DateCustom
+participant "schedulerStore:\nVaccineSchedulerStore" as schStore
+participant "vaccScheduler:\nVaccineScheduler" as vaccSch
+participant "vStore:\nVaccineStore" as vStore
+participant "vacc:\nVaccine" as Vac
+participant "perfRecordsStore:\nPerformanceRecordsStore" as pRdsStore
+participant "perfRecords:\nPerformanceRecords" as pRecords
+participant "admProc:\nAdministrationProcess" as AdmProc
+participant ":WaitingRoomMapper" as wrMAPPER
+participant "InfoAndHealthConditionsMapper" as healthMAPPER
+participant ":VaccinesMapper" as vMAPPER
+participant ":AdministrationProcessMapper" as apMAPPER
+participant ":VaccineRecordsMapper" as vrMAPPER
+
+activate Nurse
+
+note over Nurse, UI
+The Nurse at this moment is already logged in
+and attached to the vaccination center where she's working.
+See the [[/US008_SD_NurseSelectsVaccinationCenter.puml SD_NurseSelectsVaccinationCenter]]
+end note
+
+'-------------------------------------------------------------------------------------------------------
+Nurse -> UI : asks to record the administration \nof a vaccine to a SNS user
+activate UI
+UI -> CTRL : getListOfSnsUsers(vaccinationCenterId)
+activate CTRL
+CTRL->comp: vcStore = getVaccinationCenterStore()
+activate comp
+deactivate comp
+CTRL->vcStore: vaccCenter = getVaccinationCenter(vaccinationCenterId)
+activate vcStore
+deactivate vcStore
+CTRL->vcStore : listWaitingRoom = getVaccinationCenterWaitingRoomList(vaccCenter)
+activate vcStore
+vcStore->VC: listWaitingRoom = getWaitingRoomList()
+activate VC
+deactivate VC
+vcStore->VC: sortWaitingRoomListByArrival()
+activate VC
+deactivate VC
+deactivate vcStore
+
+CTRL-> wrMAPPER:toDTO(listWaitingRoom)
+activate wrMAPPER
+ref over wrMAPPER
+:[[/US008_SD_WaitingRoomMapper_toDTO_List.puml SD_WaitingRoomMapper_toDTO_List]]
+
+end ref
+
+wrMAPPER-->CTRL: listWaitingRoomDto
+deactivate wrMAPPER
+CTRL-->UI: listWaitingRoomDto
+deactivate CTRL
+UI --> Nurse:  shows list of SNS Users\nfrom the "waiting room" sorted \nby "arrival time" and asks to\nselect one
+deactivate UI
+
+'-------------------------------------------------------------------------------------------------------
+
+Nurse -> UI : selects a Sns User
+activate UI
+UI -> CTRL: getInfoAndHealthConditions(snsUserNumber)
+activate CTRL
+CTRL->comp : snsUStore = getSnsUserStore()
+activate comp
+deactivate comp
+CTRL->snsuStore : snsUser = getSnsUserBySnsUserNumber(snsUserNumber)
+activate snsuStore
+deactivate snsuStore
+CTRL->SnsU: name = getName()
+activate SnsU
+deactivate SnsU
+CTRL->SnsU: age = getSnsUserAge()
+activate SnsU
+deactivate SnsU
+CTRL->SnsU: healthRecords = getHealthRecords()
+activate SnsU
+deactivate SnsU
+CTRL->hRcd: adverseReactions = getAdverseReactions()
+activate hRcd
+deactivate hRcd
+CTRL-> healthMAPPER:toDTO(name,age,adverseReactions)
+activate healthMAPPER
+ref over healthMAPPER
+:[[/US008_SD_InfoAndHealthConditionsMapper_toDTO_Obj.puml SD_InfoAndHealthConditionsMapper_toDTO_Obj]]
+
+end ref
+healthMAPPER-->CTRL:infoAndHealthConditionsDto
+deactivate healthMAPPER
+CTRL-->UI: infoAndHealthConditionsDto
+deactivate CTRL
+UI --> Nurse : shows the sns user info\nand health conditions and\nand asks to confirm
+deactivate UI
+
+'-------------------------------------------------------------------------------------------------------
+
+Nurse -> UI : confirms presented information\nand types vaccination date
+activate UI
+UI -> CTRL: getListOfVaccines(snsUserNumber,date)
+activate CTRL
+CTRL->VC : schedulerStore = getVaccineSchedulerStore()
+activate VC
+deactivate VC
+CTRL->DateCustom: vaccineDate = create(date)
+activate DateCustom
+deactivate DateCustom
+CTRL->schStore: vaccScheduler = getVaccineScheduler(snsUserNumber,vaccineDate)
+activate schStore
+deactivate schStore
+CTRL->vaccSch : vaccineTypeDesignation = getVaccineTypeDesignation()
+activate vaccSch
+deactivate vaccSch
+CTRL -> comp: vStore = getVaccineStore();
+activate comp
+deactivate comp
+CTRL -> vStore:listVaccinesWithSameVaccTypeAndAge = getVaccinesListWithVaccineTypeAndAge(vaccineTypeDesignation,age);
+activate vStore
+vStore->Vac: isAgeValid(age)
+activate Vac
+deactivate Vac
+deactivate vStore
+CTRL->hRcd:vaccRecordsStore = getVaccRecordsStore()
+activate hRcd
+deactivate hRcd
+CTRL ->vRcdStore: vaccRecordOld = findLastVaccRecordByVaccType(listVaccinesWithSameVaccTypeAndAge)
+activate vRcdStore
+deactivate vRcdStore
+
+alt if vaccRecordOld is not null
+CTRL ->vaccRds: vaccineName = getVaccineName()
+activate vaccRds
+deactivate vaccRds
+CTRL -> vStore:listVaccinesWithSameVaccNameAndAge = getVaccinesListWithVaccineNameAndAge(vaccineName, age)
+activate vStore
+vStore->Vac: isAgeValid(age)
+activate Vac
+deactivate Vac
+deactivate vStore
+CTRL ->CTRL : listVaccinesFiltered = listVaccinesWithSameVaccNameAndAge
+activate CTRL
+deactivate CTRL
+end alt
+CTRL -> vMAPPER: toDTO(listVaccinesFiltered)
+activate vMAPPER
+ref over vMAPPER
+:[[/US008_SD_VaccinesMapper_toDTO_List.puml SD_VaccinesMapper_toDTO_List]]
+
+end ref
+vMAPPER-->CTRL: listVaccinesDto
+deactivate vMAPPER
+CTRL --> UI: listVaccinesDto
+deactivate CTRL
+UI --> Nurse : shows a list of vaccines\nand asks to select one
+deactivate UI
+
+'-------------------------------------------------------------------------------------------------------
+Nurse -> UI : selects a vaccine by\nlot number
+activate UI
+UI -> CTRL: getVaccineAdministrationProcess(vaccineLotNumber)
+activate CTRL
+CTRL -> vStore:vacc = getVaccine(vaccineLotNumber)
+activate vStore
+deactivate vStore
+CTRL -> Vac: adminProcess = getAdministrationProcess(age)
+activate Vac
+Vac -> AdmProc: isAgeValid(age)
+activate AdmProc
+deactivate AdmProc
+deactivate Vac
+alt if vaccRecordOld is not null
+CTRL ->vaccRds: nextDoseStep = getNextDoseStep()
+activate vaccRds
+vaccRds->vaccRds: nextDoseStep = getDoseStep()+1
+activate vaccRds
+deactivate vaccRds
+deactivate vaccRds
+end alt
+CTRL ->AdmProc: vaccDosage = getVaccineDosageByDoseStep(nextDoseStep)
+activate AdmProc
+AdmProc -> AdmProc: isDoseStepValid(nextDoseStep)
+activate AdmProc
+deactivate AdmProc
+deactivate AdmProc
+CTRL -> apMAPPER: toDTO(vacc, nextDoseStep, vaccDosage)
+activate apMAPPER
+ref over apMAPPER
+:[[/US008_SD_VaccAdministrationDosageMapper_toDTO_Obj.puml SD_VaccAdministrationDosageMapper_toDTO_Obj]]
+
+end ref
+apMAPPER-->CTRL: vaccAdministrationDosageDto
+deactivate apMAPPER
+CTRL -->UI : vaccAdministrationDosageDto
+deactivate CTRL
+UI --> Nurse : shows vaccine administration\nprocess compliance data with\nthe physical conditions and\nasks to type the vaccine\nadministration hour
+deactivate UI
+
+'-------------------------------------------------------------------------------------------------------
+
+Nurse -> UI : types the vaccine\nadministration hour
+activate UI
+UI -> CTRL: recordAdministrationOfAVaccine(nurseAdministrationTime)
+activate CTRL
+CTRL ->TimeHour: nurseAdministrationTimeHour = create(nurseAdministrationTime)
+activate TimeHour
+deactivate TimeHour
+CTRL ->vRcdStore: vaccRecordNew = recordVaccRecords(vaccineName, doseStep, vaccineLotNumber, nurseAdministrationDate, nurseAdministrationTimeHour)
+activate vRcdStore
+vRcdStore->vaccRdsNew**: create(vaccineName,\ndoseStep,vaccineLotNumber,\nnurseAdministrationDate,\nnurseAdministrationTimeHour)
+deactivate vRcdStore
+CTRL ->vrMAPPER: toDTO(vaccRecords)
+activate vrMAPPER
+ref over vrMAPPER
+:[[/US008_SD_VaccinationRecordsMapper_toDTO_Obj.puml SD_VaccinationRecordsMapper_toDTO_Obj]]
+
+end ref
+vrMAPPER-->CTRL: vaccRecordsDto
+deactivate vrMAPPER
+CTRL-->UI: vaccRecordsDto
+deactivate CTRL
+UI --> Nurse : shows the administrated vaccine\nresume and asks to permanently\nrecord the information
+deactivate UI
+'-------------------------------------------------------------------------------------------------------
+Nurse -> UI : confirms
+activate UI
+UI -> CTRL: saveVaccineRecords()
+activate CTRL
+CTRL ->vRcdStore: saveVaccineRecords(vaccRecords)
+activate vRcdStore
+vRcdStore->vRcdStore: addVaccineRecords(vaccRecords)
+activate vRcdStore
+deactivate vRcdStore
+deactivate vRcdStore
+CTRL ->VC: perfRecordsStore = getPerformanceRecordsStore()
+activate VC
+deactivate VC
+CTRL ->pRdsStore: setPerfRecordsWithVaccAdministration(snsUserNumber, vaccRecordNew)
+activate pRdsStore
+ref over pRdsStore
+:[[/US008_SD_SaveVaccRecordsInPerfRecords.puml SD_SaveVaccRecordsInPerfRecords]]
+
+end ref
+pRdsStore-->CTRL
+deactivate pRdsStore
+
+CTRL -> VC: moveSnsUserFromWaitingRoomToRecoveryRoom(snsUser)
+activate VC
+ref over VC
+:[[/US008_SD_MoveSnsUserFromWaitingRoomToRecoveryRoom.puml SD_MoveSnsUserFromWaitingRoomToRecoveryRoom]]
+
+end ref
+VC-->CTRL
+deactivate VC
+CTRL ->CTRL: launchTimer()
+activate CTRL
+ref over CTRL
+:[[/US008_SD_LaunchTimer.puml SD_LaunchTimer]]
+
+end ref
+CTRL ->CTRL:
+deactivate CTRL
+
+CTRL -->UI: Ok
+deactivate CTRL
+UI --> Nurse : informs the success of operation
+deactivate UI
+
+deactivate Nurse
+
+
+
+@enduml

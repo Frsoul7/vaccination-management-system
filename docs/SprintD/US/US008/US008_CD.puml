@@ -1,0 +1,273 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class RecordAdministrationOfAVaccineToSnsUserUI{
+}
+
+class RecordAdministrationOfAVaccineToSnsUserController{
++getListOfSnsUsers(vaccinationCenterId)
++getInfoAndHealthConditions(snsUserNumber)
++getListOfVaccines(snsUserNumber, date)
++getVaccineAdministrationProcess(vaccineLotNumber)
++recordAdministrationOfAVaccine(nurseAdministrationTime)
++saveVaccineRecords()
+}
+
+
+class SNSUserStore{
++snsUserList
++getSnsUserBySnsUserNumber(snsUserNumber)
+}
+
+together {
+class SnsUser{
+ -name
+ -address
+ -gender
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthDate
+ -arrivalTime
+ +getName()
+ +calculateAge()
+ +getHealthRecords()
+}
+
+class "Health Records" {
+-health condition
+-adverse reactions
++getAdverseReactions()
++getVaccRecordsStore()
+}
+class VaccinationRecordsStore{
++listVaccRecords
++findLastVaccRecordByVaccType(listVaccinesWithSameVaccTypeAndAge)
++saveVaccinationRecords(vaccRecordNew)
+}
+
+class "VaccinationRecords"{
+-vaccineName
+-doseStep
+-vaccineLotNumber
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
++VaccinationRecords(vaccineName, doseStep,...)
++getVaccineName()
++getNextDoseStep()
+
+}
+}
+class VaccinationCenter {
+    -name
+    -address
+    -phone number
+    -email address
+    -fax number
+    -website address
+    -Open and closing hours
+    -Slot duration
+    -maximum number of vaccines per slot
+    -type
+    -designation
+    +waiting room
+    +recovery room
+    +listWaitingRoom= getWaitingRoomList()
+    +sortWaitingRoomListByArrival()
+    +getPerformanceRecordsStore()
+    +moveSnsUserFromWaitingRoomToRecoveryRoom(snsUser)
+}
+
+class VaccinationCenterStore{
+-vc
++vaccinationCenterList
++listWaitingRoom=getVaccinationCenterWaitingRoomList(vaccinationCenter)
+}
+
+class VaccineSchedulerStore{
++lVacSchedules
++getVaccinationScheduler(snsUserNumber, vaccineDate)
+}
+
+class Company
+{
+  -designation
+  +getVaccineTypeStore()
+  +getVaccineStore()
+  +getSnsUserStore()
+  +getVaccinationCenterStore()
+
+}
+
+
+class PerformanceRecordsStore{
++listPerfRecords
++setPerfRecordsWithVaccAdministration(snsUserNumber, vaccRecordNew)
+}
+
+class "PerformanceRecords"{
+-snsUserNumber
+-vaccineName
+-doseStep
+-lotNumber
+-scheduledDate
+-scheduledTimeHour
+-arrivalDate
+-arrivalTimeHour
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
+-leavingDate
+-leavingTimeHour
++PerformanceRecords(snsUserNumber, scheduledDate,...)
+}
+class VaccineScheduler{
+-snsUserNumber
+-vaccineTypeDesignation
+-vaccinationCenterName
+-date
+-schedulerTime
++VaccineScheduler(snsUserNumber, vaccineTypeDesignation,...)
++getVaccineTypeDesignation()
+
+}
+
+
+class "Vaccine Type"{
+-designation
+}
+class VaccineTypeStore{
++vaccineTypesList
+}
+class VaccineStore{
++vaccineList
++getVaccinesListWithVaccineTypeAndAge(vaccineTypeDesignation, age)
++getVaccinesListWithVaccineNameAndAge(vaccineName, age)
++getVaccine(vaccineLotNumber)
+}
+class Vaccine{
+-name
+-lot number
+-Id
+-brand
+-vaccineType
+-ageGroup
+-numberDoses
+-vaccineDosage
++admProcList
++Vaccine(name, lotNumber,...)
++getAdministrationProcess(age)
+}
+
+class "Administration Process"{
+-age group
+-doses administrated per age group
+-vaccine dosage
+-time intervals
++getVaccineDosageByDoseStep(nextDoseStep)
+}
+
+class WaitingRoomMapper{
++toDTO(listWaitingRoom)
+}
+class SnsUserDTO{
+ -name
+ -gender
+ -birthDate
+ -snsUserNumber
+ -phoneNumber
+ -snsUserArrivalTime
+ +SnsUserDto(name,gender,...)
+}
+
+class InfoAndHealthConditionsMapper{
+toDTO(name, age, adverseReactions)
+}
+class InfoAndHealthConditionsDTO{
+-name
+-age
+-adverseReactions
++InfoAndHealthConditionsDTO(name, age, adverseReactions)
+}
+
+class VaccineMapper{
++toDTO(listVaccinesFiltered)
+}
+class VaccineDTO{
+-name
+-lotNumber
+-Id
+-brand
+-vaccineType
+-ageGroup
++VaccineDTO(name, lotNumber,...)
+}
+
+class VaccAdministrationDosageMapper{
++toDoTO(vacc, nextDoseStep, vaccDosage)
+}
+class VaccAdministrationDosageDTO{
+-vaccineType
+-vaccineName
+-vaccineLotNumber
+-vaccineDoseStep
+-vaccineDosage
++VaccAdministrationDosageDTO(vaccineType, vaccineName,...)
+}
+
+class VaccinationRecordsMapper{
++toDTO(vaccRecord)
+}
+class VaccRecordsDTO{
+-vaccineName
+-doseStep
+-vaccineLotNumber
+-nurseAdministrationDate
+-nurseAdministrationTimeHour
++VaccRecordsDTO(vaccineName, doseStep,...)
+}
+
+
+
+RecordAdministrationOfAVaccineToSnsUserUI ..> RecordAdministrationOfAVaccineToSnsUserController
+RecordAdministrationOfAVaccineToSnsUserController..>Company
+Company..>VaccinationCenterStore
+VaccinationCenterStore..>VaccinationCenter
+VaccinationCenter..>PerformanceRecordsStore
+PerformanceRecordsStore..>PerformanceRecords
+VaccinationCenter..>VaccineSchedulerStore
+VaccineSchedulerStore..>VaccineScheduler
+Company..>SNSUserStore
+SNSUserStore..>SnsUser
+"Health Records"..>VaccinationRecordsStore
+VaccinationRecordsStore..>"VaccinationRecords"
+Company..>VaccineTypeStore
+VaccineTypeStore..>"Vaccine Type"
+Company..>VaccineStore
+VaccineStore..>Vaccine
+
+RecordAdministrationOfAVaccineToSnsUserController..>WaitingRoomMapper
+RecordAdministrationOfAVaccineToSnsUserController..>InfoAndHealthConditionsMapper
+RecordAdministrationOfAVaccineToSnsUserController..>VaccineMapper
+RecordAdministrationOfAVaccineToSnsUserController..>VaccAdministrationDosageMapper
+RecordAdministrationOfAVaccineToSnsUserController..>VaccinationRecordsMapper
+
+
+WaitingRoomMapper..>SnsUserDTO
+WaitingRoomMapper..>SnsUser
+InfoAndHealthConditionsMapper..>InfoAndHealthConditionsDTO
+InfoAndHealthConditionsMapper..>"Health Records"
+VaccineMapper..>VaccineDTO
+VaccineMapper..>Vaccine
+VaccAdministrationDosageMapper..>VaccAdministrationDosageDTO
+VaccAdministrationDosageMapper..>Vaccine
+VaccinationRecordsMapper..>VaccRecordsDTO
+VaccinationRecordsMapper..>"VaccinationRecords"
+
+
+"Administration Process" "*" -- "1" Vaccine : follows a <
+"VaccineScheduler" "*" -- "1" "Vaccine Type" : for taking a >
+Vaccine "*" -- "1" "Vaccine Type" : is part of >
+
+SnsUser "1" -- "*" "Health Records" : has a >
+@enduml

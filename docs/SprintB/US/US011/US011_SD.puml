@@ -1,0 +1,48 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":List employes " as UI
+participant ":List employes" as CTRL
+participant "List employes" as EmpStore
+participant "List employes" as EmpStore3
+
+
+activate ADM
+ADM -> UI : List employes menu
+
+activate UI
+UI --> ADM : Choose listing option :1-List employee in specific 2-List all employes 3-list employes of a certain role
+deactivate UI
+
+
+ADM -> UI : type of data choised
+activate UI
+UI -> CTRL : List employe in specific
+UI --> CTRL :ask for employe id,email or  full name.
+
+
+activate CTRL
+
+CTRL->EmpStore : List all employes
+
+activate EmpStore
+activate EmpStore3
+EmpStore ->EmpStore3:list employes of a certain role
+
+
+
+CTRL-->EmpStore :Present data of all employees registered in the system
+UI --> CTRL : present data about specif employe
+UI --> ADM : presents the data according to the selected option and ask for return to list menu
+EmpStore -->EmpStore3 :present all employes of a certain role
+deactivate UI
+
+
+
+
+deactivate UI
+deactivate ADM
+
+@enduml

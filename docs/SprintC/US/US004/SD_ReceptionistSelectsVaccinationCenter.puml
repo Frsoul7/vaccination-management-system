@@ -1,0 +1,77 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Receptionist" as Rec
+
+participant ":SelectVaccinationCenterUI" as UI
+participant "SelectVaccinationCenterController" as CTRL
+participant ":Company" as Com
+participant "vcStore:\nVaccinationCenterStore" as VcStore
+participant ":VaccinationCenterMapper" as VCMapper
+
+participant "App" as Ap
+participant "app:App" as InstAp
+participant "session:UserSession" as Sess
+
+participant "eStore:\nEmployeeStore" as EmpStore
+participant "empl:Employee" as Emp
+participant "lvaccinationCenters: List<VaccinationCenter>" as ListVCenters
+participant "lvaccinationCentersDTO : List<vaccinationCentersDTO>" as VCListDTO
+
+
+note left UI : After login, this UI will run automatically
+
+activate UI
+UI->CTRL : lvaccinationCenters = getVaccinationCenters()
+activate CTRL
+CTRL->Com :vcStore = getVaccinationCenterStore()
+activate Com
+deactivate Com
+CTRL->VcStore: lvaccinationCenters = getVaccinationCenters()
+activate VcStore
+deactivate VcStore
+CTRL->VCMapper: toDTO(lvaccinationCenters)
+activate VCMapper
+ref over VCMapper
+SD_VaccinationCenterMapper_toDTO_List
+end ref
+VCMapper --> CTRL : lvaccinationCentersDTO
+deactivate VCMapper
+deactivate CTRL
+
+UI --> Rec: shows the vaccination centers list
+deactivate UI
+
+activate Rec
+Rec ->UI : selects the vaccination center to work
+activate UI
+
+UI -> CTRL : setEmployeeVaccinationCenter(vaccinationCenter)
+activate CTRL
+CTRL -> Ap : app = getInstance()
+activate Ap
+deactivate Ap
+CTRL -> InstAp : session = getCurrentUserSession()
+activate InstAp
+deactivate InstAp
+CTRL -> Sess : email = getUserId()
+activate Sess
+deactivate Sess
+CTRL -> Com : eStore = getEmployeeStore()
+activate Com
+deactivate Com
+CTRL -> EmpStore : empl = getEmployeeByEmail(email)
+activate EmpStore
+deactivate EmpStore
+CTRL -> Emp : setEmployeeVaccinationCenter(vaccinationCenter)
+activate Emp
+deactivate Emp
+
+deactivate CTRL
+UI --> Rec: Vaccination Center added with success
+deactivate UI
+
+
+
+@enduml

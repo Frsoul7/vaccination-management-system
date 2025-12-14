@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="315.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.ShowDosageAndTypeTimeGUI">
+   <children>
+      <Label layoutX="31.0" layoutY="21.0" text="Vaccine administration dosage:" textAlignment="CENTER" textFill="#247ec0" />
+      <Button fx:id="btnSaveTime" layoutX="144.0" layoutY="209.0" mnemonicParsing="false" onAction="#btnSaveTimeAction" prefHeight="43.0" prefWidth="81.0" text="Save" />
+      <Label fx:id="lblVaccineDosageInfo" alignment="TOP_LEFT" layoutX="31.0" layoutY="42.0" prefHeight="92.0" prefWidth="274.0" text="- n/a -" textFill="#00000099">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <TextField fx:id="txtVaccAdministrationTime" alignment="CENTER" layoutX="131.0" layoutY="171.0" onAction="#onEnter" prefHeight="25.0" prefWidth="110.0" promptText="Time of Vaccine" />
+      <Label layoutX="31.0" layoutY="142.0" text="Insert Administration Time (HH:MM am/pm)" textFill="#247ec0" />
+      <Label fx:id="lbWarningMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="258.0" prefHeight="43.0" prefWidth="194.0" textAlignment="CENTER" textFill="RED" />
+   </children>
+</AnchorPane>

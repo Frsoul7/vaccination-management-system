@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.CoordinatorGUI_0">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="600.0" text="MENU: CENTER COORDINATOR" textFill="#247ec0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <AnchorPane prefHeight="370.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="LogoutButton" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#SessionLogout" text="LOGOUT" />
+            <Button fx:id="option1Button" layoutX="88.0" layoutY="85.0" mnemonicParsing="false" onAction="#chooseOption1" prefHeight="25.0" prefWidth="410.0" text="1 - Import CSV and Sort by Arrival/Leaving Time" textFill="#247ec0" />
+            <Button fx:id="option2Button" layoutX="88.0" layoutY="146.0" mnemonicParsing="false" onAction="#chooseOption2" prefHeight="25.0" prefWidth="410.0" text="2 - Analyse Performance of a Vaccination Center" textFill="#247ec0" />
+            <Button fx:id="option3Button" layoutX="88.0" layoutY="206.0" mnemonicParsing="false" onAction="#chooseOption3" prefHeight="25.0" prefWidth="410.0" text="3 - Check and Export the Total Number of Fully Vaccinated per Day" textFill="#247ec0" />
+            <Label layoutX="209.0" layoutY="28.0" text="Choose one option from bellow" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

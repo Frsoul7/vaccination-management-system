@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.CoordinatorGUI_3">
+   <right>
+      <ListView fx:id="ShowList" prefHeight="370.0" prefWidth="396.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="600.0" text="MENU: CENTER COORDINATOR - Vaccination Statistics" textFill="#247ec0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <AnchorPane prefHeight="370.0" prefWidth="206.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="BackButton" layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#BackToMenu" text="BACK" />
+            <Button fx:id="SortButton" layoutX="94.0" layoutY="317.0" mnemonicParsing="false" text="ANALYZE" textFill="#247ec0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="LogoutButton" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#SessionLogout" text="LOGOUT" />
+            <Label fx:id="FileNotLoaded1" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="51.0" text="Choose the starting period to analyse" />
+            <TextField layoutX="25.0" layoutY="76.0" prefHeight="25.0" prefWidth="159.0" promptText="insert date (DD/MM/YYYY)" />
+            <Label fx:id="FileNotLoaded11" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="113.0" text="Choose the ending period to analyse" />
+            <TextField layoutX="25.0" layoutY="136.0" prefHeight="25.0" prefWidth="159.0" promptText="insert date (DD/MM/YYYY)" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

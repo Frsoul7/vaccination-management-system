@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="113px" preserveAspectRatio="none" style="width:363px;height:113px;background:#FFFFFF;" version="1.1" viewBox="0 0 363 113" width="363px" zoomAndPan="magnify"><defs><filter height="300%" id="fim8tp7ur9my4" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#fim8tp7ur9my4)" height="94" style="stroke:#000000;stroke-width:1.5;" width="218" x="133" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="217" y="23.5332">System</text><ellipse cx="242.0017" cy="64.0003" fill="#FEFECE" filter="url(#fim8tp7ur9my4)" rx="93.0017" ry="21.0003" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="169.5017" y="67.7289">To registe a new nurse</text><!--MD5=[97ab183161fd5d1db7fba7485cf76add]
+entity Admin--><ellipse cx="47.5" cy="32" fill="#FEFECE" filter="url(#fim8tp7ur9my4)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M47.5,40 L47.5,67 M34.5,48 L60.5,48 M47.5,67 L34.5,82 M47.5,67 L60.5,82 " fill="none" filter="url(#fim8tp7ur9my4)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="6" y="102.0332">Administrator</text><!--MD5=[7ae90e739ae7be82c4a0f0ae17219aab]
+link Admin to To registe a new nurse--><path d="M89.32,64 C105.26,64 124.28,64 143.37,64 " fill="none" id="Admin-to-To registe a new nurse" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="148.75,64,139.75,60,143.75,64,139.75,68,148.75,64" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7680f2da48f92e6f23d08f9f1c47c53e]
+@startuml
+
+left to right direction
+"Administrator" as Admin
+rectangle System{
+Admin - -> (To registe a new nurse)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

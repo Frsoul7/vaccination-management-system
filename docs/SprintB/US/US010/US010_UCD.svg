@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="117px" preserveAspectRatio="none" style="width:384px;height:117px;background:#FFFFFF;" version="1.1" viewBox="0 0 384 117" width="384px" zoomAndPan="magnify"><defs><filter height="300%" id="ff3idxc8ijcrs" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#ff3idxc8ijcrs)" height="98" style="stroke:#000000;stroke-width:1.5;" width="239" x="133" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="227.5" y="23.5332">System</text><ellipse cx="252.6395" cy="66.1279" fill="#FEFECE" filter="url(#ff3idxc8ijcrs)" rx="103.6395" ry="23.1279" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="168.1395" y="69.8564">US010: Register Employee</text><!--MD5=[97ab183161fd5d1db7fba7485cf76add]
+entity Admin--><ellipse cx="47.5" cy="34" fill="#FEFECE" filter="url(#ff3idxc8ijcrs)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M47.5,42 L47.5,69 M34.5,50 L60.5,50 M47.5,69 L34.5,84 M47.5,69 L60.5,84 " fill="none" filter="url(#ff3idxc8ijcrs)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="6" y="104.0332">Administrator</text><!--MD5=[11ef0454eae993087621b8b558b9419b]
+link Admin to US010: Register Employee--><path d="M89.09,66 C104.96,66 123.97,66 143.31,66 " fill="none" id="Admin-to-US010: Register Employee" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="148.77,66,139.77,62,143.77,66,139.77,70,148.77,66" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6032aa3b84833ecaf3fb2e59070ddd3b]
+@startuml
+
+left to right direction
+"Administrator" as Admin
+rectangle System{
+Admin - -> (US010: Register Employee)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

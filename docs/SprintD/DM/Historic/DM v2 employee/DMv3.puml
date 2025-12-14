@@ -1,0 +1,159 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+
+
+
+together {
+
+class User {
+  -name
+  -password
+  -email
+  - role
+}
+class Employee{
+}
+
+}
+
+
+
+together {
+
+class "SNS User" {
+  -SNS user number
+  -mobile Contact
+}
+class "Vaccine Certificate"{
+}
+class "Health Records" {
+-vaccination history
+-health condition
+-adverse reactions
+}
+
+}
+
+
+
+class Receptionist {
+}
+
+together {
+
+class Nurse {
+}
+class Administrator {
+}
+
+}
+
+class Company {
+  -Designation
+}
+
+together {
+
+class "Center Coordinator" {
+}
+class "Vaccination Center" {
+  -name
+  -address
+  -phone number
+  -email address
+  -fax number
+  -website address
+  -Open and closing hours
+  -Slot duration
+  -maximum number of vaccines per slot
+  +waiting list
+}
+
+class "Healthcare Center" {
+  -ARS Designation
+  -AGES Designation
+}
+
+class "Mass Vaccination Center" {
+
+}
+
+}
+
+together {
+class "Administration Process"{
+-age group
+-doses administrated per age group
+-vaccine dosage
+-time intervals
+}
+
+class Vaccine{
+-designation
+-lot number
+}
+
+}
+
+class "Vaccine Type"{
+-designation
+}
+
+class "Vaccine Scheduler"{
+-SNS user number
+-vaccination center
+-dateTime
+-vaccine type
+}
+
+class "Vaccine Administration"{
+-vaccine type
+-vaccine name
+-lote number
++recovery time
+}
+
+
+
+User <|-- "SNS User"
+User <|-- "Employee"
+
+Employee "1" -- "1" "Administrator" : plays >
+Employee "1" -- "1" "Receptionist" : plays >
+Employee "1" -- "1" "Nurse" : plays >
+Employee "1" -- "1" "Center Coordinator" : plays >
+
+
+Company "1" -- "*" User : registers >
+
+"Vaccination Center" "1" -- "*" "Mass Vaccination Center" : part of <
+"Vaccination Center" "1" -- "*" "Healthcare Center" : part of <
+"Vaccination Center" "1" -- "*" "Vaccine Scheduler" : plans for <
+
+Administrator "*" -- "*" User : registers >
+Administrator "1" -- "*" "Vaccination Center" : registers >
+Administrator "1" -- "*" "Vaccine Type" : registers >
+Administrator "1" -- "*" Vaccine : registers >
+
+"Center Coordinator" "1" -- "*" "Vaccination Center" : monitors Covid-19 process >
+
+Vaccine "*" -- "1" "Vaccine Type" : is part of >
+Vaccine "1" -- "*" "Vaccine Administration" : of a <
+
+"Administration Process" "*" -- "1" Vaccine : follows a <
+
+Nurse "1" -- "*" "Vaccine Administration" : is responsible for >
+
+"SNS User" "1" -- "*" "Vaccine Administration" : Administered on <
+"SNS User" "1" -- "*" "Vaccine Scheduler" : creates a >
+"SNS User" "1" -- "*" "Vaccine Certificate" : requests for issuance of >
+"SNS User" "1" -- "*" "Health Records" : has a >
+
+"Vaccine Scheduler" "*" -- "1" "Vaccine Type" : for taking a >
+"Vaccine Scheduler" "0..1" -- "0..1" "Vaccine Administration" : fulfilling <
+
+Receptionist "1" -- "*" "Vaccine Scheduler" : creates a >
+Receptionist "1" -- "*" "Vaccination Center" : checks in >
+
+@enduml

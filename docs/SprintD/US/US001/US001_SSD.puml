@@ -1,0 +1,33 @@
+@startuml
+autonumber
+actor "SNS User" as SnsUser
+
+activate SnsUser
+SnsUser -> ":System" : starts the scheduling of a vaccine
+activate ":System"
+":System" --> SnsUser : requests the required data (SNS User number)
+deactivate ":System"
+
+SnsUser -> ":System" : types required information according to the data fields
+activate ":System"
+":System" --> SnsUser : asks to select a vaccination center, a vaccine type and if SMS confirmation is desired
+deactivate ":System"
+
+SnsUser -> ":System" : selects the data
+activate ":System"
+":System" --> SnsUser : requests to input the date and time of vaccine schedule
+deactivate ":System"
+
+SnsUser -> ":System" : types required information
+activate ":System"
+":System" --> SnsUser : shows the data and requests confirmation
+deactivate ":System"
+
+SnsUser -> ":System" : confirms data
+activate ":System"
+":System" --> SnsUser : informs about the success of the operation
+deactivate ":System"
+
+deactivate SnsUser
+
+@enduml

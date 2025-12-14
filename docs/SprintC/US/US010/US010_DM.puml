@@ -1,0 +1,54 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+together {
+
+class User {
+  -name
+  -password
+  -email
+}
+class Employee{
+  -address
+  -phone number
+  -citizen card number
+  -id
+  -name
+  -email
+  -role
+}
+
+}
+
+together {
+class Receptionist {
+}
+
+class Nurse {
+}
+
+class "Center Coordinator" {
+}
+}
+
+class Administrator {
+}
+
+class Company {
+  -Designation
+}
+
+User "1"-- "0..1" "Employee" : relates to <
+
+Employee "1" -- "*" "Receptionist" : plays >
+Employee "1" -- "*" "Nurse" : plays >
+Employee "1" -- "*" "Center Coordinator" : plays >
+
+Company "1" -- "*" "Employee" : owns >
+Company "1" -- "*" Administrator : registers >
+
+Administrator "1" -- "*" "Employee" : registers >
+
+@enduml

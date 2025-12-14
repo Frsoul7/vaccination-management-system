@@ -1,0 +1,58 @@
+@startuml
+autonumber
+'hide footbox
+actor Nurse
+
+participant ":ConsultSnsUsersInWaitingRoomUI" as UI
+participant ":ConsultSnsUsersInWaitingRoomController" as CTRL
+participant ":Company" as comp
+participant "vcStore:VaccinationCenterStore" as vsStore
+participant ":WaitingRoomMapper" as mapper
+participant ":VaccinationCenter" as VC
+participant "listWaitingRoom: List<SnsUser>" as list
+participant "listWaitingRoomDTO: List<SnsUserDto>" as listDTO
+participant "snsUser: SnsUser" as snsu
+participant "snsUserDto: SnsUserDto" as snsuDTO
+
+activate Nurse
+
+note over Nurse, UI
+The Nurse at this moment is already logged in
+and attached to the vaccination center where she's working.
+See the **SD_NurseSelectsVaccinationCenter**
+end note
+
+Nurse -> UI : asks to get the list of SNS Users \nin the waiting room
+activate UI
+UI -> CTRL : getListOfSnsUsers(vaccinationCenterId)
+activate CTRL
+CTRL->comp: vcStore= getVaccinationCenterStore()
+activate comp
+deactivate comp
+CTRL->vsStore : listWaitingRoom = getVaccinationCenterWaitingRoomList(vaccinationCenterId)
+activate vsStore
+vsStore->VC: listWaitingRoom= getWaitingRoomList()
+activate VC
+deactivate VC
+vsStore->VC: sortWaitingRoomListByArrival()
+activate VC
+deactivate VC
+deactivate vsStore
+
+CTRL-> mapper:toDTO(listWaitingRoom)
+activate mapper
+ref over mapper
+SD_WaitingRoomMapper_toDTO_List
+end ref
+
+mapper-->CTRL: listWaitingRoomDto
+deactivate mapper
+CTRL-->UI: listWaitingRoomDto
+deactivate CTRL
+UI --> Nurse:  shows list of SNS Users\nsorted by arrival time
+deactivate UI
+deactivate Nurse
+
+
+
+@enduml

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="129px" preserveAspectRatio="none" style="width:433px;height:129px;background:#FFFFFF;" version="1.1" viewBox="0 0 433 129" width="433px" zoomAndPan="magnify"><defs><filter height="300%" id="f90u6cr06hrxd" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#f90u6cr06hrxd)" height="110" style="stroke:#000000;stroke-width:1.5;" width="293" x="128" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="249.5" y="23.5332">System</text><ellipse cx="274.3511" cy="71.9702" fill="#FEFECE" filter="url(#f90u6cr06hrxd)" rx="130.3511" ry="28.4702" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="227" x="160.8511" y="75.6987">To register the arrival of a SNS user</text><!--MD5=[13d33e681bb8b80feb56fac81b77103f]
+entity Recep--><ellipse cx="45" cy="40" fill="#FEFECE" filter="url(#f90u6cr06hrxd)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M45,48 L45,75 M32,56 L58,56 M45,75 L32,90 M45,75 L58,90 " fill="none" filter="url(#f90u6cr06hrxd)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="6" y="110.0332">Receptionist</text><!--MD5=[3de588a984b56a424c3a8bf5b7264809]
+link Recep to To register the arrival of a SNS user--><path d="M84.08,72 C99.7,72 118.82,72 138.82,72 " fill="none" id="Recep-to-To register the arrival of a SNS user" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="143.93,72,134.93,68,138.93,72,134.93,76,143.93,72" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4bbfadf09320092b4b15e553f6cd7cf8]
+@startuml
+
+left to right direction
+"Receptionist" as Recep
+rectangle System{
+Recep - -> (To register the arrival of a SNS user)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

@@ -1,0 +1,47 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+together {
+
+class SNS_user {
+ -id
+ -SNS user number
+  -mobile Contact
+}
+
+
+class Schedule_Vaccine{
+-SNS user number
+-Citizen Card
+-dateTime
+-vaccine type
+-waiting list
+-vaccination center
+
+}
+
+
+
+}
+
+together {
+class Receptionist {
+}
+
+
+}
+class Receptionist {
+}
+
+SNS_user "1" -- "*" "Receptionist" : plays >
+Receptionist "1" -- "*" "Schedule_Vaccine" :creat >
+Schedule_Vaccine "1" -- "*" " VaccineStore  " :vaccine type >
+Schedule_Vaccine "1" -- "*" " Vaccination Center " :plans for >
+Company "1" -- "*" "Schedule_Vaccine" :know >
+
+
+
+
+@enduml

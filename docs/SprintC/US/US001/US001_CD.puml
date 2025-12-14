@@ -1,0 +1,133 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+class AuthFacade
+{
+  +addUser(name, email, pwd)
+  +existsUser(email)
+}
+
+class SnsUser {
+ -name
+ -email
+ -phoneNumber
+ -citizenCardNumber
+ -snsUserNumber
+ -birthdate
+ -gender
+ +SnsUser(name, gender, phoneNumber, email, birthdate, snsUserNumber, citizenCardNumber)
+ +getEmail()
+ +getName()
+}
+
+class VaccineTypeMapper {
++toDTO(lvacType)
+}
+
+class VaccinationCenterMapper {
++toDTO(lvaccinationCenters)
+}
+
+class VaccineSchedulerMapper {
++toDTO(vaccineScheduler)
+}
+
+class SnsUserStore{
++validateSnsUserNumber()
+}
+
+class VaccinationCenterStore{
++getVaccinationCenters()
+}
+
+class VaccineTypeStore{
++getVaccineTypes()
+}
+
+class VaccineSchedulerStore{
++registerVaccineScheduler(snsUserNumber, vaccineType, date, time)
++validateOpenPeriod(time)
++validateSlotAvailable(date, time)
+}
+
+class Company {
+  +getSnsUserStore()
+  +getVaccinationCenterStore()
+  +getVaccineTypeStore()
+}
+
+class VaccinationCenter {
+-name
+-address
+-phoneNumber
+-emailAddress
+-faxNumber
+-websiteAddress
+-openHour
+-closeHour
+-slotDuration
+-maximumNumberOfVaccinesPerSlot
+-vaccinationCenterType
+-**designation**
+-waitingList
++getVaccineScheduleStore()
++getName()
++getAddress()
++**methods to get all the attributes()**
+}
+
+class ScheduleAVaccineController {
+  +validateSnsUserNumber(snsUserNumber)
+  +getVaccinationCenters()
+  +getVaccineTypes()
+  +registerVaccineScheduler(snsUserNumber, vaccinationCenter, vaccineType, date, time)
+  +saveVaccineScheduler()
+  +sendSMS()
+}
+
+class VaccineScheduler {
+-snsUserNumber
+-vaccineType
+-vaccinationCenter
+-date
+-time
+}
+
+class VaccinationCenterDTO {
++create (name, address, ...)
+}
+
+class VaccineTypeDTO {
++create (designation)
+}
+
+class VaccineSchedulerDTO {
++create (snsUserNumber, vaccineType, date, time)
+}
+
+ScheduleAVaccineUI ..> ScheduleAVaccineController
+ScheduleAVaccineController ..> SnsUserStore
+ScheduleAVaccineController ..> VaccineTypeStore
+ScheduleAVaccineController ..> Company
+ScheduleAVaccineController ..> VaccinationCenterStore
+ScheduleAVaccineController ..> VaccineTypeMapper
+ScheduleAVaccineController ..> VaccinationCenterMapper
+ScheduleAVaccineController ..> VaccineSchedulerMapper
+
+Company "1" --> "1" SnsUserStore : use
+Company "1" --> "1" VaccinationCenterStore : use
+Company "1" --> "1" VaccineTypeStore : use
+VaccinationCenterStore "1" --> "*" VaccinationCenter : has
+VaccinationCenter "1" --> "1" VaccineSchedulerStore : use
+SnsUserStore "1" --> "*" SnsUser : has
+VaccineSchedulerStore "1" --> "*" VaccineScheduler : has
+SnsUser "1" --> "*" VaccineScheduler : creates
+
+VaccineTypeMapper ..> VaccineTypeDTO
+VaccinationCenterMapper ..> VaccinationCenterDTO
+VaccineSchedulerMapper ..> VaccineSchedulerDTO
+
+SnsUserStore ..>  AuthFacade
+
+@enduml

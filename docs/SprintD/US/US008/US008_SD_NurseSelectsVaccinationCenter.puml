@@ -1,0 +1,47 @@
+@startuml
+autonumber
+'hide footbox
+
+actor Nurse
+
+participant ":SelectVaccinationCenterUI" as UI
+participant ":NurseUI" as nurseUI
+participant "SelectVaccinationCenterController" as CTRL
+participant ":Company" as Com
+participant "vcStore:\nVaccinationCenterStore" as VcStore
+participant ":VaccinationCenterMapper" as VCMapper
+
+
+note left UI : After login, this UI will run automatically
+
+activate UI
+UI->CTRL : lvaccinationCenters = getVaccinationCenters()
+activate CTRL
+CTRL->Com :vcStore = getVaccinationCenterStore()
+activate Com
+deactivate Com
+CTRL->VcStore: lvaccinationCenters = getVaccinationCenters()
+activate VcStore
+deactivate VcStore
+CTRL->VCMapper: toDTO(lvaccinationCenters)
+activate VCMapper
+ref over VCMapper
+:[[/US008_SD_VaccinationCenterMapper_toDTO_List.puml SD_VaccinationCenterMapper_toDTO_List]]
+
+end ref
+VCMapper --> CTRL : lvaccinationCentersDTO
+deactivate VCMapper
+deactivate CTRL
+
+UI --> Nurse: shows the vaccination centers list
+deactivate UI
+
+activate Nurse
+Nurse ->UI : selects the vaccination center to work
+activate UI
+UI ->nurseUI: runs automatically NurseUI(vaccinationCenterId)
+activate nurseUI
+deactivate nurseUI
+deactivate UI
+
+@enduml

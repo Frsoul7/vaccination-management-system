@@ -1,0 +1,56 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "RecordAdministrationOfAVaccineToSnsUserController" as CTRL
+participant "task :TimerTask" as TimerTask
+participant "snsUser :SnsUser" as snsUser
+participant "vaccScheduler :VaccineScheduler" as vaccScheduler
+participant ":TimeHour" as TimeHour
+participant "perfRecStore :PerformanceRecordsStore" as perfRecStore
+participant ":VaccinationCenter" as VC
+participant "schStore :VaccineSchedulerStore" as schStore
+participant ":Notifications" as Notif
+participant "recoveryRoomTimer :Timer" as Timer
+
+activate CTRL
+[o->CTRL : [[/US008_SD.puml launchTimer()]]
+
+CTRL -> TimerTask**: create()
+activate TimerTask
+TimerTask-> snsUser: snsUserNumber = getSnsUserNumber();
+activate snsUser
+deactivate snsUser
+TimerTask->vaccScheduler: schedulerDate = getDate()
+activate vaccScheduler
+deactivate vaccScheduler
+TimerTask->TimeHour: currentHour = getActualTime()
+activate TimeHour
+deactivate TimeHour
+TimerTask-> perfRecStore: setPerfRecordsWithTimerAfterLeaving(snsUserNumber,schedulerDate, currentHour)
+activate perfRecStore
+deactivate perfRecStore
+TimerTask->VC: removeFromRecoveryList(snsUser)
+activate VC
+deactivate VC
+TimerTask-> schStore: removeFromVaccinationScheduler(snsUserNumber, schedulerDate )
+activate schStore
+deactivate schStore
+TimerTask-> Notif: sendSMSEndOfRecoveryTimeNotification(snsUser)
+activate Notif
+deactivate Notif
+
+TimerTask-->CTRL
+deactivate TimerTask
+
+CTRL -> Timer**: create()
+CTRL ->Timer: schedule(task, RECOVERY_ROOM_DELAY_BY_DEFAULT)
+activate Timer
+Timer-->CTRL
+deactivate Timer
+
+<-- CTRL : [[/US008_SD.puml .]]
+deactivate CTRL
+
+
+@enduml

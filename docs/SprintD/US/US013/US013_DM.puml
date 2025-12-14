@@ -1,0 +1,40 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+left to right direction
+
+
+
+class Administrator {
+}
+
+class Company {
+  -Designation
+}
+
+class Vaccine{
+-designation
+-lot number
+}
+
+
+class "Vaccine Type"{
+-designation
+}
+
+class "Administration Process"{
+-age group
+-doses administrated per age group
+-vaccine dosage
+-time intervals
+}
+
+
+Company "1" -- "*" Administrator : registers >
+Company "1" -- "*" "Vaccine Type" : manages >
+
+"Administrator" "1" -- "*" "Vaccine" : registers >
+"Vaccine" "1" -- "*" "Administration Process" : follows a >
+Vaccine "*" -- "1" "Vaccine Type" : is part of >
+
+@enduml

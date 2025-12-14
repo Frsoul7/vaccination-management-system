@@ -1,0 +1,77 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RegisterEmployeeUI" as UI
+participant ":RegisterEmployeeController" as CTRL
+participant ":Company" as Com
+participant "eStore:\nEmployeeStore" as EmpStore
+participant "empl:Employee" as Emp
+participant ":AuthFacade" as Aut
+participant ":PasswordGenerator" as Pass
+
+activate ADM
+ADM -> UI : asks to register new employee
+activate UI
+UI --> ADM : requests data (name, address, phoneNumber, email,\n citizenCardNumber, employeeRole)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+UI -> CTRL : registerEmployee(name, address, phoneNumber, email,\n citizenCardNumber, employeeRole)
+activate CTRL
+CTRL->Com : eStore = getEmployeeStore()
+activate Com
+deactivate Com
+CTRL->EmpStore : empl= registerEmployee(name, address, phoneNumber, email,\n citizenCardNumber, employeeRole)
+activate EmpStore
+EmpStore --> Emp** : create(name, address, phoneNumber, email,\n citizenCardNumber, employeeRole)
+
+
+deactivate CTRL
+deactivate Com
+deactivate EmpStore
+
+UI --> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveEmployee()
+activate CTRL
+CTRL -> EmpStore : saveEmployee(empl)
+activate EmpStore
+EmpStore -> Emp : email=getEmail()
+activate Emp
+deactivate Emp
+EmpStore -> EmpStore : validateEmployee(empl)
+activate EmpStore
+EmpStore -> Aut : existUser(email)
+activate Aut
+deactivate Aut
+deactivate EmpStore
+EmpStore -> Emp : name=getName()
+activate Emp
+deactivate Emp
+EmpStore -> Emp : role=getRole()
+activate Emp
+deactivate Emp
+EmpStore -> Pass : getPassword()
+activate Pass
+Pass --> EmpStore : pass
+deactivate Pass
+EmpStore -> Aut : addUserWithRole(name, email, pass, role)
+activate Aut
+deactivate Aut
+EmpStore -> EmpStore : addEmployee(empl)
+activate EmpStore
+deactivate EmpStore
+deactivate EmpStore
+deactivate CTRL
+
+UI --> ADM : informs about the success of the operation
+deactivate UI
+deactivate ADM
+
+@enduml

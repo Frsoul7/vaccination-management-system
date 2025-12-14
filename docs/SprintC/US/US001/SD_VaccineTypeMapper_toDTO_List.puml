@@ -1,0 +1,36 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":VaccineTypeMapper" as VTMapper
+participant "lVacType: List<VaccineType>" as ListVType
+participant "lVacTypeDTO : List<vaccineTypeDTO>" as VTListDTO
+participant "vaccineType : VaccineType" as Vtype
+participant "objectDTO : VaccineTypeDTO" as objDTO
+
+activate VTMapper
+[o->VTMapper : toDTO(lVacType)
+VTMapper-->VTListDTO** : create()
+
+loop for each VaccineType in lVacType
+VTMapper -> ListVType : vaccineType = getVaccineType(i)
+activate ListVType
+deactivate ListVType
+
+VTMapper-> Vtype : designation = getDesignation()
+activate Vtype
+deactivate Vtype
+
+VTMapper --> objDTO** : create(designation)
+
+VTMapper -> VTListDTO : add(objectDTO)
+activate VTListDTO
+deactivate VTListDTO
+
+end
+
+<-- VTMapper : lVacTypeDTO
+deactivate VTMapper
+
+
+@enduml

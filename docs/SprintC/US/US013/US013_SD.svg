@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1304px" preserveAspectRatio="none" style="width:2739px;height:1304px;background:#FFFFFF;" version="1.1" viewBox="0 0 2739 1304" width="2739.2px" zoomAndPan="magnify"><defs><filter height="300%" id="fx0r78fecka8" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.6000000000000003"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="3.2000000000000006" dy="3.2000000000000006" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="1148.1375" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="47.6" y="79.6875"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="145.125" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="97.5688"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24.2813" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="266.975"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="206.6938" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="315.5375"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="203.2875" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="546.5125"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="44.5625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="774.0813"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="158.4125" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="842.925"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="190.2063" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="1025.6188"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="96.5625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="121.85"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="145.125" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="339.8188"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="136.0438" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="570.7938"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="96.8438" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="867.2063"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="136.0438" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="1049.9"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1187.6" y="146.1313"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1187.6" y="364.1"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="72.5625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1534" y="412.3813"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="111.7625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1534" y="595.075"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1538" y="625.7563"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1538" y="684.4375"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1534" y="891.4875"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24.2813" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2006" y="939.7688"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="111.7625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2006" y="1074.1813"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2010" y="1104.8625"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2010" y="1163.5438"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2228.4" y="194.4125"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2228.4" y="436.6625"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="436.1438" style="stroke:#000000;stroke-width:1.6000000000000003;" width="2720.4" x="8" y="786.0813"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="51.2" x2="51.2" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="495.6" x2="495.6" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="1010" x2="1010" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="1191.6" x2="1191.6" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="1538" x2="1538" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="2010" x2="2010" y1="493.7063" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="2232.4" x2="2232.4" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="2357.2" x2="2357.2" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="2483.6" x2="2483.6" y1="71.6875" y2="1235.825"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:5.0,5.0;" x1="2633.2" x2="2633.2" y1="972.8125" y2="1235.825"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="66.4" x="16" y="69.2266">Administrator</text><ellipse cx="51.6" cy="12" fill="#FEFECE" filter="url(#fx0r78fecka8)" rx="6.4" ry="6.4" style="stroke:#A80036;stroke-width:1.6000000000000003;"/><path d="M51.6,18.4 L51.6,40 M41.2,24.8 L62,24.8 M51.6,40 L41.2,52 M51.6,40 L62,52 " fill="none" filter="url(#fx0r78fecka8)" style="stroke:#A80036;stroke-width:1.6000000000000003;"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="66.4" x="16" y="1246.6516">Administrator</text><ellipse cx="51.6" cy="1257.1125" fill="#FEFECE" filter="url(#fx0r78fecka8)" rx="6.4" ry="6.4" style="stroke:#A80036;stroke-width:1.6000000000000003;"/><path d="M51.6,1263.5125 L51.6,1285.1125 M41.2,1269.9125 L62,1269.9125 M51.6,1285.1125 L41.2,1297.1125 M51.6,1285.1125 L62,1297.1125 " fill="none" filter="url(#fx0r78fecka8)" style="stroke:#A80036;stroke-width:1.6000000000000003;"/><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="238.4" x="374.8" y="42.4"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="227.2" x="380.4" y="59.6266">:RegisterVaccineAndAdministrationProcessUI</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="238.4" x="374.8" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="227.2" x="380.4" y="1252.2516">:RegisterVaccineAndAdministrationProcessUI</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="278.4" x="869.2" y="42.4"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="267.2" x="874.8" y="59.6266">:RegisterVaccineAndAdministrationProcessController</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="278.4" x="869.2" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="267.2" x="874.8" y="1252.2516">:RegisterVaccineAndAdministrationProcessController</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="62.4" x="1158.8" y="42.4"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="51.2" x="1164.4" y="59.6266">:Company</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="62.4" x="1158.8" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="51.2" x="1164.4" y="1252.2516">:Company</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="39.375" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="78.4" x="1497.2" y="28.3125"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="36" x="1518.4" y="45.5391">vStore:</text><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="67.2" x="1502.8" y="59.6266">VaccineStore</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="39.375" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="78.4" x="1497.2" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="36" x="1518.4" y="1252.2516">vStore:</text><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="67.2" x="1502.8" y="1266.3391">VaccineStore</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="72" x="1972.4" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="60.8" x="1978" y="1252.2516">vac:Vaccine</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="39.375" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="104" x="2178.8" y="28.3125"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="39.2" x="2211.2" y="45.5391">vtStore:</text><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="92.8" x="2184.4" y="59.6266">VaccineTypeStore</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="39.375" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="104" x="2178.8" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="39.2" x="2211.2" y="1252.2516">vtStore:</text><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="92.8" x="2184.4" y="1266.3391">VaccineTypeStore</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="123.2" x="2294" y="42.4"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="112" x="2299.6" y="59.6266">vacType:VaccineType</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="123.2" x="2294" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="112" x="2299.6" y="1252.2516">vacType:VaccineType</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="39.375" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="107.2" x="2428.4" y="28.3125"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="48.8" x="2457.6" y="45.5391">lvacType:</text><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="96" x="2434" y="59.6266">List&lt;VaccineType&gt;</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="39.375" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="107.2" x="2428.4" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="48.8" x="2457.6" y="1252.2516">lvacType:</text><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="96" x="2434" y="1266.3391">List&lt;VaccineType&gt;</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="170.4" x="2546.8" y="1235.025"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="159.2" x="2552.4" y="1252.2516">admproc:AdministrationProcess</text><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="1148.1375" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="47.6" y="79.6875"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="145.125" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="97.5688"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24.2813" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="266.975"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="206.6938" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="315.5375"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="203.2875" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="546.5125"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="44.5625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="774.0813"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="158.4125" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="842.925"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="190.2063" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="491.6" y="1025.6188"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="96.5625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="121.85"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="145.125" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="339.8188"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="136.0438" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="570.7938"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="96.8438" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="867.2063"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="136.0438" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1006" y="1049.9"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1187.6" y="146.1313"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1187.6" y="364.1"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="72.5625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1534" y="412.3813"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="111.7625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1534" y="595.075"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1538" y="625.7563"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1538" y="684.4375"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="1534" y="891.4875"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24.2813" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2006" y="939.7688"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="111.7625" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2006" y="1074.1813"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2010" y="1104.8625"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="22.4" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2010" y="1163.5438"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2228.4" y="194.4125"/><rect fill="#FFFFFF" filter="url(#fx0r78fecka8)" height="24" style="stroke:#A80036;stroke-width:0.8000000000000002;" width="8" x="2228.4" y="436.6625"/><polygon fill="#A80036" points="482,94.3688,490,97.5688,482,100.7688,485.2,97.5688" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="55.6" x2="486.8" y1="97.5688" y2="97.5688"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="61.2" y="93.6836">1</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="297.6" x="70" y="93.6836">asks to register new vaccine and its administration process [AP]</text><polygon fill="#A80036" points="996.4,118.65,1004.4,121.85,996.4,125.05,999.6,121.85" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="499.6" x2="1001.2" y1="121.85" y2="121.85"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="505.2" y="117.9648">2</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="132.8" x="514" y="117.9648">lvacType=getVaccineTypes()</text><polygon fill="#A80036" points="1178,142.9313,1186,146.1313,1178,149.3313,1181.2,146.1313" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="1182.8" y1="146.1313" y2="146.1313"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="1019.6" y="142.2461">3</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="144" x="1028.4" y="142.2461">vtStore=getVaccineTypeStore()</text><polygon fill="#A80036" points="2218.8,191.2125,2226.8,194.4125,2218.8,197.6125,2222,194.4125" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="2223.6" y1="194.4125" y2="194.4125"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="1019.6" y="190.5273">4</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="136" x="1028.4" y="190.5273">lvacType =getVaccineTypes()</text><polygon fill="#A80036" points="64.4,239.4938,56.4,242.6938,64.4,245.8938,61.2,242.6938" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="59.6" x2="494.8" y1="242.6938" y2="242.6938"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="69.2" y="238.8086">5</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="204.8" x="78" y="238.8086">shows vaccine types and asks to select one</text><polygon fill="#A80036" points="482,263.775,490,266.975,482,270.175,485.2,266.975" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="55.6" x2="486.8" y1="266.975" y2="266.975"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="61.2" y="263.0898">6</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="103.2" x="70" y="263.0898">selects a vaccine type</text><polygon fill="#A80036" points="64.4,288.0563,56.4,291.2563,64.4,294.4563,61.2,291.2563" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="59.6" x2="494.8" y1="291.2563" y2="291.2563"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="69.2" y="287.3711">7</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="390.4" x="78" y="287.3711">requests data (name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage)</text><polygon fill="#A80036" points="482,312.3375,490,315.5375,482,318.7375,485.2,315.5375" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="55.6" x2="486.8" y1="315.5375" y2="315.5375"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="61.2" y="311.6523">8</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="97.6" x="70" y="311.6523">types requested data</text><polygon fill="#A80036" points="996.4,336.6188,1004.4,339.8188,996.4,343.0188,999.6,339.8188" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="499.6" x2="1001.2" y1="339.8188" y2="339.8188"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="505.2" y="335.9336">9</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="465.6" x="514" y="335.9336">specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)</text><polygon fill="#A80036" points="1178,360.9,1186,364.1,1178,367.3,1181.2,364.1" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="1182.8" y1="364.1" y2="364.1"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1019.6" y="360.2148">10</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="124.8" x="1034" y="360.2148">vStore = getVaccineStore()</text><polygon fill="#A80036" points="1524.4,409.1813,1532.4,412.3813,1524.4,415.5813,1527.6,412.3813" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="1529.2" y1="412.3813" y2="412.3813"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1019.6" y="408.4961">11</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="490.4" x="1034" y="408.4961">vac= specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)</text><polygon fill="#A80036" points="2218.8,433.4625,2226.8,436.6625,2218.8,439.8625,2222,436.6625" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1542" x2="2223.6" y1="436.6625" y2="436.6625"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1547.6" y="432.7773">12</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="196" x="1562" y="432.7773">vacType = getVaccineType(vaccineTypeId)</text><polygon fill="#A80036" points="1962.8,481.7438,1970.8,484.9438,1962.8,488.1438,1966,484.9438" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="1538" x2="1967.6" y1="484.9438" y2="484.9438"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1543.6" y="481.0586">13</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="396.8" x="1558" y="481.0586">create(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vacType)</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="72" x="1972.4" y="467.0625"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="60.8" x="1978" y="484.2891">vac:Vaccine</text><polygon fill="#A80036" points="64.4,519.0313,56.4,522.2313,64.4,525.4313,61.2,522.2313" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="59.6" x2="494.8" y1="522.2313" y2="522.2313"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="69.2" y="518.3461">14</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="196" x="83.6" y="518.3461">presents all data and asks for confirmation</text><polygon fill="#A80036" points="482,543.3125,490,546.5125,482,549.7125,485.2,546.5125" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="55.6" x2="486.8" y1="546.5125" y2="546.5125"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="61.2" y="542.6273">15</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="80" x="75.6" y="542.6273">confirms the data</text><polygon fill="#A80036" points="996.4,567.5938,1004.4,570.7938,996.4,573.9938,999.6,570.7938" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="499.6" x2="1001.2" y1="570.7938" y2="570.7938"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="505.2" y="566.9086">16</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="64.8" x="519.6" y="566.9086">saveVaccine()</text><polygon fill="#A80036" points="1524.4,591.875,1532.4,595.075,1524.4,598.275,1527.6,595.075" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="1529.2" y1="595.075" y2="595.075"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1019.6" y="591.1898">17</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="80" x="1034" y="591.1898">saveVaccine(vac)</text><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1546" x2="1579.6" y1="619.3563" y2="619.3563"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1579.6" x2="1579.6" y1="619.3563" y2="629.7563"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1546.8" x2="1579.6" y1="629.7563" y2="629.7563"/><polygon fill="#A80036" points="1554.8,626.5563,1546.8,629.7563,1554.8,632.9563,1551.6,629.7563" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1551.6" y="615.4711">18</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="93.6" x="1566" y="615.4711">validateVaccine(vac)</text><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1546" x2="1579.6" y1="678.0375" y2="678.0375"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1579.6" x2="1579.6" y1="678.0375" y2="688.4375"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1546.8" x2="1579.6" y1="688.4375" y2="688.4375"/><polygon fill="#A80036" points="1554.8,685.2375,1546.8,688.4375,1554.8,691.6375,1551.6,688.4375" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1551.6" y="674.1523">19</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="76" x="1566" y="674.1523">addVaccine(vac)</text><polygon fill="#A80036" points="64.4,746.6,56.4,749.8,64.4,753,61.2,749.8" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="59.6" x2="494.8" y1="749.8" y2="749.8"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="69.2" y="739.3742">20</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="254.4" x="83.6" y="732.8336">informs about the success of the operation and request</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="192" x="86.8" y="745.9148">the number of age groups' intervals for AP</text><polygon fill="#A80036" points="482,770.8813,490,774.0813,482,777.2813,485.2,774.0813" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="55.6" x2="486.8" y1="774.0813" y2="774.0813"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="61.2" y="770.1961">21</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="97.6" x="75.6" y="770.1961">types requested data</text><path d="M8,786.0813 L66.4,786.0813 L66.4,792.4813 L58.4,800.4813 L8,800.4813 L8,786.0813 " fill="#EEEEEE" style="stroke:#000000;stroke-width:0.8000000000000002;"/><rect fill="none" height="436.1438" style="stroke:#000000;stroke-width:1.6000000000000003;" width="2720.4" x="8" y="786.0813"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="22.4" x="20" y="797.6773">loop</text><text fill="#000000" font-family="sans-serif" font-size="8.8" font-weight="bold" lengthAdjust="spacing" textLength="137.6" x="78.4" y="796.8164">[number of age groups' for AP]</text><polygon fill="#A80036" points="64.4,815.4438,56.4,818.6438,64.4,821.8438,61.2,818.6438" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="59.6" x2="494.8" y1="818.6438" y2="818.6438"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="69.2" y="814.7586">22</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="402.4" x="83.6" y="814.7586">requests data (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)</text><polygon fill="#A80036" points="482,839.725,490,842.925,482,846.125,485.2,842.925" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="55.6" x2="486.8" y1="842.925" y2="842.925"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="61.2" y="839.0398">23</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="97.6" x="75.6" y="839.0398">types requested data</text><polygon fill="#A80036" points="996.4,864.0063,1004.4,867.2063,996.4,870.4063,999.6,867.2063" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="499.6" x2="1001.2" y1="867.2063" y2="867.2063"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="505.2" y="863.3211">24</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="476.8" x="519.6" y="863.3211">specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)</text><polygon fill="#A80036" points="1524.4,888.2875,1532.4,891.4875,1524.4,894.6875,1527.6,891.4875" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="1529.2" y1="891.4875" y2="891.4875"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1019.6" y="887.6023">25</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="91.2" x="1034" y="887.6023">vac =getVaccine(Id)</text><polygon fill="#A80036" points="1996.4,936.5688,2004.4,939.7688,1996.4,942.9688,1999.6,939.7688" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="2001.2" y1="939.7688" y2="939.7688"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1019.6" y="935.8836">26</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="523.2" x="1034" y="935.8836">admproc=specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)</text><polygon fill="#A80036" points="2537.2,960.85,2545.2,964.05,2537.2,967.25,2540.4,964.05" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="2010" x2="2542" y1="964.05" y2="964.05"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="2015.6" y="960.1648">27</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="364.8" x="2030" y="960.1648">create(ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)</text><rect fill="#FEFECE" filter="url(#fx0r78fecka8)" height="25.2875" style="stroke:#A80036;stroke-width:1.2000000000000002;" width="170.4" x="2546.8" y="946.1688"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="159.2" x="2552.4" y="963.3953">admproc:AdministrationProcess</text><polygon fill="#A80036" points="64.4,998.1375,56.4,1001.3375,64.4,1004.5375,61.2,1001.3375" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="59.6" x2="494.8" y1="1001.3375" y2="1001.3375"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="69.2" y="997.4523">28</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="196" x="83.6" y="997.4523">presents all data and asks for confirmation</text><polygon fill="#A80036" points="482,1022.4188,490,1025.6188,482,1028.8188,485.2,1025.6188" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="55.6" x2="486.8" y1="1025.6188" y2="1025.6188"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="61.2" y="1021.7336">29</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="80" x="75.6" y="1021.7336">confirms the data</text><polygon fill="#A80036" points="996.4,1046.7,1004.4,1049.9,996.4,1053.1,999.6,1049.9" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="499.6" x2="1001.2" y1="1049.9" y2="1049.9"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="505.2" y="1046.0148">30</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="132" x="519.6" y="1046.0148">saveAdministrationProcess()</text><polygon fill="#A80036" points="1996.4,1070.9813,2004.4,1074.1813,1996.4,1077.3813,1999.6,1074.1813" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="1014" x2="2001.2" y1="1074.1813" y2="1074.1813"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="1019.6" y="1070.2961">31</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="175.2" x="1034" y="1070.2961">saveAdministrationProcess(AdmProc)</text><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="2018" x2="2051.6" y1="1098.4625" y2="1098.4625"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="2051.6" x2="2051.6" y1="1098.4625" y2="1108.8625"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="2018.8" x2="2051.6" y1="1108.8625" y2="1108.8625"/><polygon fill="#A80036" points="2026.8,1105.6625,2018.8,1108.8625,2026.8,1112.0625,2023.6,1108.8625" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="2023.6" y="1094.5773">32</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="188.8" x="2038" y="1094.5773">validateAdministrationProcess(AdmProc)</text><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="2018" x2="2051.6" y1="1157.1438" y2="1157.1438"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="2051.6" x2="2051.6" y1="1157.1438" y2="1167.5438"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;" x1="2018.8" x2="2051.6" y1="1167.5438" y2="1167.5438"/><polygon fill="#A80036" points="2026.8,1164.3438,2018.8,1167.5438,2026.8,1170.7438,2023.6,1167.5438" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="2023.6" y="1153.2586">33</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="171.2" x="2038" y="1153.2586">addAdministrationProcess(AdmProc)</text><polygon fill="#A80036" points="64.4,1212.625,56.4,1215.825,64.4,1219.025,61.2,1215.825" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><line style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="59.6" x2="494.8" y1="1215.825" y2="1215.825"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="11.2" x="69.2" y="1211.9398">34</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="196.8" x="83.6" y="1211.9398">informs about the success of the operation</text><!--MD5=[60a20f91ef7a91fae6df9293aaaa3f99]
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RegisterVaccineAndAdministrationProcessUI" as UI
+participant ":RegisterVaccineAndAdministrationProcessController" as CTRL
+participant ":Company" as Com
+participant "vStore:\nVaccineStore" as VStore
+participant "vac:Vaccine" as Vac
+participant "vtStore:\nVaccineTypeStore" as VTStore
+participant "vacType:VaccineType" as VacTyp
+participant "lvacType:\nList<VaccineType>" as ListVacTyp
+participant "admproc:AdministrationProcess" as AdmProc
+
+activate ADM
+ADM -> UI : asks to register new vaccine and its administration process [AP]
+activate UI
+UI -> CTRL : lvacType=getVaccineTypes()
+activate CTRL
+CTRL -> Com : vtStore=getVaccineTypeStore()
+activate Com
+deactivate Com
+CTRL -> VTStore: lvacType =getVaccineTypes()
+activate VTStore
+deactivate VTStore
+deactivate CTRL
+UI - -> ADM : shows vaccine types and asks to select one
+deactivate UI
+
+ADM -> UI : selects a vaccine type
+activate UI
+UI - -> ADM : requests data (name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage)
+deactivate UI
+ADM -> UI : types requested data
+activate UI
+UI -> CTRL : specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
+activate CTRL
+CTRL -> Com : vStore = getVaccineStore()
+activate Com
+deactivate Com
+CTRL-> VStore : vac= specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
+activate VStore
+VStore -> VTStore: vacType = getVaccineType(vaccineTypeId)
+activate VTStore
+deactivate VTStore
+VStore - -> Vac** : create(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vacType)
+deactivate VStore
+
+deactivate CTRL
+UI - -> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveVaccine()
+activate CTRL
+CTRL -> VStore : saveVaccine(vac)
+activate VStore
+VStore -> VStore : validateVaccine(vac)
+activate VStore
+deactivate VStore
+VStore -> VStore : addVaccine(vac)
+activate VStore
+deactivate VStore
+deactivate VStore
+deactivate CTRL
+
+UI - -> ADM : informs about the success of the operation and request\n the number of age groups' intervals for AP
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+loop number of age groups' for AP
+
+UI - -> ADM : requests data (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+
+UI -> CTRL : specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+activate CTRL
+
+CTRL -> VStore : vac =getVaccine(Id)
+activate VStore
+deactivate VStore
+
+CTRL -> Vac: admproc=specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+activate Vac
+Vac - -> AdmProc** : create(ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+deactivate Vac
+deactivate CTRL
+UI - -> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveAdministrationProcess()
+activate CTRL
+CTRL -> Vac : saveAdministrationProcess(AdmProc)
+activate Vac
+Vac -> Vac : validateAdministrationProcess(AdmProc)
+activate Vac
+deactivate Vac
+Vac -> Vac : addAdministrationProcess(AdmProc)
+activate Vac
+deactivate Vac
+deactivate Vac
+deactivate CTRL
+
+UI - -> ADM : informs about the success of the operation
+deactivate UI
+
+
+
+end
+
+
+
+
+
+deactivate ADM
+
+@enduml
+
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+participant ":RegisterVaccineAndAdministrationProcessUI" as UI
+participant ":RegisterVaccineAndAdministrationProcessController" as CTRL
+participant ":Company" as Com
+participant "vStore:\nVaccineStore" as VStore
+participant "vac:Vaccine" as Vac
+participant "vtStore:\nVaccineTypeStore" as VTStore
+participant "vacType:VaccineType" as VacTyp
+participant "lvacType:\nList<VaccineType>" as ListVacTyp
+participant "admproc:AdministrationProcess" as AdmProc
+
+activate ADM
+ADM -> UI : asks to register new vaccine and its administration process [AP]
+activate UI
+UI -> CTRL : lvacType=getVaccineTypes()
+activate CTRL
+CTRL -> Com : vtStore=getVaccineTypeStore()
+activate Com
+deactivate Com
+CTRL -> VTStore: lvacType =getVaccineTypes()
+activate VTStore
+deactivate VTStore
+deactivate CTRL
+UI - -> ADM : shows vaccine types and asks to select one
+deactivate UI
+
+ADM -> UI : selects a vaccine type
+activate UI
+UI - -> ADM : requests data (name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage)
+deactivate UI
+ADM -> UI : types requested data
+activate UI
+UI -> CTRL : specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
+activate CTRL
+CTRL -> Com : vStore = getVaccineStore()
+activate Com
+deactivate Com
+CTRL-> VStore : vac= specifyVaccine(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vaccineTypeId)
+activate VStore
+VStore -> VTStore: vacType = getVaccineType(vaccineTypeId)
+activate VTStore
+deactivate VTStore
+VStore - -> Vac** : create(name, lotNumber, Id, brand, ageGroup, doseNumber, vaccineDosage, vacType)
+deactivate VStore
+
+deactivate CTRL
+UI - -> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveVaccine()
+activate CTRL
+CTRL -> VStore : saveVaccine(vac)
+activate VStore
+VStore -> VStore : validateVaccine(vac)
+activate VStore
+deactivate VStore
+VStore -> VStore : addVaccine(vac)
+activate VStore
+deactivate VStore
+deactivate VStore
+deactivate CTRL
+
+UI - -> ADM : informs about the success of the operation and request\n the number of age groups' intervals for AP
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+loop number of age groups' for AP
+
+UI - -> ADM : requests data (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+
+UI -> CTRL : specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+activate CTRL
+
+CTRL -> VStore : vac =getVaccine(Id)
+activate VStore
+deactivate VStore
+
+CTRL -> Vac: admproc=specifyAdministrationProcess (ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+activate Vac
+Vac - -> AdmProc** : create(ageGroup, numberOfDoses, vaccineDosage, timeIntervalBetweenDoses)
+deactivate Vac
+deactivate CTRL
+UI - -> ADM : presents all data and asks for confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+UI -> CTRL : saveAdministrationProcess()
+activate CTRL
+CTRL -> Vac : saveAdministrationProcess(AdmProc)
+activate Vac
+Vac -> Vac : validateAdministrationProcess(AdmProc)
+activate Vac
+deactivate Vac
+Vac -> Vac : addAdministrationProcess(AdmProc)
+activate Vac
+deactivate Vac
+deactivate Vac
+deactivate CTRL
+
+UI - -> ADM : informs about the success of the operation
+deactivate UI
+
+
+
+end
+
+
+
+
+
+deactivate ADM
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

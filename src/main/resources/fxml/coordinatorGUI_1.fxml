@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.CoordinatorGUI_1">
+   <right>
+      <TableView fx:id="ShowList" prefHeight="370.0" prefWidth="396.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="600.0" text="MENU: CENTER COORDINATOR - Import and Sort List" textFill="#247ec0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="importCSVFileButton" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ImportCSV" prefHeight="25.0" prefWidth="180.0" text="Import CSV File" textFill="#247ec0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="RadioArrivalTime" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" text="Sort by Arrival Time">
+               <toggleGroup>
+                  <ToggleGroup fx:id="time" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="RadioLeavingTime" layoutX="10.0" layoutY="119.0" mnemonicParsing="false" text="Sort by Leaving Time" toggleGroup="$time" />
+            <RadioButton fx:id="RadioAscending" layoutX="10.0" layoutY="177.0" mnemonicParsing="false" text="Sort by Ascending">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ascdesc" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="RadioDescending" layoutX="10.0" layoutY="209.0" mnemonicParsing="false" text="Sort by Descending" toggleGroup="$ascdesc" />
+            <Button fx:id="SortButton" layoutX="66.0" layoutY="248.0" mnemonicParsing="false" onAction="#sortByMerge" text="SORT" textFill="#247ec0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="BackButton" layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#BackToMenu" text="BACK" />
+            <Button fx:id="LogoutButton" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#SessionLogout" text="LOGOUT" />
+            <Label fx:id="FileNotLoaded" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="55.0" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

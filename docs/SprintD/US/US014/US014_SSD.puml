@@ -1,0 +1,19 @@
+@startuml
+autonumber
+actor "Administrator" as Admin
+
+activate Admin
+Admin -> ":System" : starts the import of a new CSV file
+activate ":System"
+":System" --> Admin : requests the required data (fileLocation)
+deactivate ":System"
+
+Admin -> ":System" : types required information
+activate ":System"
+
+":System" --> Admin : informs about the success of the operation
+deactivate ":System"
+
+deactivate Admin
+
+@enduml

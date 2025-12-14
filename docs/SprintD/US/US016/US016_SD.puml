@@ -1,0 +1,141 @@
+@startuml
+autonumber
+actor "Center Coordinator" as Cord
+
+participant ":PerformanceAnalysisUI" as UI
+participant ":PerformanceAnalysisController" as CTRL
+participant "vaccinationCenter1:VaccinationCenter" as selectedVS
+participant "perfRecordsStore:\nPerformanceRecordsStore" as pRdsStore
+participant "perfRecords:\nPerformanceRecords" as pRecords
+participant "outputData:PerformanceAnalysis" as out
+
+participant "bruteForce:Algorithm" as alg
+participant ":PerformanceAnalysisMapper" as map
+
+participant "lPerformanceRecords:List<PerformanceRecords>" as listP
+participant "lInputPerformanceRecords:List<PerformanceRecords>" as IlistP
+participant "performanceAnalysisDTO:PerformanceAnalysisDTO" as dto
+
+activate Cord
+
+note over Cord, UI
+The center coordinator at this moment is already logged in
+and attached to the vaccination centers where he's working.
+See the [[US016_SD_CenterCoordinatorSelectsVaccinationCenter.puml SD_CenterCoordinatorSelectsVaccinationCenter]]
+end note
+
+Cord -> UI : starts the analysis of a center performance
+activate UI
+UI --> Cord : requests the date and time interval
+deactivate UI
+Cord -> UI : types requested data
+activate UI
+UI -> CTRL : validateData(date, timeInterval)
+activate CTRL
+CTRL -> selectedVS: perfRecordsStore = getPerformanceRecordsStore()
+activate selectedVS
+deactivate selectedVS
+CTRL -> selectedVS: validateTimeInterval(timeInterval)
+activate selectedVS
+deactivate selectedVS
+CTRL -> pRdsStore : checkIfExistsRecordsForTheSelectedDate(date)
+activate pRdsStore
+deactivate pRdsStore
+deactivate CTRL
+
+UI --> Cord : Shows the selected data and asks confirmation
+deactivate UI
+Cord -> UI : Confirms the data
+activate UI
+UI -> CTRL : analyseThePerformanceOfACenter()
+activate CTRL
+
+CTRL -> pRdsStore : lPerformanceRecords = getPerformanceRecordsList()
+activate pRdsStore
+deactivate pRdsStore
+
+CTRL --> IlistP** : create()
+
+loop for each performanceRecords
+CTRL -> pRecords : dateR = getDate()
+activate pRecords
+deactivate pRecords
+alt if dateR is equals to date
+CTRL -> IlistP: add(pRecords)
+activate IlistP
+deactivate IlistP
+CTRL -> pRecords : arrivalTime = getArrivalTime()
+activate pRecords
+deactivate pRecords
+CTRL -> pRecords : leavingTime = getLeavingTime()
+activate pRecords
+deactivate pRecords
+CTRL -> selectedVS: index= getSlotIndex(arrivalTime)
+activate selectedVS
+deactivate selectedVS
+CTRL -> CTRL: arrivalSnsUser[index]=+1
+activate CTRL
+deactivate CTRL
+CTRL -> selectedVS: index= getSlotIndex(leavingTime)
+activate selectedVS
+deactivate selectedVS
+CTRL -> CTRL: leavingSnsUser[index]=+1
+activate CTRL
+deactivate CTRL
+end
+end
+loop for each element in arrivalSnsUser[]
+CTRL -> CTRL: differenceBetweenArrLeavSnsUser[i]=arrivalSnsUser[i]-leavingSnsUser[i]
+activate CTRL
+deactivate CTRL
+end
+CTRL --> out** :create()
+CTRL -> out: setDifferenceBetweenArrLeavSnsUser(differenceBetweenArrLeavSnsUser[])
+activate out
+deactivate out
+CTRL -> out: setInputList(lInputPerformanceRecords)
+activate out
+deactivate out
+CTRL -> CTRL : bruteForce= getAlgorithm()
+activate CTRL
+deactivate CTRL
+CTRL -> alg: contiguousSublistWithMaximumSum[] = determineContiguousSublistWithMaximumSum(differenceBetweenArrLeavSnsUser[])
+activate alg
+deactivate alg
+CTRL -> out: setContiguousSublistWithMaximumSum( contiguousSublistWithMaximumSum[])
+activate out
+deactivate out
+CTRL -> out: setTimeInterval(timeInterval)
+activate out
+deactivate out
+CTRL -> selectedVS: openHour= getOpenHour()
+activate selectedVS
+deactivate selectedVS
+CTRL -> out: setOpenHour(openHour)
+activate out
+deactivate out
+CTRL -> out: calculateMaximumSum()
+activate out
+out->out: maxSum=calculateMaximumSum()
+activate out
+deactivate out
+deactivate out
+CTRL -> out: calculateLessEffectivePeriod()
+activate out
+out->out: lessEffectivePeriod=calculateLessEffectivePeriod()
+activate out
+deactivate out
+deactivate out
+
+CTRL -> map: toDto(outputData)
+ref over map
+[[US016_SD_PerformanceAnalysisMapper.puml US016_SD_PerformanceAnalysisMapper]]
+end ref
+activate map
+map --> CTRL: performanceAnalysisDTO
+deactivate map
+deactivate CTRL
+UI --> Cord : shows the performance and informs about the success of the operation
+deactivate UI
+deactivate Cord
+@enduml

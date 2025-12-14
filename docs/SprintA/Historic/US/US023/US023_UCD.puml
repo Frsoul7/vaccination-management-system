@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Center Coordinator" as coord
+rectangle System{
+coord --> (To consult the performance statistics and charts)
+}
+
+@enduml

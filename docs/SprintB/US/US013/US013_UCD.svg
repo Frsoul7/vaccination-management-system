@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="159px" preserveAspectRatio="none" style="width:590px;height:159px;background:#FFFFFF;" version="1.1" viewBox="0 0 590 159" width="590px" zoomAndPan="magnify"><defs><filter height="300%" id="f17sm2g9fhjt5p" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b31deea5d7419a569cd5090bf83263]
+cluster System--><rect fill="#FFFFFF" filter="url(#f17sm2g9fhjt5p)" height="140" style="stroke:#000000;stroke-width:1.5;" width="445" x="133" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="330.5" y="23.5332">System</text><ellipse cx="355.3232" cy="87.1646" fill="#FEFECE" filter="url(#f17sm2g9fhjt5p)" rx="206.3232" ry="43.6646" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="385" x="162.8232" y="90.8932">US013: Specify a new Vaccine and its Administration Process</text><!--MD5=[97ab183161fd5d1db7fba7485cf76add]
+entity Admin--><ellipse cx="47.5" cy="55" fill="#FEFECE" filter="url(#f17sm2g9fhjt5p)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M47.5,63 L47.5,90 M34.5,71 L60.5,71 M47.5,90 L34.5,105 M47.5,90 L60.5,105 " fill="none" filter="url(#f17sm2g9fhjt5p)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="6" y="125.0332">Administrator</text><!--MD5=[df43af203ae8d7c4a021b53551662460]
+link Admin to US013: Specify a new Vaccine and its Administration Process--><path d="M89.13,87 C104.5,87 123.23,87 143.56,87 " fill="none" id="Admin-to-US013: Specify a new Vaccine and its Administration Process" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="148.76,87,139.76,83,143.76,87,139.76,91,148.76,87" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5e02b34c364b6cf4cfe7a43906164bc0]
+@startuml
+
+left to right direction
+"Administrator" as Admin
+rectangle System{
+Admin - -> (US013: Specify a new Vaccine and its Administration Process)
+}
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

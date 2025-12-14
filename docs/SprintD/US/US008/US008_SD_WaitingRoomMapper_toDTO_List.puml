@@ -1,0 +1,53 @@
+@startuml
+autonumber
+'hide footbox
+
+participant ":WaitingRoomMapper" as mapper
+participant "listWaitingRoom: List<SnsUser>" as list
+participant "listWaitingRoomDTO: List<SnsUserDto>" as listDTO
+participant "snsUser: SnsUser" as snsu
+participant "snsUserDto: SnsUserDto" as snsuDTO
+
+activate mapper
+[o->mapper : [[/US008_SD.puml toDTO(listWaitingRoom)]]
+mapper-->listDTO** : create()
+
+loop for each SnsUser in listWaitingRoom
+
+mapper -> list : snsUser = getSnsUser(i)
+activate list
+deactivate list
+
+mapper -> snsu : name = getName()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : gender = getGender()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : birthDate = getBirthDate()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : snsUserNumber = getSnsUserNumber()
+activate snsu
+deactivate snsu
+
+mapper -> snsu : phoneNumber = getPhoneNumber()
+activate snsu
+deactivate snsu
+
+mapper --> snsuDTO** : create(name, gender, birthDate, snsUserNumber, phoneNumber)
+
+mapper -> listDTO : add(snsUserDto)
+activate listDTO
+deactivate listDTO
+
+end
+
+<-- mapper : [[/US008_SD.puml listSnsUserDto]]
+deactivate mapper
+
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+"Receptionit" as recep
+rectangle System{
+recep --> (US003: Register SNS User)
+}
+
+@enduml
