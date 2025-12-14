@@ -2,26 +2,6 @@
 
 This directory contains screenshots demonstrating the COVID Vaccination Management System.
 
-## Console Interface
-
-### Welcome & Login
-<img src="console/1-welcome_login.png" alt="Console Welcome" width="300"/>
-
-### Administrator Menu
-<img src="console/2-admin-menu.png" alt="Admin Menu" width="300"/>
-
-### Register Employee
-<img src="console/3-admin-register_employer.png" alt="Register Employee" width="300"/>
-
-### Receptionist - Choose Center
-<img src="console/4-receptionist-choose_center.png" alt="Choose Center" width="300"/>
-
-### Receptionist - Register User
-<img src="console/5-receptionist-register_user.png" alt="Register User Success" width="300"/>
-
-### Receptionist - Register User (Validation)
-<img src="console/6-receptionist-register_user_fail.png" alt="Register User Fail" width="300"/>
-
 ## GUI Interface
 
 ### Welcome & Login
@@ -47,6 +27,26 @@ This directory contains screenshots demonstrating the COVID Vaccination Manageme
 <img src="gui/14- nurse_vaccine_administration_process4.png" alt="Vaccine Admin Step 4" width="300"/>
 <img src="gui/15- nurse_vaccine_administration_process5.png" alt="Vaccine Admin Step 5" width="300"/>
 <img src="gui/16- nurse_vaccine_administration_process6.png" alt="Vaccine Admin Step 6" width="300"/>
+
+## Console Interface
+
+### Welcome & Login
+<img src="console/1-welcome_login.png" alt="Console Welcome" width="300"/>
+
+### Administrator Menu
+<img src="console/2-admin-menu.png" alt="Admin Menu" width="300"/>
+
+### Register Employee
+<img src="console/3-admin-register_employer.png" alt="Register Employee" width="300"/>
+
+### Receptionist - Choose Center
+<img src="console/4-receptionist-choose_center.png" alt="Choose Center" width="300"/>
+
+### Receptionist - Register User
+<img src="console/5-receptionist-register_user.png" alt="Register User Success" width="300"/>
+
+### Receptionist - Register User (Validation)
+<img src="console/6-receptionist-register_user_fail.png" alt="Register User Fail" width="300"/>
 
 ---
 

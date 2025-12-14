@@ -59,23 +59,6 @@ java -jar target/Sem2App-1.0-SNAPSHOT-jar-with-dependencies.jar --console
 
 ## 📸 Screenshots
 
-### Console Interface
-
-<div align="center">
-  <img src="docs/screenshots/console/1-welcome_login.png" alt="Console Login" width="300"/>
-  <p><em>Console Login Screen</em></p>
-</div>
-
-<div align="center">
-  <img src="docs/screenshots/console/2-admin-menu.png" alt="Admin Menu" width="300"/>
-  <p><em>Administrator Menu Options</em></p>
-</div>
-
-<div align="center">
-  <img src="docs/screenshots/console/5-receptionist-register_user.png" alt="Register User" width="300"/>
-  <p><em>Receptionist Registering SNS User</em></p>
-</div>
-
 ### GUI Interface
 
 <div align="center">
@@ -96,6 +79,23 @@ java -jar target/Sem2App-1.0-SNAPSHOT-jar-with-dependencies.jar --console
 <div align="center">
   <img src="docs/screenshots/gui/11- nurse_vaccine_administration_process1.png" alt="Nurse Interface" width="300"/>
   <p><em>Nurse Interface - Vaccine Administration Process</em></p>
+</div>
+
+### Console Interface
+
+<div align="center">
+  <img src="docs/screenshots/console/1-welcome_login.png" alt="Console Login" width="300"/>
+  <p><em>Console Login Screen</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/console/2-admin-menu.png" alt="Admin Menu" width="300"/>
+  <p><em>Administrator Menu Options</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/console/5-receptionist-register_user.png" alt="Register User" width="300"/>
+  <p><em>Receptionist Registering SNS User</em></p>
 </div>
 
 [🖼️ View all screenshots →](docs/screenshots)
