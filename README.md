@@ -13,7 +13,7 @@
       <td align="center">
         <img src="docs/screenshots/gui/1- welcome_login.png" alt="Application Welcome Screen" width="400"/>
         <br/>
-        <em>Application Welcome Screen</em>
+        <em>Application Welcome and Login Screen</em>
       </td>
     </tr>
   </table>
