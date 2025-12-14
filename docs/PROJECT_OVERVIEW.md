@@ -339,9 +339,7 @@ Report available at: `target/site/jacoco/index.html`
 
 ## Project Structure
 
-```
-ersmoreira-lei-22-s2-1na-g074/
-│
+```│
 ├── docs/                          # Documentation artifacts
 │   ├── SprintA/                   # Requirements & domain modeling
 │   ├── SprintB/                   # Console features documentation
