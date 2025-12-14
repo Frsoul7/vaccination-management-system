@@ -231,7 +231,7 @@ Each sprint includes comprehensive documentation:
 **Course:** LAPR2 - Laboratório de Projeto e Análise de Requisitos 2  
 **Academic Year:** 2021-2022 (2nd Semester)
 
-This project demonstrates proficiency in:
+This project helped me gain hands-on experience with:
 - ✅ Object-Oriented Programming (OOP)
 - ✅ Software Engineering best practices
 - ✅ Design patterns and SOLID principles
@@ -243,9 +243,7 @@ This project demonstrates proficiency in:
 
 ## 📁 Project Structure
 
-```
-ersmoreira-lei-22-s2-1na-g074/
-│
+```│
 ├── docs/                          # Documentation
 │   ├── PROJECT_OVERVIEW.md       # Comprehensive technical overview
 │   ├── SprintA/                  # Requirements & domain modeling
@@ -287,9 +285,10 @@ This is an academic project and is not actively maintained. However, it serves a
 ## 📞 Contact
 
 For questions about the project architecture or implementation:
-- Review the [comprehensive documentation](docs/PROJECT_OVERVIEW.md)
+- Review the [refered documentation](docs/PROJECT_OVERVIEW.md)
 - Check the [Sprint documentation](docs/SprintD/) for specific features
 - Analyze the [code quality report](General%20project%20status.md)
+- Reach me out :)
 
 ## 📄 License
 
