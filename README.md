@@ -34,8 +34,8 @@
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd ersmoreira-lei-22-s2-1na-g074-ccf82f1c3cf7
+git clone https://github.com/Frsoul7/vaccination-management-system.git
+cd vaccination-management-system
 
 # Build the project
 mvn clean package
