@@ -47,7 +47,7 @@ java -jar target/Sem2App-1.0-SNAPSHOT-jar-with-dependencies.jar --graphic
 java -jar target/Sem2App-1.0-SNAPSHOT-jar-with-dependencies.jar --console
 ```
 
-### Default Login Credentials
+### Default Login Credentials for Testing
 
 | Role | Email | Password |
 |------|-------|----------|
@@ -62,17 +62,17 @@ java -jar target/Sem2App-1.0-SNAPSHOT-jar-with-dependencies.jar --console
 ### Console Interface
 
 <div align="center">
-  <img src="docs/screenshots/console/1-welcome_login.png" alt="Console Login" width="600"/>
+  <img src="docs/screenshots/console/1-welcome_login.png" alt="Console Login" width="300"/>
   <p><em>Console Login Screen</em></p>
 </div>
 
 <div align="center">
-  <img src="docs/screenshots/console/2-admin-menu.png" alt="Admin Menu" width="600"/>
+  <img src="docs/screenshots/console/2-admin-menu.png" alt="Admin Menu" width="300"/>
   <p><em>Administrator Menu Options</em></p>
 </div>
 
 <div align="center">
-  <img src="docs/screenshots/console/5-receptionist-register_user.png" alt="Register User" width="600"/>
+  <img src="docs/screenshots/console/5-receptionist-register_user.png" alt="Register User" width="300"/>
   <p><em>Receptionist Registering SNS User</em></p>
 </div>
 
