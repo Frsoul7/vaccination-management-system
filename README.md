@@ -79,22 +79,22 @@ java -jar target/Sem2App-1.0-SNAPSHOT-jar-with-dependencies.jar --console
 ### GUI Interface
 
 <div align="center">
-  <img src="docs/screenshots/gui/3- login.png" alt="GUI Login" width="600"/>
+  <img src="docs/screenshots/gui/3- login.png" alt="GUI Login" width="300"/>
   <p><em>Graphical Login Interface</em></p>
 </div>
 
 <div align="center">
-  <img src="docs/screenshots/gui/4- choose_vaccination_center.png" alt="Choose Center" width="600"/>
+  <img src="docs/screenshots/gui/4- choose_vaccination_center.png" alt="Choose Center" width="300"/>
   <p><em>Vaccination Center Selection</em></p>
 </div>
 
 <div align="center">
-  <img src="docs/screenshots/gui/9- coordinator_perfomance_analysis.png" alt="Performance Analysis" width="600"/>
+  <img src="docs/screenshots/gui/9- coordinator_perfomance_analysis.png" alt="Performance Analysis" width="300"/>
   <p><em>Center Coordinator - Performance Analysis Dashboard</em></p>
 </div>
 
 <div align="center">
-  <img src="docs/screenshots/gui/11- nurse_vaccine_administration_process1.png" alt="Nurse Interface" width="600"/>
+  <img src="docs/screenshots/gui/11- nurse_vaccine_administration_process1.png" alt="Nurse Interface" width="300"/>
   <p><em>Nurse Interface - Vaccine Administration Process</em></p>
 </div>
 
