@@ -1,11 +1,14 @@
 package app.controller;
 
 import app.domain.model.Company;
+import app.domain.model.SNSUser;
 import app.domain.model.VaccinationCenter;
 import app.domain.model.store.PerformanceRecordsStore;
+import app.domain.model.store.SNSUserStore;
 import app.domain.model.store.VaccinationCenterStore;
 import app.domain.model.utils.Configurations;
 import app.domain.model.utils.DateCustom;
+import app.domain.model.utils.TimeHour;
 import app.domain.shared.EmployeeRoles;
 import app.interfaces.Constants;
 import pt.isep.lei.esoft.auth.AuthFacade;
@@ -126,6 +129,9 @@ public class App implements Constants {
 
         // Bootstrap vaccination centers (dev seed data)
         bootstrapVaccinationCenters();
+        
+        // Bootstrap waiting room with SNS users (dev seed data)
+        bootstrapWaitingRoom();
 
         // Schedule task
 /*        try {
@@ -258,11 +264,63 @@ public class App implements Constants {
     }
     
     /**
+     * Bootstrap waiting room with SNS users (dev seed data)
+     * Adds demo SNS users to the waiting room for testing/development
+     */
+    private void bootstrapWaitingRoom() {
+        try {
+            VaccinationCenterStore vcStore = company.getVaccinationCenterStore();
+            SNSUserStore snsUserStore = company.getSnsUserStore();
+            
+            // Only add if there are no users in waiting rooms and we have vaccination centers
+            if (vcStore.getVaccinationCenterList().isEmpty()) {
+                return; // No vaccination centers yet
+            }
+            
+            // Get Centro do Porto (first center, id = 0)
+            VaccinationCenter portoCenter = vcStore.getVaccinationCenter(0);
+            if (portoCenter != null && portoCenter.getWaitingList().isEmpty()) {
+                // Add 3 SNS users to Porto center waiting room
+                addUserToWaitingRoom(snsUserStore, portoCenter, 123456789L, 9, 15);  // Arrived at 09:15
+                addUserToWaitingRoom(snsUserStore, portoCenter, 123456790L, 9, 30);  // Arrived at 09:30
+                addUserToWaitingRoom(snsUserStore, portoCenter, 123456791L, 10, 0);  // Arrived at 10:00
+            }
+            
+            // Get Centro Gondomar (second center, id = 1)
+            VaccinationCenter gondomarCenter = vcStore.getVaccinationCenter(1);
+            if (gondomarCenter != null && gondomarCenter.getWaitingList().isEmpty()) {
+                // Add 2 SNS users to Gondomar center waiting room
+                addUserToWaitingRoom(snsUserStore, gondomarCenter, 123456792L, 10, 30); // Arrived at 10:30
+                addUserToWaitingRoom(snsUserStore, gondomarCenter, 123456793L, 11, 0);  // Arrived at 11:00
+            }
+            
+            System.out.println("✓ Bootstrap: SNS users added to waiting rooms successfully");
+            
+        } catch (Exception e) {
+            // Silent catch - bootstrap data creation failure shouldn't prevent app startup
+            System.out.println("Warning: Failed to bootstrap waiting room - " + e.getMessage());
+        }
+    }
+    
+    /**
+     * Helper method to add a user to a vaccination center's waiting room
+     */
+    private void addUserToWaitingRoom(SNSUserStore snsUserStore, VaccinationCenter center, 
+                                     long snsUserNumber, int arrivalHour, int arrivalMinutes) {
+        SNSUser user = snsUserStore.getSnsUserBySnsUserNumber(snsUserNumber);
+        if (user != null) {
+            user.setSnsUserArrivalTime(new TimeHour(arrivalHour, arrivalMinutes));
+            center.addToWaitingList(user);
+        }
+    }
+    
+    /**
      * Public method to re-bootstrap vaccination centers after serialization loads
      * Can be called from SerializationController after loading data
      */
     public void ensureBootstrapData() {
         bootstrapVaccinationCenters();
+        bootstrapWaitingRoom();
     }
 
 /*    private static class TimeTaskPeopleVaccinatedInDay extends TimerTask {
