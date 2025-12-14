@@ -10,10 +10,6 @@ The teams consists of students identified in the following table.
 | **1060064**     | Fernando Ribeiro |
 | **1060568**     | José Silva       |
 | **1060588**     | Pedro Gomes      |
-| **1200662**     | Ricardo Soares   |
-| **1210852**     | Inês Veiga       |
-| **1181464**     | Márcio Fernandes - left group after Sprint B|
-
 
 # 2. Task Distribution ###
 
