@@ -11,11 +11,6 @@
   <table>
     <tr>
       <td align="center">
-        <img src="https://scontent.cdninstagram.com/v/t51.2885-15/124675089_197229911808341_2859729953738970453_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=xQyGcMJE9sQQ7kNvgFpQ8GT&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=AuYM9Pw2A1FtWQIuWW-NkKs&oh=00_AYCSB-4c-Lzsk-9R9tpI9X6z9bGTl4-hcjSXdHu2gVDLYA&oe=6765DA3E" alt="Street Art - Vaccination" width="400"/>
-        <br/>
-        <em>Street art by <a href="https://www.instagram.com/p/CHYdiimBbZY/">@tvboy</a></em>
-      </td>
-      <td align="center">
         <img src="docs/screenshots/gui/1- welcome_login.png" alt="Application Welcome Screen" width="400"/>
         <br/>
         <em>Application Welcome Screen</em>
