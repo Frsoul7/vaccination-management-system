@@ -1,11 +1,10 @@
 # 🏥 (COVID-19) Vaccination Management System
 
-> A comprehensive Java-based vaccination management system developed as part of the BSc in Computer Engineering at ISEP (2021-2022)
+> A comprehensive Java-based vaccination management system developed as part of the 1st year of BSc in Computer Engineering at ISEP (2021-2022)
 
 [![Java](https://img.shields.io/badge/Java-11-orange.svg)](https://www.oracle.com/java/)
 [![JavaFX](https://img.shields.io/badge/JavaFX-18.0.1-blue.svg)](https://openjfx.io/)
 [![Maven](https://img.shields.io/badge/Maven-3.x-red.svg)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-Academic-green.svg)]()
 
 <div align="center">
   <table>
